@@ -1,0 +1,45 @@
+
+name: Build
+on: [push]
+env:
+  device_name: 'iPhone 14'
+  ios_version: '16.0'
+jobs:
+  build:
+    name: Compile the code
+    runs-on: macOS
+    steps:
+      - name: Configure Artifactory Access
+        uses: extractions/netrc@v1
+        with:
+          machine: repositories.tomtom.com
+          username: ${{ secrets.ARTIFACTORY_USERNAME }}
+          password: ${{ secrets.ARTIFACTORY_PASSWORD }}
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          # cleanup caches
+          rm -rf ~/Library/Caches/CocoaPods/Pods/Specs/Release/TomTomSDK*
+          rm -rf ~/Library/Caches/CocoaPods/Pods/Release/TomTomSDK*
+          rm -rf ~/.cocoapods/repos/tomtom-sdk-cocoapods
+          rm -rf ~/.cocoapods/repos-art/
+          rm -rf Pods
+
+          # add cocoapods repo
+          pod repo-art add tomtom-sdk-cocoapods "https://repositories.tomtom.com/artifactory/api/pods/cocoapods"
+          pod repo-art update tomtom-sdk-cocoapods
+          pod deintegrate
+
+          # install dependencies
+          pod install --repo-update
+        shell: bash
+
+      - name: Build
+        run:
+          xcodebuild \
+          -project 'TomTom SDK Examples.xcworkspace' \
+          -scheme 'TomTom SDK Examples'
+          -destination 'platform=iOS Simulator,name=${{ env.device_name }},OS=${{ env.ios_version }}' \
