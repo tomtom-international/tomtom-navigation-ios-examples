@@ -39,7 +39,4 @@ jobs:
 
       - name: Build
         run:
-          xcodebuild \
-          -project 'TomTom SDK Examples.xcworkspace' \
-          -scheme 'TomTom SDK Examples'
-          -destination 'platform=iOS Simulator,name=${{ env.device_name }},OS=${{ env.ios_version }}' \
+          xcodebuild -workspace 'TomTom SDK Examples.xcworkspace' -scheme 'TomTom SDK Examples' -destination 'platform=iOS Simulator,name=${{ env.device_name }},OS=${{ env.ios_version }}'
