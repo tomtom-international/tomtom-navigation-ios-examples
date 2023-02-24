@@ -25,7 +25,7 @@ jobs:
           rm -rf ~/Library/Caches/CocoaPods/Pods/Specs/Release/TomTomSDK*
           rm -rf ~/Library/Caches/CocoaPods/Pods/Release/TomTomSDK*
           rm -rf ~/.cocoapods/repos/tomtom-sdk-cocoapods
-          rm -rf ~/.cocoapods/repos-art/
+          rm -rf ~/.cocoapods/repos-art/tomtom-sdk-cocoapods
           rm -rf Pods
 
           # add cocoapods repo
