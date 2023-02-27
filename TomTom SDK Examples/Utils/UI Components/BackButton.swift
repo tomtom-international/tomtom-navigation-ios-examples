@@ -21,8 +21,11 @@ struct BackButton: View {
             Image(Resource.Images.back)
                 .foregroundColor(Resource.Colors.secondaryContent)
                 .frame(width: width, height: height)
-                .background(Resource.Colors.primaryContent)
-                .clipShape(Circle())
+                .background(
+                    Circle()
+                        .foregroundColor(Resource.Colors.primaryContent)
+                        .shadow(color: Resource.Colors.boxShadow, radius: 8, x: 0, y: 0)
+                    )
         }
     }
 }
