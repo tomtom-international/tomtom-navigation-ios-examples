@@ -27,6 +27,14 @@ import TomTomSDKRoutePlanner
 import TomTomSDKRoutePlannerOnline
 import TomTomSDKRouteReplannerDefault
 
+/**
+ This example shows how to build a simple navigation application using the TomTom Navigation SDK for iOS.
+ The application displays a map and shows the user’s location. After the user selects a destination with a long press, the app plans a route and draws it on the map.
+ Navigation is started automatically using the route simulation.
+ The application will display upcoming manoeuvres, remaining distance, estimated time of arrival (ETA), current speed, and speed limit information.
+ 
+ For more details on this example, check out the tutorial: https://developer.tomtom.com/ios/navigation/documentation/use-cases/build-a-navigation-app
+ */
 struct BasicNavigationContent: View {
     var body: some View {
         MainView()
@@ -35,6 +43,9 @@ struct BasicNavigationContent: View {
 
 // MARK: - NavigationController
 
+/**
+ An observable class to handle flows betweeen modules
+ */
 final class NavigationController: ObservableObject {
     // MARK: Lifecycle
 
@@ -97,6 +108,10 @@ final class NavigationController: ObservableObject {
 
 // MARK: NavigationProgressObserver
 
+/**
+ Extend the NavigationController to conform to the NavigationProgressObserver protocol.
+ This allows to track route progress.
+ */
 extension NavigationController: NavigationProgressObserver {
     func didUpdateProgress(progress: RouteProgress) {
         progressOnRouteSubject.send(progress.distanceAlongRoute)
@@ -146,6 +161,10 @@ struct TomTomMapView {
 
 // MARK: UIViewRepresentable
 
+/**
+ Extend the TomTomMapView to conform to the UIViewRepresentable protocol.
+ This allows you to use the MapView in SwiftUI
+ */
 extension TomTomMapView: UIViewRepresentable {
     typealias UIViewType = TomTomSDKMapDisplay.MapView
 
@@ -167,6 +186,9 @@ extension TomTomMapView: UIViewRepresentable {
 
 // MARK: - MapCoordinator
 
+/**
+ Create the MapCoordinator, which facilitates communication from the UIView to the SwiftUI environments.
+ */
 final class MapCoordinator: NSObject {
     // MARK: Lifecycle
 
@@ -200,6 +222,14 @@ final class MapCoordinator: NSObject {
 
 // MARK: TomTomSDKMapDisplay.MapViewDelegate
 
+/**
+ Extend the MapCoordinator to conform to the MapViewDelegate protocol by implementing the onMapReady callback.
+ The onMapReady callback notifies MapCoordinator that the Map is ready to display.
+ The Map instance can be configured in this callback function
+ 
+ You can experiment with different ways of showing the current location on the map by changing the locationIndicatorType in the onMapReady callback.
+ Activate the location provider to see the current GPS position on the map
+ */
 extension MapCoordinator: TomTomSDKMapDisplay.MapViewDelegate {
     func mapView(_: MapView, onMapReady map: TomTomMap) {
         // Store the map to be used later
@@ -230,6 +260,10 @@ extension MapCoordinator: TomTomSDKMapDisplay.MapViewDelegate {
 
 // MARK: Camera Options
 
+/**
+ Create the camera utility functions.
+ The virtual map is observed through a camera that can be zoomed, panned, rotated, and tilted to provide a compelling 3D navigation experience.
+ */
 extension MapCoordinator {
     private var defaultCameraUpdate: CameraUpdate {
         let defaultLocation = CLLocation(latitude: 0.0, longitude: 0.0)
@@ -270,6 +304,13 @@ extension MapCoordinator {
 
 // MARK: TomTomSDKLocationProvider.LocationProviderObservable
 
+/**
+ Extend MapCoordinator to conform to LocationProviderObservable by adding the following functions.
+ 
+ This extension enables the MapCoordinator to observe GPS updates and authorization changes.
+ This means that when the application starts, the camera position and zoom level are updated in the onLocationUpdated callback function.
+ The user then sees the current location.
+ */
 extension MapCoordinator: TomTomSDKLocationProvider.LocationProviderObservable {
     func onLocationUpdated(location: GeoLocation) {
         // Zoom and center the camera on the first location received.
@@ -287,6 +328,11 @@ extension MapCoordinator: TomTomSDKLocationProvider.LocationProviderObservable {
 
 // MARK: TomTomSDKMapDisplay.MapDelegate
 
+/**
+ Extend MapCoordinator to conform to MapDelegate.
+ 
+ Update the MapCoordinator to plan a route and add it to the map after a long press.
+ */
 extension MapCoordinator: TomTomSDKMapDisplay.MapDelegate {
     func map(_: TomTomMap, onInteraction interaction: MapInteraction) {
         switch interaction {
@@ -309,6 +355,13 @@ extension MapCoordinator: TomTomSDKMapDisplay.MapDelegate {
     }
 }
 
+/**
+ Add an extension to NavigationController with a navigateToCoordinate function that plans a route, starts location simulation and starts the navigation process.
+ 
+ The call to the async planRoute function is wrapped in a Task so that it can be called from the navigateToCoordinate function, even though that function is not async.
+ Do not use Navigation directly to start navigation along the route when using NavigationView.
+ Instead, use its NavigationView.ViewModel for that. It will also handle both the visual and voice instructions.
+ */
 extension NavigationController {
     func navigateToCoordinate(_ destination: CLLocationCoordinate2D) {
         Task { @MainActor in
@@ -350,6 +403,9 @@ extension NavigationController {
 
 // MARK: - Route planning
 
+/**
+ Create a NavigationController extension for the route planning functions
+ */
 extension NavigationController {
     enum RoutePlanError: Error {
         case unknownStartingLocation
@@ -441,6 +497,14 @@ extension NavigationController {
     }
 }
 
+/**
+ Update the MapCoordinator extension with the observe function to display changes to the current route and its progress on the map.
+ 
+ After adding a route on the map, you will receive a reference to that route.
+ The addRouteToMap function keeps it in the routeOnMap so that it can show the visual progress along the route, without being added again.
+ The default location provider has an approximate position but no route information.
+ For smooth movement of the chevron along the route, ensure the map uses a mapMatchedLocationProvider from Navigation instead of the SimulatedLocationProvider.
+ */
 extension MapCoordinator {
     func observe(navigationController: NavigationController) {
         navigationController.displayedRouteSubject.sink { [weak self] route in
@@ -465,6 +529,9 @@ extension MapCoordinator {
     }
 }
 
+/**
+ Create a MapCoordinator extension to add the planned route to the map
+ */
 extension MapCoordinator {
     private func createMapRouteOptions(coordinates: [CLLocationCoordinate2D]) -> TomTomSDKMapDisplay.RouteOptions {
         var routeOptions = RouteOptions(coordinates: coordinates)
@@ -488,6 +555,9 @@ extension MapCoordinator {
 
 // MARK: - NavigationView Actions
 
+/**
+ Update the NavigationController extension with the onNavigationViewAction function to handle actions like arrival, mute, and etc
+ */
 extension NavigationController {
     func onNavigationViewAction(_ action: TomTomSDKNavigationUI.NavigationView.Action) {
         switch action {
