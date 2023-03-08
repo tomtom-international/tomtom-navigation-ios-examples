@@ -3,11 +3,10 @@ name: Build
 on: [push]
 env:
   device_name: 'iPhone 14'
-  ios_version: '16.0'
 jobs:
   build:
     name: Compile the code
-    runs-on: macOS
+    runs-on: macos-latest
     steps:
       - name: Configure Artifactory Access
         uses: extractions/netrc@v1
