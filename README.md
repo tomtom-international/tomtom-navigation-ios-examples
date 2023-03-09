@@ -3,6 +3,9 @@ Hello and welcome to this repository with examples showcasing the [TomTom Naviga
 
 Note: Navigation SDK for iOS is only available upon request. [Contact us](https://developer.tomtom.com/tomtom-sdk-for-ios/request-access) to get access.
 
+<div align="center">
+  <img align="center" src=".github/nav-sdk-phone.png" width="400"/>
+</div>
 
 ## Setup
 Once you have obtained access, do the following:
