@@ -22,6 +22,7 @@ struct BasicNavigationView: View {
                 BasicNavigationContent()
             }
             .navigationBarHidden(true)
+            .navigationViewStyle(StackNavigationViewStyle())
 
             // MARK: Back Button
 
@@ -36,6 +37,9 @@ struct BasicNavigationView: View {
 struct BasicNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         BasicNavigationView()
-            .preferredColorScheme(.dark)
+            .previewDevice("iPhone 14")
+        
+        BasicNavigationView()
+            .previewDevice("iPad Pro")
     }
 }
