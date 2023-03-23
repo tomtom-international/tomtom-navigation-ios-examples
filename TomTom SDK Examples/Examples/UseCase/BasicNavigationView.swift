@@ -38,7 +38,7 @@ struct BasicNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         BasicNavigationView()
             .previewDevice("iPhone 14")
-        
+
         BasicNavigationView()
             .previewDevice("iPad Pro")
     }

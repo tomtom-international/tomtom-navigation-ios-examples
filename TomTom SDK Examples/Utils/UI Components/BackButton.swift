@@ -25,7 +25,7 @@ struct BackButton: View {
                     Circle()
                         .foregroundColor(Resource.Colors.primaryContent)
                         .shadow(color: Resource.Colors.boxShadow, radius: 8, x: 0, y: 0)
-                    )
+                )
         }
     }
 }

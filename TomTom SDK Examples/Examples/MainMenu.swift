@@ -104,7 +104,7 @@ struct MainMenu_Previews: PreviewProvider {
     static var previews: some View {
         MainMenu()
             .previewDevice("iPhone 14")
-        
+
         MainMenu()
             .previewDevice("iPad Pro")
     }
@@ -144,7 +144,7 @@ struct MainMenuRow_Previews: PreviewProvider {
     static var previews: some View {
         MainMenuRow(title: Resource.Strings.map, icon: Resource.Images.map)
             .previewDevice("iPhone 14")
-        
+
         MainMenuRow(title: Resource.Strings.map, icon: Resource.Images.map)
             .previewDevice("iPad Pro")
     }
