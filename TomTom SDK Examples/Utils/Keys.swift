@@ -7,10 +7,8 @@
 //  not the licensee, you are not authorized to use this software in any manner and should
 //  immediately return or destroy it.
 
-/**
- Navigation SDK is only avaialble upon request.
- Use the API key provided by TomTom to start using the SDK.
- */
+/// Navigation SDK is only avaialble upon request.
+/// Use the API key provided by TomTom to start using the SDK.
 enum Keys {
     static let ttServicesAPIKey = "YOUR_API_KEY"
 }
