@@ -15,7 +15,7 @@ Clone the repository https://github.com/tomtom-international/tomtom-navigation-i
 
 ## iOS setup
 
-1. Install Xcode if you don't already have it.
+1. Install [Xcode](https://apps.apple.com/app/id497799835) 14 or higher if you don't already have it.
 2. Install Cocoapods on your computer.
     ```
     sudo gem install cocoapods
