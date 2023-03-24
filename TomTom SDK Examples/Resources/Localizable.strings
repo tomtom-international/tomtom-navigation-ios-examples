@@ -1,0 +1,21 @@
+//  © 2023 TomTom NV. All rights reserved.
+//
+//  This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+//  used for internal evaluation purposes or commercial use strictly subject to separate
+//  license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+//  to use this software in accordance with the terms of your license agreement. If you are
+//  not the licensee, you are not authorized to use this software in any manner and should
+//  immediately return or destroy it.
+
+"CFBundleDisplayName" = "TomTom SDK Examples";
+
+"main_menu" = "Main Menu";
+"basic_driving_app" = "Basic driving app";
+"map" = "Map Display";
+"search" = "Search";
+"routing" = "Routing";
+"navigation" = "Navigation";
+"map_demo_title" = "Map display examples coming soon";
+"navigation_demo_title" = "Navigation examples coming soon";
+"routing_demo_title" = "Routing examples coming soon";
+"search_demo_title" = "Search examples coming soon";
