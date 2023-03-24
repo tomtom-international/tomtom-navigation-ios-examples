@@ -31,6 +31,7 @@
 		125B245475B51A4AEA021E70 /* Pods-TomTom SDK Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTom SDK Examples.debug.xcconfig"; path = "Target Support Files/Pods-TomTom SDK Examples/Pods-TomTom SDK Examples.debug.xcconfig"; sourceTree = "<group>"; };
 		58CE66AC44AFF8FA61EDD9C7 /* Pods_TomTom_SDK_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomTom_SDK_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846EECDB2245D789CD447F12 /* Pods-TomTom SDK Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTom SDK Examples.release.xcconfig"; path = "Target Support Files/Pods-TomTom SDK Examples/Pods-TomTom SDK Examples.release.xcconfig"; sourceTree = "<group>"; };
+		9D2A34DE29CDA54F00BF8884 /* TomTom-SDK-Examples-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TomTom-SDK-Examples-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9D2F394929A379FC0093F702 /* TomTom SDK Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TomTom SDK Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2F394C29A379FC0093F702 /* TomTom_SDK_ExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTom_SDK_ExamplesApp.swift; sourceTree = "<group>"; };
 		9D2F395029A379FE0093F702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		9D2F394B29A379FC0093F702 /* TomTom SDK Examples */ = {
 			isa = PBXGroup;
 			children = (
+				9D2A34DE29CDA54F00BF8884 /* TomTom-SDK-Examples-Info.plist */,
 				9D2F395229A379FE0093F702 /* Preview Content */,
 				9D2F398129A38A120093F702 /* Resources */,
 				9D2F398829A3C66F0093F702 /* Utils */,
@@ -463,10 +465,10 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TomTom-SDK-Examples-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application requires GPS to display your position on map";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -498,10 +500,10 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TomTom-SDK-Examples-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application requires GPS to display your position on map";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
