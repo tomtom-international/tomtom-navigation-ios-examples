@@ -58,3 +58,9 @@ enum Keys {
     static let apiKey = "YOUR_API_KEY"
 }
 ```
+
+## Troubleshooting
+If you have a **black screen** when launching the Basic driving app, please follow the steps below.
+- Check that you have updated the `API key` with yours in the `Keys.swift` file.
+- Check that your `API key` is valid for the requested features
+- Check your internet connection
