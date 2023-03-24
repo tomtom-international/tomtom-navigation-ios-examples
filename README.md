@@ -61,6 +61,26 @@ enum Keys {
 
 ## Troubleshooting
 If you have a **black screen** when launching the Basic driving app, please follow the steps below.
+
 - Check that you have updated the `API key` with yours in the `Keys.swift` file.
 - Check that your `API key` is valid for the requested features
 - Check your internet connection
+
+---
+
+If you get a warning about the device's architecture, please follow the steps below.
+```
+Warning: Error creating LLDB target at path '*' using an empty LLDB target which can cause slow memory reads from remote devices: the specified architecture 'arm64-*-*' is not compatible with 'x86_64-apple-ios*' 
+```
+
+### Apple M1 and M2 processor support
+
+Xcode requires a specific setup to support TomTom SDK on Apple M1 and M2 processors devices. The existing frameworks are optimized for Intel processors. Apple introduced Rosetta to emulate devices with Apple M1 and M2 processors, using Intel processors for backward compatibility. Please follow the steps below to run Rosetta during the build process:
+
+1. Skip this section if your device uses an Intel processor:
+- go to `Apple Menu` -> `About This Mac` to check
+2. Automatically open Xcode using Rosetta:
+- go to `Applications` -> `Xcode` -> `Right mouse click` (control + click) -> `Get Info`
+- check the flag `Open using Rosetta`
+
+---
