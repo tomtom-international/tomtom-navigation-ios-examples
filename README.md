@@ -16,11 +16,11 @@ Clone the repository https://github.com/tomtom-international/tomtom-navigation-i
 ## iOS setup
 
 1. Install [Xcode](https://apps.apple.com/app/id497799835) 14 or higher if you don't already have it.
-2. Install Cocoapods on your computer.
+2. Install [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) on your computer.
     ```
     sudo gem install cocoapods
     ```
-3. Install cocoapods-art tool on your computer.
+3. Install cocoapods-art plugin on your computer.
     ```
     sudo gem install cocoapods-art
     ```
