@@ -13,6 +13,6 @@ import TomTomSDKMapDisplay
 
 enum TomTomServices {
     static func register() {
-        TomTomSDKMapDisplay.MapsDisplayService.apiKey = Keys.ttServicesAPIKey
+        TomTomSDKMapDisplay.MapsDisplayService.apiKey = Keys.apiKey
     }
 }

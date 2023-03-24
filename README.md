@@ -55,6 +55,6 @@ Change your API key in the `Keys.swift` file.
 
 ```
 enum Keys {
-    static let ttServicesAPIKey = "YOUR_API_KEY"
+    static let apiKey = "YOUR_API_KEY"
 }
 ```
