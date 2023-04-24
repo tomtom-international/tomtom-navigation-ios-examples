@@ -1,0 +1,66 @@
+# Copyright (C) 2023 TomTom NV. All rights reserved.
+
+name: Run Renovate
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 0 * * *'  # at 00:05 am every day
+
+permissions: {}
+
+jobs:
+  renovate:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      CP_HOME_DIR: "~"
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+
+      # Install dependencies manually in order to preserve context for renovate post upgrade tasks
+      - name: Install bundle dependencies
+        run: bundle install
+
+      - name: Install renovate npm package
+        run: npm install renovate
+
+      - name: Configure Artifactory access
+        run: |
+          echo "machine repositories.tomtom.com" > ~/.netrc
+          echo "login ${{ secrets.ARTIFACTORY_USERNAME }}" >> ~/.netrc
+          echo "password ${{ secrets.ARTIFACTORY_PASSWORD }}" >> ~/.netrc
+
+      - name: Add Cocoapods repository
+        # Ensure we have repos dir created
+        # Workaround for https://github.com/jfrog/cocoapods-art/issues/32
+        run: |
+          mkdir -p ~/.cocoapods/repos
+          bundle exec pod repo-art add tomtom-sdk-cocoapods https://repositories.tomtom.com/artifactory/api/pods/cocoapods
+
+      - name: Generate app token
+        uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92  # v1.8.0
+        id: generate-token
+        with:
+          app_id: ${{ secrets.TOMTOM_SDK_INTEGRATION_APP_ID}}
+          private_key: ${{ secrets.TOMTOM_SDK_INTEGRATION_PRIVATE_KEY }}
+
+      - name: Run renovate
+        env:
+          LOG_LEVEL: debug
+          RENOVATE_CONFIG_FILE: .github/renovate-config.js
+          RENOVATE_TARGET_REPOSITORY: ${{ github.repository }}
+          RENOVATE_ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
+          RENOVATE_ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
+          RENOVATE_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: npx renovate
+
+      - name: Clear .netrc file
+        if: always()
+        run: echo -n > ~/.netrc
