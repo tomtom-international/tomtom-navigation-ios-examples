@@ -1,0 +1,44 @@
+# Copyright (C) 2023 TomTom NV. All rights reserved.
+
+---
+
+name: Main Verification
+
+on: 
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.ref }}
+
+permissions: {}
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+    secrets: inherit
+
+  notify:
+    needs: build
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:      
+      - name: Send slack notification
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          payload: |
+            {
+              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.head_commit.url }}",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.head_commit.url }}"
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK

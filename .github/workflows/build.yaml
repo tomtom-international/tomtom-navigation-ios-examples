@@ -1,0 +1,50 @@
+# Copyright (C) 2023 TomTom NV. All rights reserved.
+
+---
+
+name: Buid iOS app
+
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  build:
+    name: Buid iOS app
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Ensure we have repos dir created 
+      # Workaround for https://github.com/jfrog/cocoapods-art/issues/32
+      - run: mkdir -p ~/.cocoapods/repos
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+
+      - name: Install Gem dependencies
+        run: bundle install
+
+      - name: Configure Artifactory access
+        run: |
+          echo "machine repositories.tomtom.com" > ~/.netrc
+          echo "login ${{ secrets.ARTIFACTORY_USERNAME }}" >> ~/.netrc
+          echo "password ${{ secrets.ARTIFACTORY_PASSWORD }}" >> ~/.netrc
+
+      - name: Add Cocoapods repository
+        run: bundle exec pod repo-art add tomtom-sdk-cocoapods https://repositories.tomtom.com/artifactory/api/pods/cocoapods
+
+      - name: Install Cocoapods dependencies
+        run: bundle exec pod install
+
+      - name: Clear .netrc file
+        if: always()
+        run: echo -n > ~/.netrc
+
+      - name: Build iOS app
+        run: >
+          xcodebuild
+          -workspace 'TomTom SDK Examples.xcworkspace'
+          -scheme 'TomTom SDK Examples'
+          -destination 'platform=iOS Simulator,name=iPhone 14'
