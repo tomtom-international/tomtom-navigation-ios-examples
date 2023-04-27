@@ -11,7 +11,7 @@
 
 "main_menu" = "Main Menu";
 "basic_driving_app" = "Basic driving app";
-"map" = "Map Display";
+"map_display" = "Map Display";
 "search" = "Search";
 "routing" = "Routing";
 "navigation" = "Navigation";
@@ -19,3 +19,12 @@
 "navigation_demo_title" = "Navigation examples coming soon";
 "routing_demo_title" = "Routing examples coming soon";
 "search_demo_title" = "Search examples coming soon";
+"hybrid_navigation_demo_title" = "Hybrid mode example coming soon";
+"options" = "Options";
+"map_mode" = "Map Mode";
+"online" = "Online";
+"offline" = "Offline";
+"hybrid" = "Hybrid";
+"next" = "Next";
+"downloading" = "Downloading";
+"map" = "Map";

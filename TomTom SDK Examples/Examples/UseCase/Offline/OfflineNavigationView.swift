@@ -9,37 +9,51 @@
 
 import SwiftUI
 
-// MARK: - Basic Driving App
+// MARK: - Basic Driving App Offline Mode
 
-struct BasicNavigationView: View {
-    @Environment(\.presentationMode) var presentationMode
+struct OfflineNavigationView: View {
+    @Environment(\.presentationMode)
+    var presentationMode
+
+    var copyFoldersStatus: Bool = false
+    var copyFoldersError: Error?
+
+    init() {
+        // Copy the offline map folders into the simulator/device
+        OfflineMapHelper.copyFolders { success, error in
+            copyFoldersStatus = success
+            copyFoldersError = error
+        }
+    }
 
     var body: some View {
         ZStack(alignment: .topLeading, content: {
-            NavigationView {
+            if copyFoldersStatus {
                 // MARK: Navigation SDK
 
-                BasicNavigationContent()
+                OfflineNavigationContent()
+            } else {
+                Text(copyFoldersError?.localizedDescription ?? "-")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .navigationBarHidden(true)
-            .navigationViewStyle(StackNavigationViewStyle())
 
             // MARK: Back Button
 
             BackButton(presentationMode: presentationMode)
                 .padding()
         })
+        .navigationBarHidden(true)
     }
 }
 
 // MARK: - Preview
 
-struct BasicNavigationView_Previews: PreviewProvider {
+struct OfflineNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        BasicNavigationView()
+        OfflineNavigationView()
             .previewDevice("iPhone 14")
 
-        BasicNavigationView()
+        OfflineNavigationView()
             .previewDevice("iPad Pro")
     }
 }

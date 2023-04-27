@@ -6,3 +6,15 @@ This example shows how to build a simple navigation application using the TomTom
 The application displays a map and shows the user’s location. After the user selects a destination with a long press, the app plans a route and draws it on the map. Navigation is started automatically using the route simulation. 
 
 For further explanations on the example provided can be found in this [tutorial](https://developer.tomtom.com/ios/navigation/documentation/use-cases/build-a-navigation-app).
+
+## Offline Map Mode
+
+The offline map example shows how to use offline maps using the TomTom Navigation SDK for iOS.
+
+Upon receiving the offline maps data from TomTom, it is necessary to copy the offline maps directory into the project's root folder and name it "Map" following the directory structure provided below.
+
+- Map
+    - DATA
+    - keystore.sqlite
+
+![](../../../.github/offline-map-files.gif)

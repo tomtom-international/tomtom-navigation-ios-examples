@@ -7,9 +7,23 @@
 //  not the licensee, you are not authorized to use this software in any manner and should
 //  immediately return or destroy it.
 
-/// Navigation SDK is only avaialble upon request.
-/// Use the API key provided by TomTom to start using the SDK.
-enum Keys {
-    static let apiKey = "YOUR_API_KEY"
-    static let mapLicense = "YOUR_MAP_LICENSE"
+import Foundation
+
+enum OfflineConfig {
+    // Update Server
+    static let ndsUpdateServer = "https://api.tomtom.com/nds-test/updates/1/fetch"
+
+    // Folder paths
+    static let mapFolderName = "Map"
+    static let mapDataPath = "/Map/DATA"
+    static let keystorePath = "/Map/keystore.sqlite"
+    static let updateStoragePath = "/update"
+    static let persistantStoragePath = "/persistent"
+}
+
+enum Region {
+    static let amsterdam = (
+        lat: 52.36198355889382,
+        lon: 4.899839061959026
+    )
 }

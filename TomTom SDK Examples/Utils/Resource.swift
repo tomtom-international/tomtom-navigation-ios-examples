@@ -14,7 +14,7 @@ enum Resource {
     enum Strings {
         static let title = NSLocalizedString("main_menu", comment: "")
         static let basicDrivingApp = NSLocalizedString("basic_driving_app", comment: "")
-        static let map = NSLocalizedString("map", comment: "")
+        static let mapDisplay = NSLocalizedString("map_display", comment: "")
         static let search = NSLocalizedString("search", comment: "")
         static let routing = NSLocalizedString("routing", comment: "")
         static let navigation = NSLocalizedString("navigation", comment: "")
@@ -22,6 +22,15 @@ enum Resource {
         static let navigationDemoTitle = NSLocalizedString("navigation_demo_title", comment: "")
         static let routingDemoTitle = NSLocalizedString("routing_demo_title", comment: "")
         static let searchDemoTitle = NSLocalizedString("search_demo_title", comment: "")
+        static let hybridNavigationDemoTitle = NSLocalizedString("hybrid_navigation_demo_title", comment: "")
+        static let options = NSLocalizedString("options", comment: "")
+        static let mapMode = NSLocalizedString("map_mode", comment: "")
+        static let online = NSLocalizedString("online", comment: "")
+        static let offline = NSLocalizedString("offline", comment: "")
+        static let hybrid = NSLocalizedString("hybrid", comment: "")
+        static let next = NSLocalizedString("next", comment: "")
+        static let downloading = NSLocalizedString("downloading", comment: "")
+        static let map = NSLocalizedString("map", comment: "")
     }
 
     enum Colors {
@@ -31,6 +40,8 @@ enum Resource {
         static let primaryLight = Color("tt_colour_primary_light")
         static let primaryContent = Color("tt_colour_primary_content_light")
         static let secondaryContent = Color("tt_colour_secondary_content_light")
+        static let titleLight = Color("tt_colour_title_light")
+        static let inactiveLight = Color("tt_colour_inactive_light")
     }
 
     enum Images {
@@ -41,5 +52,8 @@ enum Resource {
         static let phoneApp = "ic_phone_app"
         static let route = "ic_route"
         static let search = "ic_search"
+        static let online = "ic_online"
+        static let hybrid = "ic_hybrid"
+        static let offline = "ic_offline"
     }
 }
