@@ -1,0 +1,21 @@
+# Copyright (C) 2023 TomTom NV. All rights reserved.
+
+---
+
+name: Pull Request Verification
+
+on: 
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+    secrets: inherit

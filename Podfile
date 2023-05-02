@@ -1,12 +1,19 @@
+platform :ios, '13.0'
+
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+workspace 'TomTom SDK Examples.xcworkspace'
+
+install! 'cocoapods', warn_for_unused_master_specs_repo: false
+use_frameworks!
+
 plugin 'cocoapods-art', :sources => [
-   'tomtom-sdk-cocoapods'
+  'tomtom-sdk-cocoapods'
 ]
 
 TOMTOM_SDK_VERSION = '0.2.3404'
 
 target 'TomTom SDK Examples' do
-  use_frameworks!
-  
   pod 'TomTomSDKCommon', TOMTOM_SDK_VERSION
   pod 'TomTomSDKCommonUI', TOMTOM_SDK_VERSION
   pod 'TomTomSDKDefaultTextToSpeech', TOMTOM_SDK_VERSION
