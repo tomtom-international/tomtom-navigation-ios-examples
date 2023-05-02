@@ -37,7 +37,7 @@ Once you have gained access, set up the development environment by following:
 
    5. Update `bundler`
    ```zsh
-   gem install bundler -v 2.3.23
+   gem install bundler
    ```
    6. Ensure you ***reload*** your shell so the `rbenv` can extend `PATH` accordingly.
 

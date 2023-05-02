@@ -16,15 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Ensure we have repos dir created 
-      # Workaround for https://github.com/jfrog/cocoapods-art/issues/32
-      - run: mkdir -p ~/.cocoapods/repos
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-
-      - name: Install Gem dependencies
-        run: bundle install
+        with:
+          bundler-cache: true
 
       - name: Configure Artifactory access
         run: |
@@ -33,7 +28,11 @@ jobs:
           echo "password ${{ secrets.ARTIFACTORY_PASSWORD }}" >> ~/.netrc
 
       - name: Add Cocoapods repository
-        run: bundle exec pod repo-art add tomtom-sdk-cocoapods https://repositories.tomtom.com/artifactory/api/pods/cocoapods
+        # Ensure we have repos dir created
+        # Workaround for https://github.com/jfrog/cocoapods-art/issues/32
+        run: |
+          mkdir -p ~/.cocoapods/repos
+          bundle exec pod repo-art add tomtom-sdk-cocoapods https://repositories.tomtom.com/artifactory/api/pods/cocoapods
 
       - name: Install Cocoapods dependencies
         run: bundle exec pod install
