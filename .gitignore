@@ -91,3 +91,6 @@ iOSInjectionProject/
 
 ## OS generated files #
 *.DS_Store
+
+# Bundle gems 
+**/bundle
