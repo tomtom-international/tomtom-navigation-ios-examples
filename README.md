@@ -99,11 +99,11 @@ If you get a warning about the device's architecture, please follow the steps be
 Warning: Error creating LLDB target at path '*' using an empty LLDB target which can cause slow memory reads from remote devices: the specified architecture 'arm64-*-*' is not compatible with 'x86_64-apple-ios*' 
 ```
 
-### Apple M1 and M2 processor support
+### Apple silicon support
 
-Xcode requires a specific setup to support TomTom SDK on Apple M1 and M2 processors devices.
+Xcode requires a specific setup to support TomTom SDK on Mac computers with Apple silicon.
 The existing frameworks are optimized for Intel processors. Apple introduced Rosetta to emulate devices with
-Apple M1 and M2 processors, using Intel processors for backward compatibility.
+Apple silicon processors, using Intel processors for backward compatibility.
 
 Please follow the steps below to run Rosetta during the build process:
 
