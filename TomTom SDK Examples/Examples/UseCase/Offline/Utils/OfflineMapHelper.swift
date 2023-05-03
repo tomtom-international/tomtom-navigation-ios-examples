@@ -9,32 +9,34 @@
 
 import Foundation
 
-// MARK: Offline Map Errors
-
-enum OfflineMapError: LocalizedError {
-    case bundleResourceURLNotExist
-    case documentsDirectoryNotExist
-    case mapFolderDoesNotExist
-    case keystoreFileDoesNotExist
-
-    public var errorDescription: String? {
-        /* YOUR CODE GOES HERE */
-        return "Error! . \(self)"
-    }
-}
-
 // MARK: Offline Map Helper
 
 enum OfflineMapHelper {
+    // MARK: Offline Map Errors
+
+    enum OfflineMapError: LocalizedError {
+        case bundleResourceURLNotExist
+        case documentsDirectoryNotExist
+        case mapFolderDoesNotExist
+        case keystoreFileDoesNotExist
+
+        public var errorDescription: String? {
+            /* YOUR CODE GOES HERE */
+            return "Error! . \(self)"
+        }
+    }
+
+    // MARK: Copy Folders
+
     /// Copy the 'Map' folder (all folders and files recursively inside) from the Bundle to the device
     static func copyFolders(completion: (_ success: Bool, _ error: Error?) -> Void) {
         let fileManager = FileManager.default
-        
+
         guard let pathFromBundle = Bundle.main.resourceURL?.appendingPathComponent(OfflineConfig.mapFolderName).path else {
             completion(false, OfflineMapError.bundleResourceURLNotExist)
             return
         }
-        
+
         guard let docsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
             completion(false, OfflineMapError.documentsDirectoryNotExist)
             return
@@ -53,17 +55,17 @@ enum OfflineMapHelper {
                 for fileName in files {
                     try fileManager.copyItem(atPath: "\(pathFromBundle)/\(fileName)", toPath: "\(pathDestDocs)/\(fileName)")
                 }
-                
+
                 if OfflineMapPath.mapDataPath == nil {
                     completion(false, OfflineMapError.mapFolderDoesNotExist)
                     return
                 }
-                
+
                 if OfflineMapPath.keystorePath == nil {
                     completion(false, OfflineMapError.keystoreFileDoesNotExist)
                     return
                 }
-                
+
                 completion(true, nil)
             } catch {
                 completion(false, error)
