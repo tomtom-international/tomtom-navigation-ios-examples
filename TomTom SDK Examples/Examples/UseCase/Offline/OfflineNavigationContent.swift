@@ -44,7 +44,7 @@ struct OfflineNavigationContent: View {
 
 // MARK: - OfflineNavigationController
 
-/// An observable class to handle flows betweeen modules
+/// An observable class to handle flows between modules
 final class OfflineNavigationController: ObservableObject {
     // MARK: Lifecycle
 

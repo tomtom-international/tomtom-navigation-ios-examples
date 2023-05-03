@@ -42,11 +42,10 @@ enum OfflineMapHelper {
         let pathDestDocs = docsURL.appendingPathComponent(OfflineConfig.mapFolderName).path
 
         if fileManager.fileExists(atPath: pathDestDocs) {
-            /// It has already been copied previously
-            /* YOUR CODE GOES HERE */
+            // The path exists. That means the files have already been copied previously.
             completion(true, nil)
         } else {
-            /// Copy directory content recursively
+            // Copy directory content recursively
             do {
                 let files = try fileManager.contentsOfDirectory(atPath: pathFromBundle)
                 try? fileManager.copyItem(atPath: pathFromBundle, toPath: pathDestDocs)

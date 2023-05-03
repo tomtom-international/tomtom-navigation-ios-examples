@@ -41,7 +41,7 @@ struct BasicNavigationContent: View {
 
 // MARK: - NavigationController
 
-/// An observable class to handle flows betweeen modules
+/// An observable class to handle flows between modules
 final class NavigationController: ObservableObject {
     // MARK: Lifecycle
 
