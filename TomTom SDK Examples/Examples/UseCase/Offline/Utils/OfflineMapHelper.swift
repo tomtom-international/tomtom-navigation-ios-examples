@@ -48,10 +48,10 @@ enum OfflineMapHelper {
             // Copy directory content recursively
             do {
                 let files = try fileManager.contentsOfDirectory(atPath: pathFromBundle)
-                try? fileManager.copyItem(atPath: pathFromBundle, toPath: pathDestDocs)
+                try fileManager.copyItem(atPath: pathFromBundle, toPath: pathDestDocs)
 
                 for fileName in files {
-                    try? fileManager.copyItem(atPath: "\(pathFromBundle)/\(fileName)", toPath: "\(pathDestDocs)/\(fileName)")
+                    try fileManager.copyItem(atPath: "\(pathFromBundle)/\(fileName)", toPath: "\(pathDestDocs)/\(fileName)")
                 }
                 
                 if OfflineMapPath.mapDataPath == nil {
