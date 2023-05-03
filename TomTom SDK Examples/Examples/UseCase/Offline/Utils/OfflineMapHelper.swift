@@ -47,14 +47,9 @@ enum OfflineMapHelper {
             // The path exists. That means the files have already been copied previously.
             completion(true, nil)
         } else {
-            // Copy directory content recursively
+            // Copy directory content
             do {
-                let files = try fileManager.contentsOfDirectory(atPath: pathFromBundle)
                 try fileManager.copyItem(atPath: pathFromBundle, toPath: pathDestDocs)
-
-                for fileName in files {
-                    try fileManager.copyItem(atPath: "\(pathFromBundle)/\(fileName)", toPath: "\(pathDestDocs)/\(fileName)")
-                }
 
                 if OfflineMapPath.mapDataPath == nil {
                     completion(false, OfflineMapError.mapFolderDoesNotExist)
@@ -88,7 +83,7 @@ enum OfflineMapPath {
             return nil
         }
     }
-    
+
     static var keystorePath: String? {
         if let documentDirectory {
             let resourcesKeystorePath = documentDirectory.path + OfflineConfig.keystorePath
@@ -97,7 +92,7 @@ enum OfflineMapPath {
             return nil
         }
     }
-    
+
     static var updateStoragePath: String? {
         if let documentDirectory {
             let updateStoragePath = documentDirectory.path + OfflineConfig.updateStoragePath
@@ -106,7 +101,7 @@ enum OfflineMapPath {
             return nil
         }
     }
-    
+
     static var persistantStoragePath: String? {
         if let documentDirectory {
             let persistantStoragePath = documentDirectory.path + OfflineConfig.persistantStoragePath
@@ -119,7 +114,7 @@ enum OfflineMapPath {
     // MARK: Private
 
     private static let documentDirectory: URL? = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-    
+
     private static func pathContainsMap(_ path: String) -> Bool { pathExists(path + "/ROOT.NDS") }
 
     private static func pathExists(_ path: String) -> Bool {
