@@ -87,7 +87,7 @@ struct BasicNavigationMenu: View {
                                 .shadow(color: Resource.Colors.boxShadow, radius: 8, x: 0, y: 0)
                         )
                 }
-                .disabled(selectedMapMode == .none)
+                .disabled(selectedMapMode == nil)
                 .fullScreenCover(isPresented: $showSheet) {
                     navigationContent
                 }
@@ -105,7 +105,6 @@ struct BasicNavigationMenu: View {
     // MARK: - Internal
 
     enum MapMode {
-        case none
         case online
         case hybrid
         case offline
@@ -115,7 +114,7 @@ struct BasicNavigationMenu: View {
     var presentationMode
 
     @State
-    var selectedMapMode: MapMode = .none
+    var selectedMapMode: MapMode?
 
     @State
     var showSheet: Bool = false
