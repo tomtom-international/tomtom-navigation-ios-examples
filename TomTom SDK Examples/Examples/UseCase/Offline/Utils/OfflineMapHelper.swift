@@ -90,9 +90,8 @@ enum OfflineMapPath {
     private static let resourcesPath: String = Bundle.main.bundlePath
 
     private static func getUpdateStoragePath() -> String? {
-        let suffix = OfflineConfig.updateStoragePath
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let updateStoragePath = documentDirectory.path + suffix
+            let updateStoragePath = documentDirectory.path + OfflineConfig.updateStoragePath
             return updateStoragePath
         } else {
             return nil
@@ -100,9 +99,8 @@ enum OfflineMapPath {
     }
 
     private static func getPersistantStoragePath() -> String? {
-        let suffix = OfflineConfig.persistantStoragePath
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let persistantStoragePath = documentDirectory.path + suffix
+            let persistantStoragePath = documentDirectory.path + OfflineConfig.persistantStoragePath
             return persistantStoragePath
         } else {
             return nil
@@ -110,9 +108,8 @@ enum OfflineMapPath {
     }
 
     private static func getMapDataPath() -> String? {
-        let suffix = OfflineConfig.mapDataPath
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let resourcesMapPath = documentDirectory.path + suffix
+            let resourcesMapPath = documentDirectory.path + OfflineConfig.mapDataPath
             return pathContainsMap(resourcesMapPath) ? resourcesMapPath : nil
         } else {
             return nil
@@ -120,9 +117,8 @@ enum OfflineMapPath {
     }
 
     private static func getKeystorePath() -> String? {
-        let suffix = OfflineConfig.keystorePath
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let resourcesKeystorePath = documentDirectory.path + suffix
+            let resourcesKeystorePath = documentDirectory.path + OfflineConfig.keystorePath
             return pathExists(resourcesKeystorePath) ? resourcesKeystorePath : nil
         } else {
             return nil
