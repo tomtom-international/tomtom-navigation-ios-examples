@@ -79,27 +79,36 @@ enum OfflineMapHelper {
 enum OfflineMapPath {
     // MARK: Internal
 
-    // Properties to access Onboard Map resources
-    static let mapDataPath: String? = getMapDataPath()
-    static let keystorePath: String? = getKeystorePath()
-    static let updateStoragePath: String? = getUpdateStoragePath()
-    static let persistantStoragePath: String? = getPersistantStoragePath()
-
-    // MARK: Private
-
-    private static let resourcesPath: String = Bundle.main.bundlePath
-
-    private static func getUpdateStoragePath() -> String? {
-        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+    // Properties to access offline map resources
+    static var mapDataPath: String? {
+        if let documentDirectory {
+            let resourcesMapPath = documentDirectory.path + OfflineConfig.mapDataPath
+            return pathContainsMap(resourcesMapPath) ? resourcesMapPath : nil
+        } else {
+            return nil
+        }
+    }
+    
+    static var keystorePath: String? {
+        if let documentDirectory {
+            let resourcesKeystorePath = documentDirectory.path + OfflineConfig.keystorePath
+            return pathExists(resourcesKeystorePath) ? resourcesKeystorePath : nil
+        } else {
+            return nil
+        }
+    }
+    
+    static var updateStoragePath: String? {
+        if let documentDirectory {
             let updateStoragePath = documentDirectory.path + OfflineConfig.updateStoragePath
             return updateStoragePath
         } else {
             return nil
         }
     }
-
-    private static func getPersistantStoragePath() -> String? {
-        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+    
+    static var persistantStoragePath: String? {
+        if let documentDirectory {
             let persistantStoragePath = documentDirectory.path + OfflineConfig.persistantStoragePath
             return persistantStoragePath
         } else {
@@ -107,24 +116,10 @@ enum OfflineMapPath {
         }
     }
 
-    private static func getMapDataPath() -> String? {
-        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let resourcesMapPath = documentDirectory.path + OfflineConfig.mapDataPath
-            return pathContainsMap(resourcesMapPath) ? resourcesMapPath : nil
-        } else {
-            return nil
-        }
-    }
+    // MARK: Private
 
-    private static func getKeystorePath() -> String? {
-        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let resourcesKeystorePath = documentDirectory.path + OfflineConfig.keystorePath
-            return pathExists(resourcesKeystorePath) ? resourcesKeystorePath : nil
-        } else {
-            return nil
-        }
-    }
-
+    private static let documentDirectory: URL? = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+    
     private static func pathContainsMap(_ path: String) -> Bool { pathExists(path + "/ROOT.NDS") }
 
     private static func pathExists(_ path: String) -> Bool {
