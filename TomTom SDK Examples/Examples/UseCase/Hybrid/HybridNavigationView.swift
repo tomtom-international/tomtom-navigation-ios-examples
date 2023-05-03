@@ -23,7 +23,7 @@ struct HybridNavigationView: View {
 
             // MARK: Back Button
 
-            BackButton(shadow: false, presentationMode: presentationMode)
+            BackButton(useShadow: false, presentationMode: presentationMode)
                 .padding()
         })
     }

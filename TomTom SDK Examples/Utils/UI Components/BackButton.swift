@@ -12,7 +12,7 @@ import SwiftUI
 struct BackButton: View {
     var width: CGFloat = 64
     var height: CGFloat = 64
-    var shadow: Bool = false
+    var useShadow: Bool = false
     var presentationMode: Binding<PresentationMode>
 
     var body: some View {
@@ -25,7 +25,7 @@ struct BackButton: View {
                 .background(
                     Circle()
                         .foregroundColor(Resource.Colors.primaryContent)
-                        .shadow(color: shadow ? Resource.Colors.boxShadow : .clear, radius: 8, x: 0, y: 0)
+                        .shadow(color: useShadow ? Resource.Colors.boxShadow : .clear, radius: 8, x: 0, y: 0)
                 )
         }
     }
