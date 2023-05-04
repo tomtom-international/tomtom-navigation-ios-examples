@@ -17,7 +17,7 @@ struct BasicNavigationMenu: View {
                     .foregroundColor(Resource.Colors.titleLight)
                     .font(.title2)
                     .fontWeight(.semibold)
-                    .padding(.vertical, 22)
+                    .padding(.vertical, 20)
 
                 HStack(alignment: .center, spacing: 16) {
                     Rectangle().frame(height: 1)
@@ -97,7 +97,7 @@ struct BasicNavigationMenu: View {
             // MARK: Back Button
 
             BackButton(useShadow: false, presentationMode: presentationMode)
-                .padding()
+                .padding(.vertical)
         })
         .navigationBarHidden(true)
     }
