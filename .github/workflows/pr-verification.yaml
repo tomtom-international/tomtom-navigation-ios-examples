@@ -16,6 +16,11 @@ concurrency:
 permissions: {}
 
 jobs:
+  quality-checks:
+    permissions:
+      pull-requests: write
+    uses: ./.github/workflows/quality-checks.yaml
+
   build:
     uses: ./.github/workflows/build.yaml
     secrets: inherit
