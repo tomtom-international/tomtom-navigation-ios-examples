@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D2F394829A379FC0093F702"
-               BuildableName = "TomTom SDK Examples.app"
-               BlueprintName = "TomTom SDK Examples"
-               ReferencedContainer = "container:TomTom SDK Examples.xcodeproj">
+               BuildableName = "TomTomSDKExamples.app"
+               BlueprintName = "TomTomSDKExamples"
+               ReferencedContainer = "container:TomTomSDKExamples.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D2F394829A379FC0093F702"
-            BuildableName = "TomTom SDK Examples.app"
-            BlueprintName = "TomTom SDK Examples"
-            ReferencedContainer = "container:TomTom SDK Examples.xcodeproj">
+            BuildableName = "TomTomSDKExamples.app"
+            BlueprintName = "TomTomSDKExamples"
+            ReferencedContainer = "container:TomTomSDKExamples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D2F394829A379FC0093F702"
-            BuildableName = "TomTom SDK Examples.app"
-            BlueprintName = "TomTom SDK Examples"
-            ReferencedContainer = "container:TomTom SDK Examples.xcodeproj">
+            BuildableName = "TomTomSDKExamples.app"
+            BlueprintName = "TomTomSDKExamples"
+            ReferencedContainer = "container:TomTomSDKExamples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

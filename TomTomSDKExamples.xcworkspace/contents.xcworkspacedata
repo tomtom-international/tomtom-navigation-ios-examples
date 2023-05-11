@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/muhammed.tanriverdi/Developer/tomtom-navigation-ios-examples/TomTomSDKExamples.xcodeproj">
+      location = "group:TomTomSDKExamples.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
