@@ -83,6 +83,7 @@ final class NavigationController: ObservableObject {
         navigationViewModel = navigationModel
 
         self.navigation.addProgressObserver(self)
+        self.navigation.addRouteObserver(self)
         locationProvider.start()
     }
 
@@ -110,6 +111,24 @@ extension NavigationController: NavigationProgressObserver {
     func didUpdateProgress(progress: RouteProgress) {
         progressOnRouteSubject.send(progress.distanceAlongRoute)
     }
+}
+
+// MARK: NavigationProgressObserver
+
+/// Extend the NavigationController to conform to the NavigationProgressObserver protocol.
+/// This allows to route progress.
+extension NavigationController: NavigationRouteObserver {
+    func didDeviateFromRoute(currentRoute _: TomTomSDKRoute.Route, location _: TomTomSDKLocationProvider.GeoLocation) {}
+
+    func didProposeRoutePlan(routePlan _: TomTomSDKNavigationEngines.RoutePlan, reason _: TomTomSDKNavigationEngines.RouteReplanningReason) {}
+
+    func didReplanRoute(replannedRoute: TomTomSDKRoute.Route, reason _: TomTomSDKNavigationEngines.RouteReplanningReason) {
+        displayedRouteSubject.send(replannedRoute)
+    }
+
+    func didChangeRoutes(navigatedRoutes _: TomTomSDKNavigation.NavigatedRoutes) {}
+
+    func didReplanRouteOnLanguageChange(replannedRoute _: TomTomSDKRoute.Route, reason _: TomTomSDKNavigationEngines.RouteReplanningReason, language _: Locale) {}
 }
 
 // MARK: - MainView
@@ -487,12 +506,12 @@ extension MapCoordinator {
     func observe(navigationController: NavigationController) {
         navigationController.displayedRouteSubject.sink { [weak self] route in
             guard let self = self else { return }
+            self.map?.removeRoutes()
             if let route = route {
                 self.addRouteToMap(route: route)
                 self.setCamera(trackingMode: .followRoute)
             } else {
                 self.routeOnMap = nil
-                self.map?.removeRoutes()
                 self.setCamera(trackingMode: .follow)
             }
         }.store(in: &cancellableBag)
