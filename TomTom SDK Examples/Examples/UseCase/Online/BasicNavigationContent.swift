@@ -412,6 +412,8 @@ extension NavigationController {
         )
         let costModel = CostModel(routeType: .fast)
 
+        // Use language code from Supported languages list:
+        // https://developer.tomtom.com/routing-api/documentation/routing/calculate-route#supported-languages
         // For voice announcements:
         let languageCode = Locale.preferredLanguages.first ?? Locale.current.languageCode ?? "en-GB"
         let locale = Locale(identifier: languageCode)
