@@ -10,7 +10,7 @@
 		351BCD631BB328C869AA5591 /* Pods_TomTomSDKExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182816C2A2C71B776131AB66 /* Pods_TomTomSDKExamples.framework */; };
 		9D07FD2C29FABFB6008577CD /* BasicNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D07FD2A29FABFB6008577CD /* BasicNavigationView.swift */; };
 		9D07FD2D29FABFB6008577CD /* BasicNavigationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D07FD2B29FABFB6008577CD /* BasicNavigationContent.swift */; };
-		9D2F394D29A379FC0093F702 /* TomTom_SDK_ExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F394C29A379FC0093F702 /* TomTom_SDK_ExamplesApp.swift */; };
+		9D2F394D29A379FC0093F702 /* TomTomSDKExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F394C29A379FC0093F702 /* TomTomSDKExamplesApp.swift */; };
 		9D2F395129A379FE0093F702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F395029A379FE0093F702 /* Assets.xcassets */; };
 		9D2F395429A379FE0093F702 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F395329A379FE0093F702 /* Preview Assets.xcassets */; };
 		9D2F396B29A388170093F702 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F396A29A388170093F702 /* MainMenu.swift */; };
@@ -35,16 +35,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		125B245475B51A4AEA021E70 /* Pods-TomTom SDK Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTom SDK Examples.debug.xcconfig"; path = "Target Support Files/Pods-TomTom SDK Examples/Pods-TomTom SDK Examples.debug.xcconfig"; sourceTree = "<group>"; };
 		182816C2A2C71B776131AB66 /* Pods_TomTomSDKExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomTomSDKExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		530B2700A4400EB33E5DE5BB /* Pods-TomTomSDKExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTomSDKExamples.release.xcconfig"; path = "Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples.release.xcconfig"; sourceTree = "<group>"; };
-		846EECDB2245D789CD447F12 /* Pods-TomTom SDK Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTom SDK Examples.release.xcconfig"; path = "Target Support Files/Pods-TomTom SDK Examples/Pods-TomTom SDK Examples.release.xcconfig"; sourceTree = "<group>"; };
 		9AB4C03BCE89E080FDCF7166 /* Pods-TomTomSDKExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTomSDKExamples.debug.xcconfig"; path = "Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		9D07FD2A29FABFB6008577CD /* BasicNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNavigationView.swift; sourceTree = "<group>"; };
 		9D07FD2B29FABFB6008577CD /* BasicNavigationContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNavigationContent.swift; sourceTree = "<group>"; };
 		9D2A34DE29CDA54F00BF8884 /* TomTomSDKExamplesInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TomTomSDKExamplesInfo.plist; sourceTree = SOURCE_ROOT; };
 		9D2F394929A379FC0093F702 /* TomTomSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomTomSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D2F394C29A379FC0093F702 /* TomTom_SDK_ExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTom_SDK_ExamplesApp.swift; sourceTree = "<group>"; };
+		9D2F394C29A379FC0093F702 /* TomTomSDKExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTomSDKExamplesApp.swift; sourceTree = "<group>"; };
 		9D2F395029A379FE0093F702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D2F395329A379FE0093F702 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D2F396A29A388170093F702 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -83,8 +81,6 @@
 		5D3F7FDDB19FBE13004B1041 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				125B245475B51A4AEA021E70 /* Pods-TomTom SDK Examples.debug.xcconfig */,
-				846EECDB2245D789CD447F12 /* Pods-TomTom SDK Examples.release.xcconfig */,
 				9AB4C03BCE89E080FDCF7166 /* Pods-TomTomSDKExamples.debug.xcconfig */,
 				530B2700A4400EB33E5DE5BB /* Pods-TomTomSDKExamples.release.xcconfig */,
 			);
@@ -125,7 +121,7 @@
 				9D2F398129A38A120093F702 /* Resources */,
 				9D2F398829A3C66F0093F702 /* Utils */,
 				9D2F396C29A3885E0093F702 /* Examples */,
-				9D2F394C29A379FC0093F702 /* TomTom_SDK_ExamplesApp.swift */,
+				9D2F394C29A379FC0093F702 /* TomTomSDKExamplesApp.swift */,
 			);
 			path = TomTomSDKExamples;
 			sourceTree = "<group>";
@@ -395,7 +391,7 @@
 				9D2F396B29A388170093F702 /* MainMenu.swift in Sources */,
 				9D35026529DEE2D6001D106E /* OfflineNavigationView.swift in Sources */,
 				9D2F397A29A3892D0093F702 /* RoutingExamplesView.swift in Sources */,
-				9D2F394D29A379FC0093F702 /* TomTom_SDK_ExamplesApp.swift in Sources */,
+				9D2F394D29A379FC0093F702 /* TomTomSDKExamplesApp.swift in Sources */,
 				9D6B2FD829A76EE7008CB4A6 /* TomTomServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

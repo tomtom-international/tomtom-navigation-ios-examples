@@ -51,7 +51,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
-         identifier = "../TomTom SDK Examples/Resources/GPX-Amsterdam.gpx"
+         identifier = "../TomTomSDKExamples/Resources/GPX-Amsterdam.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>
