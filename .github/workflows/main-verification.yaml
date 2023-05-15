@@ -11,6 +11,7 @@ on:
 
 concurrency: ${{ github.ref }}
 
+# clear out default permissions
 permissions: {}
 
 jobs:

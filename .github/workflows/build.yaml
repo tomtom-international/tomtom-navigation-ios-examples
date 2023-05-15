@@ -7,6 +7,7 @@ name: Buid iOS app
 on:
   workflow_call:
 
+# clear out default permissions
 permissions: {}
 
 jobs:
