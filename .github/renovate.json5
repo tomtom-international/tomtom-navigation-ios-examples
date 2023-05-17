@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+      "config:base",
+      ":rebaseStalePrs",
+      ":semanticCommits",
+      ":semanticCommitTypeAll(ci)"
+  ],
+  "assigneesFromCodeOwners": true,
+  "enabledManagers": ["regex"],
+  "separateMajorMinor": false,
+  "packageRules": [
+    {
+      "matchManagers": ["regex"],
+      "matchPaths": ["Podfile"],
+      "groupName": "iOS cocoapods deps",
+      "postUpgradeTasks" : {
+        "commands" : [
+          "bundle exec pod install"],
+        "fileFilters" : ["Podfile.lock"],
+        "executionMode": "branch"
+      }
+    },
+    {
+      "matchDatasources": "artifactory",
+      "registryUrls": ["https://repositories.tomtom.com/artifactory"]
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["Podfile"],
+      "matchStrings": [
+        "\\s+pod\\s+['\"](?<depName>[a-zA-Z0-9_-]+)['\"],\\s+['\"](?<currentValue>[^'\"]+)['\"]"
+      ],
+      "packageNameTemplate": "cocoapods/{{ depName }}",
+      "datasourceTemplate": "artifactory",
+      "versioningTemplate": "ruby",
+      "depTypeTemplate": "dependencies"
+    }
+  ]
+}
