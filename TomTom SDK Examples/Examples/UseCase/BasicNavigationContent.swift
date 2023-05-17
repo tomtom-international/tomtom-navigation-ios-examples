@@ -55,7 +55,7 @@ final class NavigationController: ObservableObject {
             apiKey: Keys.apiKey,
             locationProvider: simulatedLocationProvider,
             routeReplanner: routeReplanner,
-            continuousReplanningMode: .automatic
+            betterProposalAcceptanceMode: .automatic
         )
         let navigation = Navigation(configuration: navigationConfiguration)
         let navigationModel = TomTomSDKNavigationUI.NavigationView.ViewModel(navigation, tts: textToSpeech)
