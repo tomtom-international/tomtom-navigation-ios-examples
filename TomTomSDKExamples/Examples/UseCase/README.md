@@ -15,7 +15,7 @@ For further explanations on the example provided can be found in this [tutorial]
 
 The offline map example shows how to use offline maps using the TomTom Navigation SDK for iOS.
 
-Upon receiving the offline maps data and the map license from TomTom, it is necessary to copy the offline maps directory into the project's root folder and name it "Map" following the directory structure provided below and change the map license in the `Keys.swift` file.
+Upon receiving the offline maps data and the map license from TomTom, copy the offline maps directory into the project's root folder, name it "Map" following the directory structure provided below, and change the map license in the `Keys.swift` file.
 
 - Map
     - DATA
@@ -23,4 +23,4 @@ Upon receiving the offline maps data and the map license from TomTom, it is nece
 
 ![](../../../.github/offline-map-files.gif)
 
-*Note: This example uses an online route planner.*
+*Note: "Offline Map Example" uses offline maps but uses an online route planner and navigation. Offline route planners and navigation will be provided soon.*
