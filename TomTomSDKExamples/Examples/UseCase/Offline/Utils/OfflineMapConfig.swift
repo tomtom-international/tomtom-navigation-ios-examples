@@ -9,7 +9,7 @@
 
 import Foundation
 
-enum OfflineConfig {
+enum OfflineMapConfig {
     // Update Server
     static let ndsUpdateServer = "https://api.tomtom.com/nds-test/updates/1/fetch"
 

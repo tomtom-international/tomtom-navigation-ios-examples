@@ -179,7 +179,7 @@ struct TomTomOfflineMapView {
         /// These paths are required for the offline map configuration
         guard let updateStoragePath = OfflineMapPath.updateStoragePath,
               let persistantStoragePath = OfflineMapPath.persistantStoragePath,
-              let updateServerURL = URL(string: OfflineConfig.ndsUpdateServer),
+              let updateServerURL = URL(string: OfflineMapConfig.ndsUpdateServer),
               let mapDataPath = OfflineMapPath.mapDataPath,
               let keystorePath = OfflineMapPath.keystorePath
         else {

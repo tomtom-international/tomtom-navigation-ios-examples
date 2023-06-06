@@ -28,7 +28,7 @@
 		9D6B2FD629A76E72008CB4A6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6B2FD529A76E72008CB4A6 /* Keys.swift */; };
 		9D6B2FD829A76EE7008CB4A6 /* TomTomServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6B2FD729A76EE7008CB4A6 /* TomTomServices.swift */; };
 		9DB8B45F29E55B6A00E07909 /* OfflineMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8B45E29E55B6A00E07909 /* OfflineMapHelper.swift */; };
-		9DB8B46129E55B9100E07909 /* OfflineConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8B46029E55B9100E07909 /* OfflineConfig.swift */; };
+		9DB8B46129E55B9100E07909 /* OfflineMapConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8B46029E55B9100E07909 /* OfflineMapConfig.swift */; };
 		9DB8B46529E5731900E07909 /* GPX-Amsterdam.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9DB8B46429E5731900E07909 /* GPX-Amsterdam.gpx */; };
 		9DC6205F29A5179000598A05 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6205E29A5179000598A05 /* BackButton.swift */; };
 		9DE7410B29DEB18300D57C2B /* BasicNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7410A29DEB18300D57C2B /* BasicNavigationMenu.swift */; };
@@ -60,7 +60,7 @@
 		9D6B2FD529A76E72008CB4A6 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		9D6B2FD729A76EE7008CB4A6 /* TomTomServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTomServices.swift; sourceTree = "<group>"; };
 		9DB8B45E29E55B6A00E07909 /* OfflineMapHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineMapHelper.swift; sourceTree = "<group>"; };
-		9DB8B46029E55B9100E07909 /* OfflineConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineConfig.swift; sourceTree = "<group>"; };
+		9DB8B46029E55B9100E07909 /* OfflineMapConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineMapConfig.swift; sourceTree = "<group>"; };
 		9DB8B46429E5731900E07909 /* GPX-Amsterdam.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GPX-Amsterdam.gpx"; sourceTree = "<group>"; };
 		9DC6205E29A5179000598A05 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		9DE7410A29DEB18300D57C2B /* BasicNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationMenu.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		9D96950A29E6A54500B8CB5E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9DB8B46029E55B9100E07909 /* OfflineConfig.swift */,
+				9DB8B46029E55B9100E07909 /* OfflineMapConfig.swift */,
 				9DB8B45E29E55B6A00E07909 /* OfflineMapHelper.swift */,
 			);
 			path = Utils;
@@ -380,7 +380,7 @@
 				9DB8B45F29E55B6A00E07909 /* OfflineMapHelper.swift in Sources */,
 				9D35026A29DEE47C001D106E /* HybridNavigationView.swift in Sources */,
 				9D35026729DEE315001D106E /* OfflineNavigationContent.swift in Sources */,
-				9DB8B46129E55B9100E07909 /* OfflineConfig.swift in Sources */,
+				9DB8B46129E55B9100E07909 /* OfflineMapConfig.swift in Sources */,
 				9DE7410B29DEB18300D57C2B /* BasicNavigationMenu.swift in Sources */,
 				9D6B2FD629A76E72008CB4A6 /* Keys.swift in Sources */,
 				9D2F397C29A389390093F702 /* SearchExamplesView.swift in Sources */,

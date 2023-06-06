@@ -32,7 +32,7 @@ enum OfflineMapHelper {
     static func copyFolders(completion: (_ success: Bool, _ error: Error?) -> Void) {
         let fileManager = FileManager.default
 
-        guard let pathFromBundle = Bundle.main.resourceURL?.appendingPathComponent(OfflineConfig.mapFolderName).path else {
+        guard let pathFromBundle = Bundle.main.resourceURL?.appendingPathComponent(OfflineMapConfig.mapFolderName).path else {
             completion(false, OfflineMapError.bundleResourceURLNotExist)
             return
         }
@@ -41,7 +41,7 @@ enum OfflineMapHelper {
             completion(false, OfflineMapError.documentsDirectoryNotExist)
             return
         }
-        let pathDestDocs = docsURL.appendingPathComponent(OfflineConfig.mapFolderName).path
+        let pathDestDocs = docsURL.appendingPathComponent(OfflineMapConfig.mapFolderName).path
 
         if fileManager.fileExists(atPath: pathDestDocs) {
             // The path exists. That means the files have already been copied previously.
@@ -77,7 +77,7 @@ enum OfflineMapPath {
     // Properties to access offline map resources
     static var mapDataPath: String? {
         if let documentDirectory {
-            let resourcesMapPath = documentDirectory.path + OfflineConfig.mapDataPath
+            let resourcesMapPath = documentDirectory.path + OfflineMapConfig.mapDataPath
             return pathContainsMap(resourcesMapPath) ? resourcesMapPath : nil
         } else {
             return nil
@@ -86,7 +86,7 @@ enum OfflineMapPath {
 
     static var keystorePath: String? {
         if let documentDirectory {
-            let resourcesKeystorePath = documentDirectory.path + OfflineConfig.keystorePath
+            let resourcesKeystorePath = documentDirectory.path + OfflineMapConfig.keystorePath
             return pathExists(resourcesKeystorePath) ? resourcesKeystorePath : nil
         } else {
             return nil
@@ -95,7 +95,7 @@ enum OfflineMapPath {
 
     static var updateStoragePath: String? {
         if let documentDirectory {
-            let updateStoragePath = documentDirectory.path + OfflineConfig.updateStoragePath
+            let updateStoragePath = documentDirectory.path + OfflineMapConfig.updateStoragePath
             return updateStoragePath
         } else {
             return nil
@@ -104,7 +104,7 @@ enum OfflineMapPath {
 
     static var persistantStoragePath: String? {
         if let documentDirectory {
-            let persistantStoragePath = documentDirectory.path + OfflineConfig.persistantStoragePath
+            let persistantStoragePath = documentDirectory.path + OfflineMapConfig.persistantStoragePath
             return persistantStoragePath
         } else {
             return nil
