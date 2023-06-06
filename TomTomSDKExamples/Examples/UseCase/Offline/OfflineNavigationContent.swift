@@ -108,18 +108,16 @@ final class OfflineNavigationController: ObservableObject {
 
 // MARK: NavigationProgressObserver
 
-/// Extend the OfflineNavigationController to conform to the NavigationProgressObserver protocol.
-/// This allows to track route progress.
+/// Allows observing progress changes.
 extension OfflineNavigationController: NavigationProgressObserver {
     func didUpdateProgress(progress: RouteProgress) {
         progressOnRouteSubject.send(progress.distanceAlongRoute)
     }
 }
 
-// MARK: NavigationProgressObserver
+// MARK: NavigationRouteObserver
 
-/// Extend the NavigationController to conform to the NavigationProgressObserver protocol.
-/// This allows to route progress.
+/// Allows observing route changes.
 extension OfflineNavigationController: NavigationRouteObserver {
     func didDeviateFromRoute(currentRoute _: TomTomSDKRoute.Route, location _: TomTomSDKLocationProvider.GeoLocation) {}
 
@@ -189,9 +187,9 @@ struct TomTomOfflineMapView {
             fatalError("Error!")
         }
 
-        /// In the following code, an "NDSStoreUpdateConfig" object will be created that includes configuration, such as relevant region updates.
-        /// Additionally, the empty map folders were copied by calling "OfflineMapHelper.copyFolders()" in the "OfflineNavigationView.swift" file.
-        /// Enabling relevant region updates will allow the "NDSStore" object to automatically update the map by downloading relevant data.
+        // In the following code, an `NDSStoreUpdateConfig` object will be created that includes configuration, such as relevant region updates.
+        // Additionally, the empty map folders were copied by calling "OfflineMapHelper.copyFolders()" in the "OfflineNavigationView.swift" file.
+        // Enabling relevant region updates will allow the "NDSStore" object to automatically update the map by downloading relevant data.
         let updateConfig = NDSStoreUpdateConfig(
             updateStoragePath: updateStoragePath,
             persistentStoragePath: persistantStoragePath,
@@ -205,7 +203,7 @@ struct TomTomOfflineMapView {
             iqMapsRegionsAlongRouteRadius: .tt.kilometers(5)
         )
 
-        /// Create the "NDSStore" object by the given configurations
+        // Create the "NDSStore" object by the given configurations
         guard let ndsStore = NDSStore(
             mapDataPath: mapDataPath,
             keystorePath: keystorePath,
@@ -217,18 +215,18 @@ struct TomTomOfflineMapView {
             fatalError("Error!")
         }
 
-        /// It is important to note that the relevant region updates have been enabled above through the use of the "NDSStoreUpdateConfig" configuration.
-        /// Enabling updates and setting the position of the "NDSStore" object will automatically update the relevant regions of the position.
-        /// As a result, in the case below, after a certain amount of time (depending on internet connection) the Amsterdam region will be downloaded and displayed on the map.
-        /// Once downloaded, the following lines can be removed and the app can be rerun. The previously downloaded regions will still be available on the device.
-        /// Additionally, downloading for any other coordinate can also be attempted.
+        // It is important to note that the relevant region updates have been enabled above through the use of the "NDSStoreUpdateConfig" configuration.
+        // Enabling updates and setting the position of the "NDSStore" object will automatically update the relevant regions of the position.
+        // As a result, in the case below, after a certain amount of time (depending on internet connection) the Amsterdam region will be downloaded and displayed on the map.
+        // Once downloaded, the following lines can be removed and the app can be rerun. The previously downloaded regions will still be available on the device.
+        // Additionally, downloading for any other coordinate can also be attempted.
         ndsStore.updatesEnabled = true
         ndsStore.setPosition(CLLocationCoordinate2D(
             latitude: Region.amsterdam.lat,
             longitude: Region.amsterdam.lon
         ))
 
-        /// Create an offline data provider
+        // Create an offline data provider
         var dataProviders: [MapDisplayDataProvider] = []
         if let offlineDataProvider = OfflineTileDataProviderFactory.createOfflineTileDataProvider(store: ndsStore) {
             dataProviders.append(offlineDataProvider)
@@ -237,7 +235,7 @@ struct TomTomOfflineMapView {
             fatalError("Error!")
         }
 
-        /// Create the map options by creted data provider and other configurations
+        // Create the map options by creted data provider and other configurations
         let mapOptions = MapOptions(
             apiKey: Keys.apiKey,
             cachePolicy: .noCaching,
@@ -245,15 +243,14 @@ struct TomTomOfflineMapView {
             dataProviders: dataProviders
         )
 
-        /// Create the "MapView" object with the map options
+        // Create the "MapView" object with the map options
         mapView = TomTomSDKMapDisplay.MapView(mapOptions: mapOptions)
     }
 }
 
 // MARK: UIViewRepresentable
 
-/// Extend the TomTomOfflineMapView to conform to the UIViewRepresentable protocol.
-/// This allows you to use the MapView in SwiftUI
+/// Conforming to the UIViewRepresentable protocol allows you to use the MapView in SwiftUI
 extension TomTomOfflineMapView: UIViewRepresentable {
     typealias UIViewType = TomTomSDKMapDisplay.MapView
 
@@ -275,7 +272,7 @@ extension TomTomOfflineMapView: UIViewRepresentable {
 
 // MARK: - OfflineMapCoordinator
 
-/// Create the OfflineMapCoordinator, which facilitates communication from the UIView to the SwiftUI environments.
+/// Facilitates communication from the UIView to the SwiftUI environments for the offline map.
 final class OfflineMapCoordinator: NSObject {
     // MARK: Lifecycle
 
@@ -309,12 +306,11 @@ final class OfflineMapCoordinator: NSObject {
 
 // MARK: TomTomSDKMapDisplay.MapViewDelegate
 
-/// Extend the OfflineMapCoordinator to conform to the MapViewDelegate protocol by implementing the onMapReady callback.
-/// The onMapReady callback notifies OfflineMapCoordinator that the Map is ready to display.
-/// The Map instance can be configured in this callback function
+/// The `mapView(_:, onMapReady:)` callback notifies `OfflineMapCoordinator` that the `TomTomMap` is ready to display.
+/// The `TomTomMap` instance can be configured in this callback function.
 ///
-/// You can experiment with different ways of showing the current location on the map by changing the locationIndicatorType in the onMapReady callback.
-/// Activate the location provider to see the current GPS position on the map
+/// You can experiment with different ways of showing the current location on the map by changing the `.locationIndicatorType` in the `mapView(_:, onMapReady:)` callback.
+/// Activate the location provider to see the current GPS position on the map.
 extension OfflineMapCoordinator: TomTomSDKMapDisplay.MapViewDelegate {
     func mapView(_: MapView, onMapReady map: TomTomMap) {
         // Store the map to be used later
@@ -339,13 +335,13 @@ extension OfflineMapCoordinator: TomTomSDKMapDisplay.MapViewDelegate {
     }
 
     func mapView(_: MapView, onStyleLoad _: Result<StyleContainer, Error>) {
-        print("Style loaded")
+        print("The map style is loaded")
     }
 }
 
 // MARK: Camera Options
 
-/// Create the camera utility functions.
+/// Defines camera utility functions.
 /// The virtual map is observed through a camera that can be zoomed, panned, rotated, and tilted to provide a compelling 3D navigation experience.
 extension OfflineMapCoordinator {
     private var defaultCameraUpdate: CameraUpdate {
@@ -387,9 +383,7 @@ extension OfflineMapCoordinator {
 
 // MARK: TomTomSDKLocationProvider.LocationProviderObservable
 
-/// Extend OfflineMapCoordinator to conform to LocationProviderObservable by adding the following functions.
-///
-/// This extension enables the OfflineMapCoordinator to observe GPS updates and authorization changes.
+/// Conforming to LocationProviderObservable enables the `OfflineMapCoordinator` to observe GPS updates and authorization changes.
 /// This means that when the application starts, the camera position and zoom level are updated in the onLocationUpdated callback function.
 /// The user then sees the current location.
 extension OfflineMapCoordinator: TomTomSDKLocationProvider.LocationProviderObservable {
@@ -409,8 +403,6 @@ extension OfflineMapCoordinator: TomTomSDKLocationProvider.LocationProviderObser
 
 // MARK: TomTomSDKMapDisplay.MapDelegate
 
-/// Extend OfflineMapCoordinator to conform to MapDelegate.
-///
 /// Update the OfflineMapCoordinator to plan a route and add it to the map after a long press.
 extension OfflineMapCoordinator: TomTomSDKMapDisplay.MapDelegate {
     func map(_: TomTomMap, onInteraction interaction: MapInteraction) {
@@ -434,11 +426,11 @@ extension OfflineMapCoordinator: TomTomSDKMapDisplay.MapDelegate {
     }
 }
 
-/// Add an extension to OfflineNavigationController with a navigateToCoordinate function that plans a route, starts location simulation and starts the navigation process.
+/// Utilities to plan a route, start location simulation, and start the navigation process.
 ///
-/// The call to the async planRoute function is wrapped in a Task so that it can be called from the navigateToCoordinate function, even though that function is not async.
-/// Do not use Navigation directly to start navigation along the route when using NavigationView.
-/// Instead, use its NavigationView.ViewModel for that. It will also handle both the visual and voice instructions.
+/// The call to the async `planRoute()` function is wrapped in a `Task` so that it can be called from the `navigateToCoordinate` function, even though that function is not async.
+/// - Important: Do not use `Navigation` directly to start navigation along the route when using `NavigationView`.
+/// Instead, use its `NavigationView.ViewModel` for that. It will also handle both the visual and voice instructions.
 extension OfflineNavigationController {
     func navigateToCoordinate(_ destination: CLLocationCoordinate2D) {
         Task { @MainActor in
@@ -480,7 +472,7 @@ extension OfflineNavigationController {
 
 // MARK: - Route planning
 
-/// Create a OfflineNavigationController extension for the route planning functions
+/// Utilities for route planning.
 extension OfflineNavigationController {
     enum RoutePlanError: Error {
         case unknownStartingLocation
@@ -574,12 +566,12 @@ extension OfflineNavigationController {
     }
 }
 
-/// Update the OfflineMapCoordinator extension with the observe function to display changes to the current route and its progress on the map.
+/// Utility to observe `OfflineNavigationController`. It helps to display changes to the current route and its progress on the map.
 ///
 /// After adding a route on the map, you will receive a reference to that route.
-/// The addRouteToMap function keeps it in the routeOnMap so that it can show the visual progress along the route, without being added again.
+/// The `addRouteToMap` function keeps it in the `routeOnMap` so that it can show the visual progress along the route, without being added again.
 /// The default location provider has an approximate position but no route information.
-/// For smooth movement of the chevron along the route, ensure the map uses a mapMatchedLocationProvider from Navigation instead of the SimulatedLocationProvider.
+/// For smooth movement of the chevron along the route, ensure the map uses a `mapMatchedLocationProvider` from `Navigation` instead of the `SimulatedLocationProvider`.
 extension OfflineMapCoordinator {
     func observe(offlineNavigationController: OfflineNavigationController) {
         offlineNavigationController.displayedRouteSubject.sink { [weak self] route in
@@ -604,7 +596,7 @@ extension OfflineMapCoordinator {
     }
 }
 
-/// Create a OfflineMapCoordinator extension to add the planned route to the map
+/// Utilities to add the planned route to the map.
 extension OfflineMapCoordinator {
     private func createMapRouteOptions(coordinates: [CLLocationCoordinate2D]) -> TomTomSDKMapDisplay.RouteOptions {
         var routeOptions = RouteOptions(coordinates: coordinates)
@@ -628,7 +620,7 @@ extension OfflineMapCoordinator {
 
 // MARK: - NavigationView Actions
 
-/// Update the OfflineNavigationController extension with the onNavigationViewAction function to handle actions like arrival, mute, and etc
+/// Utilities to handle actions like arrival, mute, etc
 extension OfflineNavigationController {
     func onNavigationViewAction(_ action: TomTomSDKNavigationUI.NavigationView.Action) {
         switch action {

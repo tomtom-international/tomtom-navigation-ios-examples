@@ -105,18 +105,16 @@ final class NavigationController: ObservableObject {
 
 // MARK: NavigationProgressObserver
 
-/// Extend the NavigationController to conform to the NavigationProgressObserver protocol.
-/// This allows to track route progress.
+/// Allows observing progress changes.
 extension NavigationController: NavigationProgressObserver {
     func didUpdateProgress(progress: RouteProgress) {
         progressOnRouteSubject.send(progress.distanceAlongRoute)
     }
 }
 
-// MARK: NavigationProgressObserver
+// MARK: NavigationRouteObserver
 
-/// Extend the NavigationController to conform to the NavigationProgressObserver protocol.
-/// This allows to route progress.
+/// Allows observing route changes.
 extension NavigationController: NavigationRouteObserver {
     func didDeviateFromRoute(currentRoute _: TomTomSDKRoute.Route, location _: TomTomSDKLocationProvider.GeoLocation) {}
 

@@ -23,4 +23,8 @@ Upon receiving the offline maps data and the map license from TomTom, copy the o
 
 ![](../../../.github/offline-map-files.gif)
 
-*Note: "Offline Map Example" uses offline maps but uses an online route planner and navigation. Offline route planners and navigation will be provided soon.*
+*Note: "Offline Map Example" uses offline maps but uses an online route planner and navigation. Offline route planners and navigation will be provided.*
+
+## Hybrid Map Example
+
+The hybrid map example will be provided.
