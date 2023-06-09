@@ -26,7 +26,7 @@ struct MainMenu: View {
                             // MARK: Basic Driving App
 
                             NavigationLink {
-                                BasicNavigationMenu()
+                                NavigationMenu()
                             } label: {
                                 MainMenuRow(
                                     title: Resource.Strings.basicDrivingApp,

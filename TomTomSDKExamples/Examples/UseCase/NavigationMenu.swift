@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct BasicNavigationMenu: View {
+struct NavigationMenu: View {
     var body: some View {
         ZStack(alignment: .topLeading, content: {
             VStack(alignment: .center, spacing: 16) {
@@ -135,15 +135,15 @@ struct BasicNavigationMenu: View {
 
 // MARK: - Preview
 
-struct BasicNavigationMenu_Previews: PreviewProvider {
+struct NavigationMenu_Previews: PreviewProvider {
     static var previews: some View {
-        BasicNavigationMenu()
+        NavigationMenu()
             .previewDevice("iPhone 14")
 
-        BasicNavigationMenu()
+        NavigationMenu()
             .previewDevice("iPhone SE (3rd generation)")
 
-        BasicNavigationMenu()
+        NavigationMenu()
             .previewDevice("iPad Pro")
     }
 }
