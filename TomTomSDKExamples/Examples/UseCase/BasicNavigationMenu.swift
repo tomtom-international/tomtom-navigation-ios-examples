@@ -72,8 +72,7 @@ struct BasicNavigationMenu: View {
                 Spacer()
 
                 Button {
-                    // Open the navigation app
-                    showSheet = true
+                    showNavigationExamplesSheet = true
                 } label: {
                     Text(Resource.Strings.next)
                         .font(.body)
@@ -88,7 +87,7 @@ struct BasicNavigationMenu: View {
                         )
                 }
                 .disabled(selectedMapMode == nil)
-                .fullScreenCover(isPresented: $showSheet) {
+                .fullScreenCover(isPresented: $showNavigationExamplesSheet) {
                     navigationContent
                 }
             }
@@ -117,7 +116,7 @@ struct BasicNavigationMenu: View {
     var selectedMapMode: MapMode?
 
     @State
-    var showSheet: Bool = false
+    var showNavigationExamplesSheet: Bool = false
 
     @ViewBuilder
     var navigationContent: some View {
