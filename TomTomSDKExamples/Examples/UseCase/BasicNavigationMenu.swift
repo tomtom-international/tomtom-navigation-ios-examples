@@ -122,7 +122,7 @@ struct BasicNavigationMenu: View {
     var navigationContent: some View {
         switch selectedMapMode {
         case .online:
-            BasicNavigationView()
+            OnlineNavigationView()
         case .hybrid:
             HybridNavigationView()
         case .offline:

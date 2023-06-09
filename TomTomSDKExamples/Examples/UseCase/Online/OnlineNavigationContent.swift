@@ -33,7 +33,7 @@ import TomTomSDKRouteReplannerDefault
 /// The application will display upcoming manoeuvres, remaining distance, estimated time of arrival (ETA), current speed, and speed limit information.
 ///
 /// For more details on this example, check out the tutorial: https://developer.tomtom.com/ios/navigation/documentation/use-cases/build-a-navigation-app
-struct BasicNavigationContent: View {
+struct OnlineNavigationContent: View {
     var body: some View {
         MainView()
     }

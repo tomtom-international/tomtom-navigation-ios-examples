@@ -11,14 +11,14 @@ import SwiftUI
 
 // MARK: - Basic Driving App
 
-struct BasicNavigationView: View {
+struct OnlineNavigationView: View {
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         ZStack(alignment: .topLeading, content: {
             // MARK: Navigation SDK
 
-            BasicNavigationContent()
+            OnlineNavigationContent()
 
             // MARK: Back Button
 
@@ -31,12 +31,12 @@ struct BasicNavigationView: View {
 
 // MARK: - Preview
 
-struct BasicNavigationView_Previews: PreviewProvider {
+struct OnlineNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        BasicNavigationView()
+        OnlineNavigationView()
             .previewDevice("iPhone 14")
 
-        BasicNavigationView()
+        OnlineNavigationView()
             .previewDevice("iPad Pro")
     }
 }
