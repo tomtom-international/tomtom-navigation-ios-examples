@@ -45,6 +45,6 @@ jobs:
       - name: Build iOS app
         run: >
           xcodebuild
-          -workspace 'TomTom SDK Examples.xcworkspace'
-          -scheme 'TomTom SDK Examples'
+          -workspace 'TomTomSDKExamples.xcworkspace'
+          -scheme 'TomTomSDKExamples'
           -destination 'platform=iOS Simulator,name=iPhone 14'
