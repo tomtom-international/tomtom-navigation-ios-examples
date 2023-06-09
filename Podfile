@@ -12,21 +12,21 @@ plugin 'cocoapods-art', :sources => [
 ]
 
 target 'TomTomSDKExamples' do
-  pod 'TomTomSDKCommon', '0.13.0'
-  pod 'TomTomSDKCommonUI', '0.13.0'
-  pod 'TomTomSDKDefaultTextToSpeech', '0.13.0'
-  pod 'TomTomSDKLocationProvider', '0.13.0'
-  pod 'TomTomSDKMapDisplay', '0.13.0'
-  pod 'TomTomSDKNavigation', '0.13.0'
-  pod 'TomTomSDKNavigationEngines', '0.13.0'
-  pod 'TomTomSDKNavigationUI', '0.13.0'
-  pod 'TomTomSDKRoute', '0.13.0'
-  pod 'TomTomSDKRoutePlanner', '0.13.0'
-  pod 'TomTomSDKRoutePlannerOnline', '0.13.0'
-  pod 'TomTomSDKRouteReplannerDefault', '0.13.0'
+  pod 'TomTomSDKCommon', '0.18.1'
+  pod 'TomTomSDKCommonUI', '0.18.1'
+  pod 'TomTomSDKDefaultTextToSpeech', '0.18.1'
+  pod 'TomTomSDKLocationProvider', '0.18.1'
+  pod 'TomTomSDKMapDisplay', '0.18.1'
+  pod 'TomTomSDKNavigation', '0.18.1'
+  pod 'TomTomSDKNavigationEngines', '0.18.1'
+  pod 'TomTomSDKNavigationUI', '0.18.1'
+  pod 'TomTomSDKRoute', '0.18.1'
+  pod 'TomTomSDKRoutePlanner', '0.18.1'
+  pod 'TomTomSDKRoutePlannerOnline', '0.18.1'
+  pod 'TomTomSDKRouteReplannerDefault', '0.18.1'
   
   # Offline
-  pod 'TomTomSDKDataManagementOffline', '0.13.0'
-  pod 'TomTomSDKMapDisplayDataProviderOffline', '0.13.0'
-  pod 'TomTomSDKStyleProviderOffline', '0.13.0'
+  pod 'TomTomSDKDataManagementOffline', '0.18.1'
+  pod 'TomTomSDKMapDisplayDataProviderOffline', '0.18.1'
+  pod 'TomTomSDKStyleProviderOffline', '0.18.1'
 end
