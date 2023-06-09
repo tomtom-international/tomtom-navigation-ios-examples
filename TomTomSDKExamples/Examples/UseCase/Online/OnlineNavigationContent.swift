@@ -152,7 +152,7 @@ struct MainView: View {
     // MARK: Private
 
     @State
-    private var contentInsets: EdgeInsets = .init()
+    private var contentInsets = EdgeInsets()
 
     @StateObject
     var navigationController = NavigationController()

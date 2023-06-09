@@ -154,7 +154,7 @@ struct OfflineMainView: View {
     // MARK: Private
 
     @State
-    private var contentInsets: EdgeInsets = .init()
+    private var contentInsets = EdgeInsets()
 
     @StateObject
     var offlineNavigationController = OfflineNavigationController()
