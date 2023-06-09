@@ -13,7 +13,7 @@ import CoreLocation
 import Foundation
 import SwiftUI
 
-// GO SDK modules
+// TomTomSDK modules
 import TomTomSDKCommon
 import TomTomSDKCommonUI
 import TomTomSDKDefaultTextToSpeech
@@ -30,7 +30,7 @@ import TomTomSDKRouteReplannerDefault
 /// This example shows how to build a simple navigation application using the TomTom Navigation SDK for iOS.
 /// The application displays a map and shows the user’s location. After the user selects a destination with a long press, the app plans a route and draws it on the map.
 /// Navigation is started automatically using the route simulation.
-/// The application will display upcoming manoeuvres, remaining distance, estimated time of arrival (ETA), current speed, and speed limit information.
+/// The application will display upcoming maneuvers, remaining distance, estimated time of arrival (ETA), current speed, and speed limit information.
 ///
 /// For more details on this example, check out the tutorial: https://developer.tomtom.com/ios/navigation/documentation/use-cases/build-a-navigation-app
 struct OnlineNavigationContent: View {

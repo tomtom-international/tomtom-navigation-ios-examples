@@ -13,10 +13,9 @@ import CoreLocation
 import Foundation
 import SwiftUI
 
-// GO SDK modules
+// TomTomSDK modules
 import TomTomSDKCommon
 import TomTomSDKCommonUI
-// Offline
 import TomTomSDKDataManagementOffline
 import TomTomSDKDefaultTextToSpeech
 import TomTomSDKLocationProvider
@@ -35,7 +34,7 @@ import TomTomSDKStyleProviderOffline
 /// The application downloads a region, displays a map and shows the user’s location.
 /// After the user selects a destination with a long press, the app plans a route and draws it on the map.
 /// Navigation is started automatically using the route simulation.
-/// The application will display upcoming manoeuvres, remaining distance, estimated time of arrival (ETA), current speed, and speed limit information.
+/// The application will display upcoming maneuvers, remaining distance, estimated time of arrival (ETA), current speed, and speed limit information.
 struct OfflineNavigationContent: View {
     var body: some View {
         OfflineMainView()
@@ -176,7 +175,7 @@ struct TomTomOfflineMapView {
         self.contentInsets = contentInsets
         self.offlineNavigationController = offlineNavigationController
 
-        /// These paths are required for the offline map configuration
+        // These paths are required for the offline map configuration
         guard let updateStoragePath = OfflineMapPath.updateStoragePath,
               let persistantStoragePath = OfflineMapPath.persistantStoragePath,
               let updateServerURL = URL(string: OfflineMapConfig.ndsUpdateServer),
@@ -211,7 +210,7 @@ struct TomTomOfflineMapView {
             ndsStoreUpdateConfig: updateConfig
         ) else {
             /* YOUR CODE GOES HERE */
-            /// Check your map license and api key
+            // Check your map license and API key
             fatalError("Error!")
         }
 
