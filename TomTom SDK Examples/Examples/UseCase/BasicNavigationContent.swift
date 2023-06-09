@@ -48,7 +48,7 @@ final class NavigationController: ObservableObject {
     convenience init() {
         let textToSpeech = SystemTextToSpeechEngine()
         let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.apiKey)
-        let routeReplanner = DefaultRouteReplanner(routePlanner: routePlanner, replanningPolicy: .findBetter)
+        let routeReplanner = RouteReplannerFactory.create(routePlanner: routePlanner, replanningPolicy: .findBetter)
         let locationProvider = DefaultCLLocationProvider()
         let simulatedLocationProvider = SimulatedLocationProvider(delay: .tt.seconds(1))
         let navigationConfiguration = NavigationConfiguration(
