@@ -12,28 +12,26 @@ import SwiftUI
 struct NavigationMenu: View {
     var body: some View {
         ZStack(alignment: .topLeading, content: {
-            VStack(alignment: .center, spacing: 16) {
+            VStack(alignment: .center, spacing: Constants.verticalSpacing) {
                 Text(Resource.Strings.options)
                     .foregroundColor(Resource.Colors.titleLight)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.vertical, 20)
 
-                HStack(alignment: .center, spacing: 16) {
-                    Rectangle().frame(height: 1)
-                        .foregroundColor(Resource.Colors.inputFieldLight)
+                HStack(alignment: .center, spacing: Constants.verticalSpacing) {
+                    horizontalLine
 
                     Text(Resource.Strings.mapMode)
                         .fontWeight(.semibold)
                         .foregroundColor(Resource.Colors.bodyLight)
 
-                    Rectangle().frame(height: 1)
-                        .foregroundColor(Resource.Colors.inputFieldLight)
+                    horizontalLine
                 }
 
                 HStack {
                     // Online
-                    VStack(alignment: .center, spacing: 16) {
+                    VStack(alignment: .center, spacing: Constants.verticalSpacing) {
                         Image(Resource.Images.online)
                             .modifier(MenuModifier(isSelected: selectedMapMode == .online))
 
@@ -45,7 +43,7 @@ struct NavigationMenu: View {
                     }
 
                     // Hybrid
-                    VStack(alignment: .center, spacing: 16) {
+                    VStack(alignment: .center, spacing: Constants.verticalSpacing) {
                         Image(Resource.Images.hybrid)
                             .modifier(MenuModifier(isSelected: selectedMapMode == .hybrid))
 
@@ -57,7 +55,7 @@ struct NavigationMenu: View {
                     }
 
                     // Offline
-                    VStack(alignment: .center, spacing: 16) {
+                    VStack(alignment: .center, spacing: Constants.verticalSpacing) {
                         Image(Resource.Images.offline)
                             .modifier(MenuModifier(isSelected: selectedMapMode == .offline))
 
@@ -102,6 +100,11 @@ struct NavigationMenu: View {
     }
 
     // MARK: - Internal
+    
+    enum Constants {
+        static let verticalSpacing = 16.0
+        static let lineHeight = 1.0
+    }
 
     enum MapMode {
         case online
@@ -130,6 +133,12 @@ struct NavigationMenu: View {
         case .none:
             EmptyView()
         }
+    }
+    
+    @ViewBuilder
+    var horizontalLine: some View {
+        Rectangle().frame(height: Constants.lineHeight)
+            .foregroundColor(Resource.Colors.inputFieldLight)
     }
 }
 
