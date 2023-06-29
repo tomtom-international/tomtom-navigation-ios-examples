@@ -220,7 +220,7 @@ struct TomTomOfflineMapView {
         // Once downloaded, the following lines can be removed and the app can be rerun. The previously downloaded regions will still be available on the device.
         // Additionally, downloading for any other coordinate can also be attempted.
         ndsStore.updatesEnabled = true
-        ndsStore.setPosition(CLLocationCoordinate2D(
+        ndsStore.updatePosition(CLLocationCoordinate2D(
             latitude: Region.amsterdam.lat,
             longitude: Region.amsterdam.lon
         ))
