@@ -22,12 +22,8 @@ enum Resource {
         static let navigationDemoTitle = NSLocalizedString("navigation_demo_title", comment: "")
         static let routingDemoTitle = NSLocalizedString("routing_demo_title", comment: "")
         static let searchDemoTitle = NSLocalizedString("search_demo_title", comment: "")
-        static let hybridNavigationDemoTitle = NSLocalizedString("hybrid_navigation_demo_title", comment: "")
         static let options = NSLocalizedString("options", comment: "")
         static let mapMode = NSLocalizedString("map_mode", comment: "")
-        static let online = NSLocalizedString("online", comment: "")
-        static let offline = NSLocalizedString("offline", comment: "")
-        static let hybrid = NSLocalizedString("hybrid", comment: "")
         static let next = NSLocalizedString("next", comment: "")
         static let downloading = NSLocalizedString("downloading", comment: "")
         static let map = NSLocalizedString("map", comment: "")
@@ -52,8 +48,5 @@ enum Resource {
         static let phoneApp = "ic_phone_app"
         static let route = "ic_route"
         static let search = "ic_search"
-        static let online = "ic_online"
-        static let hybrid = "ic_hybrid"
-        static let offline = "ic_offline"
     }
 }
