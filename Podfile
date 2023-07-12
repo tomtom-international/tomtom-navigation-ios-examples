@@ -24,9 +24,4 @@ target 'TomTomSDKExamples' do
   pod 'TomTomSDKRoutePlanner', '0.21.1'
   pod 'TomTomSDKRoutePlannerOnline', '0.21.1'
   pod 'TomTomSDKRouteReplannerDefault', '0.21.1'
-  
-  # Offline
-  pod 'TomTomSDKDataManagementOffline', '0.21.1'
-  pod 'TomTomSDKMapDisplayDataProviderOffline', '0.21.1'
-  pod 'TomTomSDKStyleProviderOffline', '0.21.1'
 end

@@ -11,5 +11,4 @@
 /// Use the API key provided by TomTom to start using the SDK.
 enum Keys {
     static let apiKey = "YOUR_API_KEY"
-    static let mapLicense = "YOUR_MAP_LICENSE"
 }
