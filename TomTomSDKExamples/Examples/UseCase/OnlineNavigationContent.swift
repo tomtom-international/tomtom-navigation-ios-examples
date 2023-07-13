@@ -120,8 +120,14 @@ extension NavigationController: NavigationRouteObserver {
 
     func didProposeRoutePlan(routePlan _: TomTomSDKNavigationEngines.RoutePlan, reason _: TomTomSDKNavigationEngines.RouteReplanningReason) {}
 
-    func didReplanRoute(replannedRoute: TomTomSDKRoute.Route, reason _: TomTomSDKNavigationEngines.RouteReplanningReason) {
-        displayedRouteSubject.send(replannedRoute)
+    func didReplanRoute(replannedRoute: TomTomSDKRoute.Route, reason: TomTomSDKNavigationEngines.RouteReplanningReason) {
+        if reason != RouteReplanningReason.refresh &&
+            reason != RouteReplanningReason.increment &&
+            reason != RouteReplanningReason.languageChange
+        {
+            displayedRouteSubject.send(nil)
+            displayedRouteSubject.send(replannedRoute)
+        }
     }
 
     func didChangeRoutes(navigatedRoutes _: TomTomSDKNavigation.NavigatedRoutes) {}
@@ -504,12 +510,12 @@ extension MapCoordinator {
     func observe(navigationController: NavigationController) {
         navigationController.displayedRouteSubject.sink { [weak self] route in
             guard let self = self else { return }
-            self.map?.removeRoutes()
             if let route = route {
                 self.addRouteToMap(route: route)
                 self.setCamera(trackingMode: .followRoute)
             } else {
                 self.routeOnMap = nil
+                self.map?.removeRoutes()
                 self.setCamera(trackingMode: .follow)
             }
         }.store(in: &cancellableBag)
