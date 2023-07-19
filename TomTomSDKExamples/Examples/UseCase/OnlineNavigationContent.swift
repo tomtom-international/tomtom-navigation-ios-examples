@@ -121,10 +121,8 @@ extension NavigationController: NavigationRouteObserver {
     func didProposeRoutePlan(routePlan _: TomTomSDKNavigationEngines.RoutePlan, reason _: TomTomSDKNavigationEngines.RouteReplanningReason) {}
 
     func didReplanRoute(replannedRoute: TomTomSDKRoute.Route, reason: TomTomSDKNavigationEngines.RouteReplanningReason) {
-        if reason != RouteReplanningReason.refresh &&
-            reason != RouteReplanningReason.increment &&
-            reason != RouteReplanningReason.languageChange
-        {
+        let nonTriggeringReasons: [RouteReplanningReason] = [.refresh, .increment, .languageChange]
+        if nonTriggeringReasons.contains(reason) == false {
             displayedRouteSubject.send(nil)
             displayedRouteSubject.send(replannedRoute)
         }
