@@ -12,16 +12,16 @@ plugin 'cocoapods-art', :sources => [
 ]
 
 target 'TomTomSDKExamples' do
-  pod 'TomTomSDKCommon', '0.21.1'
-  pod 'TomTomSDKCommonUI', '0.21.1'
-  pod 'TomTomSDKDefaultTextToSpeech', '0.21.1'
-  pod 'TomTomSDKLocationProvider', '0.21.1'
-  pod 'TomTomSDKMapDisplay', '0.21.1'
-  pod 'TomTomSDKNavigation', '0.21.1'
-  pod 'TomTomSDKNavigationEngines', '0.21.1'
-  pod 'TomTomSDKNavigationUI', '0.21.1'
-  pod 'TomTomSDKRoute', '0.21.1'
-  pod 'TomTomSDKRoutePlanner', '0.21.1'
-  pod 'TomTomSDKRoutePlannerOnline', '0.21.1'
-  pod 'TomTomSDKRouteReplannerDefault', '0.21.1'
+  pod 'TomTomSDKCommon', '0.22.1'
+  pod 'TomTomSDKCommonUI', '0.22.1'
+  pod 'TomTomSDKDefaultTextToSpeech', '0.22.1'
+  pod 'TomTomSDKLocationProvider', '0.22.1'
+  pod 'TomTomSDKMapDisplay', '0.22.1'
+  pod 'TomTomSDKNavigation', '0.22.1'
+  pod 'TomTomSDKNavigationEngines', '0.22.1'
+  pod 'TomTomSDKNavigationUI', '0.22.1'
+  pod 'TomTomSDKRoute', '0.22.1'
+  pod 'TomTomSDKRoutePlanner', '0.22.1'
+  pod 'TomTomSDKRoutePlannerOnline', '0.22.1'
+  pod 'TomTomSDKRouteReplannerDefault', '0.22.1'
 end
