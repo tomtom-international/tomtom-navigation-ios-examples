@@ -19,7 +19,6 @@ target 'TomTomSDKExamples' do
   pod 'TomTomSDKMapDisplay', '0.22.1'
   pod 'TomTomSDKNavigation', '0.22.1'
   pod 'TomTomSDKNavigationEngines', '0.22.1'
-  pod 'TomTomSDKNavigationOffline', '0.22.1'
   pod 'TomTomSDKNavigationOnline', '0.22.1'
   pod 'TomTomSDKNavigationUI', '0.22.1'
   pod 'TomTomSDKRoute', '0.22.1'

@@ -21,7 +21,6 @@ import TomTomSDKLocationProvider
 import TomTomSDKMapDisplay
 import TomTomSDKNavigation
 import TomTomSDKNavigationEngines
-import TomTomSDKNavigationOffline
 import TomTomSDKNavigationOnline
 import TomTomSDKNavigationUI
 import TomTomSDKRoute
@@ -54,13 +53,14 @@ final class NavigationController: ObservableObject {
         let locationProvider = DefaultCLLocationProvider()
         let simulatedLocationProvider = SimulatedLocationProvider(delay: .tt.seconds(1))
         let navigationConfiguration = OnlineTomTomNavigationFactory.Configuration(
-                    locationProvider: simulatedLocationProvider,
-                    routeReplanner: routeReplanner,
-                    apiKey: Keys.apiKey,
-                    betterProposalAcceptanceMode: .automatic
-                )
-         
-        let navigation = try! OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) as! Navigation
+            locationProvider: simulatedLocationProvider,
+            routeReplanner: routeReplanner,
+            apiKey: Keys.apiKey,
+            betterProposalAcceptanceMode: .automatic
+        )        
+        guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) as? Navigation else {
+            fatalError("The navigation object could not be created!")
+        }
         let navigationModel = TomTomSDKNavigationUI.NavigationView.ViewModel(navigation, tts: textToSpeech)
 
         self.init(
