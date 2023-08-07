@@ -446,7 +446,8 @@ extension NavigationController {
             language: locale,
             roadShieldReferences: .all,
             announcementPoints: .all,
-            phoneticsType: .IPA
+            phoneticsType: .IPA,
+            progressPoints: .all
         )
 
         let options = try RoutePlanningOptions(
