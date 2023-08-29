@@ -11,7 +11,7 @@
   "separateMajorMinor": false,
   "packageRules": [
     {
-      "matchManagers": ["custom.regex"],
+      "matchManagers": ["regex"],
       "matchPaths": ["Podfile"],
       "groupName": "iOS cocoapods deps",
       "postUpgradeTasks" : {
