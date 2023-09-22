@@ -58,7 +58,7 @@ final class NavigationController: ObservableObject {
             apiKey: Keys.apiKey,
             betterProposalAcceptanceMode: .automatic
         )        
-        guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) as? Navigation else {
+        guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) else {
             fatalError("The navigation object could not be created!")
         }
         let navigationModel = TomTomSDKNavigationUI.NavigationView.ViewModel(navigation, tts: textToSpeech)
@@ -76,7 +76,7 @@ final class NavigationController: ObservableObject {
         locationProvider: LocationProvider,
         simulatedLocationProvider: SimulatedLocationProvider,
         routePlanner: TomTomSDKRoutePlannerOnline.OnlineRoutePlanner,
-        navigation: TomTomSDKNavigation.Navigation,
+        navigation: TomTomNavigation,
         navigationModel: TomTomSDKNavigationUI.NavigationView.ViewModel
     ) {
         self.locationProvider = locationProvider
@@ -95,7 +95,7 @@ final class NavigationController: ObservableObject {
     let locationProvider: LocationProvider
     let simulatedLocationProvider: SimulatedLocationProvider
     let routePlanner: TomTomSDKRoutePlannerOnline.OnlineRoutePlanner
-    let navigation: TomTomSDKNavigation.Navigation
+    let navigation: TomTomNavigation
     let navigationViewModel: TomTomSDKNavigationUI.NavigationView.ViewModel
 
     let displayedRouteSubject = PassthroughSubject<TomTomSDKRoute.Route?, Never>()
