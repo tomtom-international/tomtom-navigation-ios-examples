@@ -12,7 +12,7 @@ Hello and welcome to this repository with examples showcasing the [TomTom Naviga
 
 Once you have gained access, set up the development environment by following:
 
-1. Install [Xcode](https://apps.apple.com/app/id497799835) 14 or higher if you don't already have it.
+1. Install Xcode if you don't already have it. Supported versions of Xcode are 13 to 14, inclusive.
 
 2. We recommend using `rbenv` to handle `ruby` selection/installation.
    1. Install `rbenv`   
