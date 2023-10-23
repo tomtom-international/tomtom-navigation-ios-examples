@@ -466,7 +466,7 @@ extension NavigationController {
     {
         let routePlanningOptions = try createRoutePlanningOptions(from: origin, to: destination)
         let route = try await planRoute(withRoutePlanner: routePlanner, routePlanningOptions: routePlanningOptions)
-        return TomTomSDKNavigationEngines.RoutePlan(route: route, routingOptions: routePlanningOptions)
+        return TomTomSDKNavigationEngines.RoutePlan(route: route, routePlanningOptions: routePlanningOptions)
     }
 
     private func planRoute(
