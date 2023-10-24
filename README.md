@@ -2,6 +2,8 @@
 
 Hello and welcome to this repository with examples showcasing the [TomTom Navigation SDK for iOS].
 
+> **Note** Navigation SDK for iOS is only available upon request. In order to get access, [contact us].
+
 <div align="center">
   <img align="center" src=".github/nav-sdk-phone.png" width="400"/>
 </div>
@@ -108,10 +110,11 @@ Please follow the steps below to run Rosetta during the build process:
 
 ---
 
-[How to get a TomTom API Key]: https://developer.tomtom.com/how-to-get-tomtom-api-key
-[register]: https://developer.tomtom.com/user/register
-[rbenv documentation]: https://github.com/rbenv/rbenv#readme
-[tomtom-navigation-ios-examples]: https://github.com/tomtom-international/tomtom-navigation-ios-examples
 [Cocoapods]: (https://guides.cocoapods.org/using/getting-started.html)
+[contact us]: https://developer.tomtom.com/tomtom-sdk-for-ios/request-access
+[How to get a TomTom API Key]: https://developer.tomtom.com/how-to-get-tomtom-api-key
+[rbenv documentation]: https://github.com/rbenv/rbenv#readme
+[register]: https://developer.tomtom.com/user/register
+[tomtom-navigation-ios-examples]: https://github.com/tomtom-international/tomtom-navigation-ios-examples
 [TomTom Navigation SDK for iOS]: https://developer.tomtom.com/ios/navigation/documentation/overview/introduction
 [TomTom Developer Portal]: https://developer.tomtom.com/user/me/apps
