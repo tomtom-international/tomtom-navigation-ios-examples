@@ -88,14 +88,6 @@ If you have a **black screen** when launching the Basic driving app, please foll
 
 ---
 
-If you get a warning about the device's architecture, please follow the steps below.
-```
-
-Warning: Error creating LLDB target at path '*' using an empty LLDB target which can cause slow memory reads from remote devices: the specified architecture 'arm64-*-*' is not compatible with 'x86_64-apple-ios*' 
-```
-
----
-
 [Cocoapods]: (https://guides.cocoapods.org/using/getting-started.html)
 [contact us]: https://developer.tomtom.com/tomtom-sdk-for-ios/request-access
 [How to get a TomTom API Key]: https://developer.tomtom.com/how-to-get-tomtom-api-key
