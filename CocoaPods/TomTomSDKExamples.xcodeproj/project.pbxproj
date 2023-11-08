@@ -8,50 +8,51 @@
 
 /* Begin PBXBuildFile section */
 		351BCD631BB328C869AA5591 /* Pods_TomTomSDKExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182816C2A2C71B776131AB66 /* Pods_TomTomSDKExamples.framework */; };
-		9D07FD2C29FABFB6008577CD /* OnlineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D07FD2A29FABFB6008577CD /* OnlineNavigationView.swift */; };
-		9D07FD2D29FABFB6008577CD /* OnlineNavigationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D07FD2B29FABFB6008577CD /* OnlineNavigationContent.swift */; };
-		9D2F394D29A379FC0093F702 /* TomTomSDKExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F394C29A379FC0093F702 /* TomTomSDKExamplesApp.swift */; };
-		9D2F395129A379FE0093F702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F395029A379FE0093F702 /* Assets.xcassets */; };
-		9D2F395429A379FE0093F702 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F395329A379FE0093F702 /* Preview Assets.xcassets */; };
-		9D2F396B29A388170093F702 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F396A29A388170093F702 /* MainMenu.swift */; };
-		9D2F397429A389010093F702 /* MapExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F397329A389010093F702 /* MapExamplesView.swift */; };
-		9D2F397629A389110093F702 /* NavigationExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F397529A389110093F702 /* NavigationExamplesView.swift */; };
-		9D2F397A29A3892D0093F702 /* RoutingExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F397929A3892D0093F702 /* RoutingExamplesView.swift */; };
-		9D2F397C29A389390093F702 /* SearchExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F397B29A389390093F702 /* SearchExamplesView.swift */; };
-		9D2F398029A3896D0093F702 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F397F29A3896D0093F702 /* README.md */; };
-		9D2F398329A38B1A0093F702 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F398229A38B1A0093F702 /* Localizable.strings */; };
-		9D2F398729A3C58F0093F702 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F398629A3C58F0093F702 /* Colors.xcassets */; };
-		9D2F398A29A3C6830093F702 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F398929A3C6830093F702 /* Resource.swift */; };
-		9D6B2FD629A76E72008CB4A6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6B2FD529A76E72008CB4A6 /* Keys.swift */; };
-		9D6B2FD829A76EE7008CB4A6 /* TomTomServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6B2FD729A76EE7008CB4A6 /* TomTomServices.swift */; };
-		9DB8B46529E5731900E07909 /* GPX-Amsterdam.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9DB8B46429E5731900E07909 /* GPX-Amsterdam.gpx */; };
-		9DC6205F29A5179000598A05 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6205E29A5179000598A05 /* BackButton.swift */; };
+		9D0D46972AF9325B009E9B53 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D467C2AF9325B009E9B53 /* Colors.xcassets */; };
+		9D0D46982AF9325B009E9B53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D467D2AF9325B009E9B53 /* Assets.xcassets */; };
+		9D0D46992AF9325B009E9B53 /* GPX-Amsterdam.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D467E2AF9325B009E9B53 /* GPX-Amsterdam.gpx */; };
+		9D0D469A2AF9325B009E9B53 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D467F2AF9325B009E9B53 /* Localizable.strings */; };
+		9D0D469B2AF9325B009E9B53 /* TomTomServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46812AF9325B009E9B53 /* TomTomServices.swift */; };
+		9D0D469C2AF9325B009E9B53 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46822AF9325B009E9B53 /* Keys.swift */; };
+		9D0D469D2AF9325B009E9B53 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46842AF9325B009E9B53 /* BackButton.swift */; };
+		9D0D469E2AF9325B009E9B53 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46852AF9325B009E9B53 /* Resource.swift */; };
+		9D0D469F2AF9325B009E9B53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D46872AF9325B009E9B53 /* Preview Assets.xcassets */; };
+		9D0D46A02AF9325B009E9B53 /* MapExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D468A2AF9325B009E9B53 /* MapExamplesView.swift */; };
+		9D0D46A12AF9325B009E9B53 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D468B2AF9325B009E9B53 /* MainMenu.swift */; };
+		9D0D46A22AF9325B009E9B53 /* NavigationExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D468D2AF9325B009E9B53 /* NavigationExamplesView.swift */; };
+		9D0D46A32AF9325B009E9B53 /* SearchExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D468F2AF9325B009E9B53 /* SearchExamplesView.swift */; };
+		9D0D46A42AF9325B009E9B53 /* RoutingExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46912AF9325B009E9B53 /* RoutingExamplesView.swift */; };
+		9D0D46A52AF9325B009E9B53 /* OnlineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46932AF9325B009E9B53 /* OnlineNavigationView.swift */; };
+		9D0D46A62AF9325B009E9B53 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D46942AF9325B009E9B53 /* README.md */; };
+		9D0D46A72AF9325B009E9B53 /* OnlineNavigationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46952AF9325B009E9B53 /* OnlineNavigationContent.swift */; };
+		9D0D46A82AF9325B009E9B53 /* TomTomSDKExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46962AF9325B009E9B53 /* TomTomSDKExamplesApp.swift */; };
+		9D0D475D2AF9421B009E9B53 /* TomTomSDKExamplesInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D475C2AF9421B009E9B53 /* TomTomSDKExamplesInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182816C2A2C71B776131AB66 /* Pods_TomTomSDKExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomTomSDKExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		530B2700A4400EB33E5DE5BB /* Pods-TomTomSDKExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTomSDKExamples.release.xcconfig"; path = "Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples.release.xcconfig"; sourceTree = "<group>"; };
 		9AB4C03BCE89E080FDCF7166 /* Pods-TomTomSDKExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTomSDKExamples.debug.xcconfig"; path = "Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples.debug.xcconfig"; sourceTree = "<group>"; };
-		9D07FD2A29FABFB6008577CD /* OnlineNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineNavigationView.swift; sourceTree = "<group>"; };
-		9D07FD2B29FABFB6008577CD /* OnlineNavigationContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineNavigationContent.swift; sourceTree = "<group>"; };
-		9D2A34DE29CDA54F00BF8884 /* TomTomSDKExamplesInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TomTomSDKExamplesInfo.plist; sourceTree = SOURCE_ROOT; };
+		9D0D467C2AF9325B009E9B53 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9D0D467D2AF9325B009E9B53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D0D467E2AF9325B009E9B53 /* GPX-Amsterdam.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GPX-Amsterdam.gpx"; sourceTree = "<group>"; };
+		9D0D467F2AF9325B009E9B53 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9D0D46812AF9325B009E9B53 /* TomTomServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomTomServices.swift; sourceTree = "<group>"; };
+		9D0D46822AF9325B009E9B53 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		9D0D46842AF9325B009E9B53 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		9D0D46852AF9325B009E9B53 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		9D0D46872AF9325B009E9B53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9D0D468A2AF9325B009E9B53 /* MapExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapExamplesView.swift; sourceTree = "<group>"; };
+		9D0D468B2AF9325B009E9B53 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		9D0D468D2AF9325B009E9B53 /* NavigationExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationExamplesView.swift; sourceTree = "<group>"; };
+		9D0D468F2AF9325B009E9B53 /* SearchExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchExamplesView.swift; sourceTree = "<group>"; };
+		9D0D46912AF9325B009E9B53 /* RoutingExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingExamplesView.swift; sourceTree = "<group>"; };
+		9D0D46932AF9325B009E9B53 /* OnlineNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineNavigationView.swift; sourceTree = "<group>"; };
+		9D0D46942AF9325B009E9B53 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D0D46952AF9325B009E9B53 /* OnlineNavigationContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineNavigationContent.swift; sourceTree = "<group>"; };
+		9D0D46962AF9325B009E9B53 /* TomTomSDKExamplesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomTomSDKExamplesApp.swift; sourceTree = "<group>"; };
+		9D0D475C2AF9421B009E9B53 /* TomTomSDKExamplesInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TomTomSDKExamplesInfo.plist; sourceTree = "<group>"; };
 		9D2F394929A379FC0093F702 /* TomTomSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomTomSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D2F394C29A379FC0093F702 /* TomTomSDKExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTomSDKExamplesApp.swift; sourceTree = "<group>"; };
-		9D2F395029A379FE0093F702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9D2F395329A379FE0093F702 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9D2F396A29A388170093F702 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		9D2F397329A389010093F702 /* MapExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExamplesView.swift; sourceTree = "<group>"; };
-		9D2F397529A389110093F702 /* NavigationExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExamplesView.swift; sourceTree = "<group>"; };
-		9D2F397929A3892D0093F702 /* RoutingExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingExamplesView.swift; sourceTree = "<group>"; };
-		9D2F397B29A389390093F702 /* SearchExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchExamplesView.swift; sourceTree = "<group>"; };
-		9D2F397F29A3896D0093F702 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9D2F398229A38B1A0093F702 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		9D2F398629A3C58F0093F702 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		9D2F398929A3C6830093F702 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		9D6B2FD529A76E72008CB4A6 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		9D6B2FD729A76EE7008CB4A6 /* TomTomServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTomServices.swift; sourceTree = "<group>"; };
-		9DB8B46429E5731900E07909 /* GPX-Amsterdam.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GPX-Amsterdam.gpx"; sourceTree = "<group>"; };
-		9DC6205E29A5179000598A05 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +84,117 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D0D467A2AF9325B009E9B53 /* TomTomSDKExamples */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D467B2AF9325B009E9B53 /* Resources */,
+				9D0D46802AF9325B009E9B53 /* Utils */,
+				9D0D46862AF9325B009E9B53 /* Preview Content */,
+				9D0D46882AF9325B009E9B53 /* Examples */,
+				9D0D46962AF9325B009E9B53 /* TomTomSDKExamplesApp.swift */,
+				9D0D475C2AF9421B009E9B53 /* TomTomSDKExamplesInfo.plist */,
+			);
+			name = TomTomSDKExamples;
+			path = ../TomTomSDKExamples;
+			sourceTree = "<group>";
+		};
+		9D0D467B2AF9325B009E9B53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D467C2AF9325B009E9B53 /* Colors.xcassets */,
+				9D0D467D2AF9325B009E9B53 /* Assets.xcassets */,
+				9D0D467E2AF9325B009E9B53 /* GPX-Amsterdam.gpx */,
+				9D0D467F2AF9325B009E9B53 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9D0D46802AF9325B009E9B53 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D46812AF9325B009E9B53 /* TomTomServices.swift */,
+				9D0D46822AF9325B009E9B53 /* Keys.swift */,
+				9D0D46832AF9325B009E9B53 /* UI Components */,
+				9D0D46852AF9325B009E9B53 /* Resource.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9D0D46832AF9325B009E9B53 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D46842AF9325B009E9B53 /* BackButton.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		9D0D46862AF9325B009E9B53 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D46872AF9325B009E9B53 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D0D46882AF9325B009E9B53 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D46892AF9325B009E9B53 /* Maps */,
+				9D0D468B2AF9325B009E9B53 /* MainMenu.swift */,
+				9D0D468C2AF9325B009E9B53 /* Navigation */,
+				9D0D468E2AF9325B009E9B53 /* Search */,
+				9D0D46902AF9325B009E9B53 /* Routing */,
+				9D0D46922AF9325B009E9B53 /* UseCase */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		9D0D46892AF9325B009E9B53 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D468A2AF9325B009E9B53 /* MapExamplesView.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		9D0D468C2AF9325B009E9B53 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D468D2AF9325B009E9B53 /* NavigationExamplesView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		9D0D468E2AF9325B009E9B53 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D468F2AF9325B009E9B53 /* SearchExamplesView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9D0D46902AF9325B009E9B53 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D46912AF9325B009E9B53 /* RoutingExamplesView.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		9D0D46922AF9325B009E9B53 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				9D0D46932AF9325B009E9B53 /* OnlineNavigationView.swift */,
+				9D0D46942AF9325B009E9B53 /* README.md */,
+				9D0D46952AF9325B009E9B53 /* OnlineNavigationContent.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		9D2F394029A379FC0093F702 = {
 			isa = PBXGroup;
 			children = (
-				9D2F394B29A379FC0093F702 /* TomTomSDKExamples */,
+				9D0D467A2AF9325B009E9B53 /* TomTomSDKExamples */,
 				9D2F394A29A379FC0093F702 /* Products */,
 				5D3F7FDDB19FBE13004B1041 /* Pods */,
 				8C16E916058AB376AE1D4195 /* Frameworks */,
@@ -99,112 +207,6 @@
 				9D2F394929A379FC0093F702 /* TomTomSDKExamples.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9D2F394B29A379FC0093F702 /* TomTomSDKExamples */ = {
-			isa = PBXGroup;
-			children = (
-				9D2A34DE29CDA54F00BF8884 /* TomTomSDKExamplesInfo.plist */,
-				9D2F395229A379FE0093F702 /* Preview Content */,
-				9D2F398129A38A120093F702 /* Resources */,
-				9D2F398829A3C66F0093F702 /* Utils */,
-				9D2F396C29A3885E0093F702 /* Examples */,
-				9D2F394C29A379FC0093F702 /* TomTomSDKExamplesApp.swift */,
-			);
-			path = TomTomSDKExamples;
-			sourceTree = "<group>";
-		};
-		9D2F395229A379FE0093F702 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F395329A379FE0093F702 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9D2F396C29A3885E0093F702 /* Examples */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F396A29A388170093F702 /* MainMenu.swift */,
-				9D2F396D29A388660093F702 /* Maps */,
-				9D2F396E29A3886F0093F702 /* Navigation */,
-				9D2F397129A388850093F702 /* Routing */,
-				9D2F397029A3887E0093F702 /* Search */,
-				9D2F396F29A388780093F702 /* UseCase */,
-			);
-			path = Examples;
-			sourceTree = "<group>";
-		};
-		9D2F396D29A388660093F702 /* Maps */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F397329A389010093F702 /* MapExamplesView.swift */,
-			);
-			path = Maps;
-			sourceTree = "<group>";
-		};
-		9D2F396E29A3886F0093F702 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F397529A389110093F702 /* NavigationExamplesView.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		9D2F396F29A388780093F702 /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F397F29A3896D0093F702 /* README.md */,
-				9D07FD2A29FABFB6008577CD /* OnlineNavigationView.swift */,
-				9D07FD2B29FABFB6008577CD /* OnlineNavigationContent.swift */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		9D2F397029A3887E0093F702 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F397B29A389390093F702 /* SearchExamplesView.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		9D2F397129A388850093F702 /* Routing */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F397929A3892D0093F702 /* RoutingExamplesView.swift */,
-			);
-			path = Routing;
-			sourceTree = "<group>";
-		};
-		9D2F398129A38A120093F702 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9DB8B46429E5731900E07909 /* GPX-Amsterdam.gpx */,
-				9D2F395029A379FE0093F702 /* Assets.xcassets */,
-				9D2F398629A3C58F0093F702 /* Colors.xcassets */,
-				9D2F398229A38B1A0093F702 /* Localizable.strings */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		9D2F398829A3C66F0093F702 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				9D2F398929A3C6830093F702 /* Resource.swift */,
-				9D6B2FD529A76E72008CB4A6 /* Keys.swift */,
-				9D6B2FD729A76EE7008CB4A6 /* TomTomServices.swift */,
-				9DC6205D29A516E700598A05 /* UI Components */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		9DC6205D29A516E700598A05 /* UI Components */ = {
-			isa = PBXGroup;
-			children = (
-				9DC6205E29A5179000598A05 /* BackButton.swift */,
-			);
-			path = "UI Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,12 +269,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D2F398729A3C58F0093F702 /* Colors.xcassets in Resources */,
-				9D2F398029A3896D0093F702 /* README.md in Resources */,
-				9D2F398329A38B1A0093F702 /* Localizable.strings in Resources */,
-				9DB8B46529E5731900E07909 /* GPX-Amsterdam.gpx in Resources */,
-				9D2F395429A379FE0093F702 /* Preview Assets.xcassets in Resources */,
-				9D2F395129A379FE0093F702 /* Assets.xcassets in Resources */,
+				9D0D46A62AF9325B009E9B53 /* README.md in Resources */,
+				9D0D46992AF9325B009E9B53 /* GPX-Amsterdam.gpx in Resources */,
+				9D0D469A2AF9325B009E9B53 /* Localizable.strings in Resources */,
+				9D0D469F2AF9325B009E9B53 /* Preview Assets.xcassets in Resources */,
+				9D0D46982AF9325B009E9B53 /* Assets.xcassets in Resources */,
+				9D0D46972AF9325B009E9B53 /* Colors.xcassets in Resources */,
+				9D0D475D2AF9421B009E9B53 /* TomTomSDKExamplesInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,18 +328,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D2F398A29A3C6830093F702 /* Resource.swift in Sources */,
-				9D2F397429A389010093F702 /* MapExamplesView.swift in Sources */,
-				9D6B2FD629A76E72008CB4A6 /* Keys.swift in Sources */,
-				9D2F397C29A389390093F702 /* SearchExamplesView.swift in Sources */,
-				9D07FD2C29FABFB6008577CD /* OnlineNavigationView.swift in Sources */,
-				9D07FD2D29FABFB6008577CD /* OnlineNavigationContent.swift in Sources */,
-				9D2F397629A389110093F702 /* NavigationExamplesView.swift in Sources */,
-				9DC6205F29A5179000598A05 /* BackButton.swift in Sources */,
-				9D2F396B29A388170093F702 /* MainMenu.swift in Sources */,
-				9D2F397A29A3892D0093F702 /* RoutingExamplesView.swift in Sources */,
-				9D2F394D29A379FC0093F702 /* TomTomSDKExamplesApp.swift in Sources */,
-				9D6B2FD829A76EE7008CB4A6 /* TomTomServices.swift in Sources */,
+				9D0D46A22AF9325B009E9B53 /* NavigationExamplesView.swift in Sources */,
+				9D0D46A42AF9325B009E9B53 /* RoutingExamplesView.swift in Sources */,
+				9D0D469B2AF9325B009E9B53 /* TomTomServices.swift in Sources */,
+				9D0D46A82AF9325B009E9B53 /* TomTomSDKExamplesApp.swift in Sources */,
+				9D0D46A12AF9325B009E9B53 /* MainMenu.swift in Sources */,
+				9D0D46A32AF9325B009E9B53 /* SearchExamplesView.swift in Sources */,
+				9D0D46A02AF9325B009E9B53 /* MapExamplesView.swift in Sources */,
+				9D0D469E2AF9325B009E9B53 /* Resource.swift in Sources */,
+				9D0D469C2AF9325B009E9B53 /* Keys.swift in Sources */,
+				9D0D469D2AF9325B009E9B53 /* BackButton.swift in Sources */,
+				9D0D46A72AF9325B009E9B53 /* OnlineNavigationContent.swift in Sources */,
+				9D0D46A52AF9325B009E9B53 /* OnlineNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,11 +468,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TomTomSDKExamples/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"../TomTomSDKExamples/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TomTomSDKExamplesInfo.plist;
+				INFOPLIST_FILE = ../TomTomSDKExamples/TomTomSDKExamplesInfo.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application requires GPS to display your position on map";
@@ -500,11 +503,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TomTomSDKExamples/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"../TomTomSDKExamples/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TomTomSDKExamplesInfo.plist;
+				INFOPLIST_FILE = ../TomTomSDKExamples/TomTomSDKExamplesInfo.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application requires GPS to display your position on map";

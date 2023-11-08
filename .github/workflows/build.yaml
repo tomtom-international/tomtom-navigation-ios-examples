@@ -7,15 +7,41 @@ name: Buid iOS app
 on:
   workflow_call:
 
+env:
+  platform: 'iOS Simulator'
+  device_name: 'iPhone 14'
+  ios_version: '16.2'
+
 # clear out default permissions
 permissions: {}
 
 jobs:
-  build:
-    name: Buid iOS app
+  build-spm:
+    name: Buid iOS app - SPM
     permissions:
       contents: read
     runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./SPM
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build iOS app
+        run: >
+          xcodebuild
+          -project 'TomTomSDKExamples.xcodeproj'
+          -scheme 'TomTomSDKExamples'
+          -destination 'platform=${{ env.platform }},name=${{ env.device_name }},OS=${{ env.ios_version }}'
+
+  build-cocoapods:
+    name: Buid iOS app - CocoaPods
+    permissions:
+      contents: read
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./CocoaPods
     steps:
       - uses: actions/checkout@v3
 
@@ -39,4 +65,4 @@ jobs:
           xcodebuild
           -workspace 'TomTomSDKExamples.xcworkspace'
           -scheme 'TomTomSDKExamples'
-          -destination 'platform=iOS Simulator,name=iPhone 14'
+          -destination 'platform=${{ env.platform }},name=${{ env.device_name }},OS=${{ env.ios_version }}'
