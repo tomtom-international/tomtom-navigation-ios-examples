@@ -8,6 +8,8 @@ on:
   workflow_call:
 
 env:
+  spm_dir: './SPM'
+  cocoapods_dir: './CocoaPods'
   platform: 'iOS Simulator'
   device_name: 'iPhone 14'
   ios_version: '16.2'
@@ -23,7 +25,7 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        working-directory: ./SPM
+        working-directory: ${{ env.spm_dir }}
     steps:
       - uses: actions/checkout@v3
 
@@ -41,7 +43,7 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        working-directory: ./CocoaPods
+        working-directory:  ${{ env.cocoapods_dir }}
     steps:
       - uses: actions/checkout@v3
 
@@ -49,6 +51,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+        env:
+          BUNDLE_GEMFILE: '${{ env.cocoapods_dir }}/Gemfile'
 
       - name: Add Cocoapods repository
         # Ensure we have repos dir created
