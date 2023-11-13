@@ -40,12 +40,12 @@ Once you have gained access, set up the development environment by following:
    ```
 
 4. Install the dependencies by executing the following command in **the project folder**.
-    ```
+    ```zsh
     bundle exec pod install
     ```
 
 5. To update the SDK version, run the command:
-    ```
+    ```zsh
     bundle exec pod repo-art update tomtom-sdk-cocoapods
     ```
 6. Open the project’s `xcworkspace` and start developing your awesome application.
