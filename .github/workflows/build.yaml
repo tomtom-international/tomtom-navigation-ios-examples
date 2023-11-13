@@ -12,7 +12,7 @@ env:
   cocoapods_dir: './CocoaPods'
   platform: 'iOS Simulator'
   device_name: 'iPhone 14'
-  ios_version: '16.2'
+  ios_version: '16.4'
 
 # clear out default permissions
 permissions: {}
