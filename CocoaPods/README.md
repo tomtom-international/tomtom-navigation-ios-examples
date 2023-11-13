@@ -34,7 +34,7 @@ Once you have gained access, set up the development environment by following:
    bundle install
    ```
 
-3. Add a reference to the [Cocoapods] private repository:
+3. Add a reference to the [CocoaPods] private repository:
    ```zsh
    bundle exec pod repo-art add tomtom-sdk-cocoapods "https://repositories.tomtom.com/artifactory/api/pods/cocoapods"
    ```
@@ -50,6 +50,6 @@ Once you have gained access, set up the development environment by following:
     ```
 6. Open the project’s `xcworkspace` and start developing your awesome application.
 
-[Cocoapods]: (https://guides.cocoapods.org/using/getting-started.html)
+[CocoaPods]: (https://guides.cocoapods.org/using/getting-started.html)
 [rbenv documentation]: https://github.com/rbenv/rbenv#readme
 [tomtom-navigation-ios-examples]: https://github.com/tomtom-international/tomtom-navigation-ios-examples
