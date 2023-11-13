@@ -9,7 +9,7 @@ Once you have gained access, set up the development environment by following:
    ```
    2. Clone the [tomtom-navigation-ios-examples] repository
    ```zsh
-   git clone https://github.com/tomtom-international/tomtom-navigation-ios-examples.git
+   git clone git@github.com:tomtom-international/tomtom-navigation-ios-examples.git
    ```   
    3. Change directory to the related folder of the recently cloned repository and install `ruby` via `rbenv`
    ```zsh
