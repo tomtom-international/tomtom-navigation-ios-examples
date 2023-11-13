@@ -27,7 +27,7 @@ Once you have gained access, set up the development environment by following:
    ```zsh
    gem install bundler
    ```
-   6. Ensure you ***reload*** your shell so the `rbenv` can extend `PATH` accordingly.  
+   6. ***reload*** your shell so the `rbenv` can extend `PATH` accordingly.
 
 2. Install project's `gem` dependencies via `bundler`
    ```zsh
