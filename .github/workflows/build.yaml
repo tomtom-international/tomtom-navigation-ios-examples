@@ -22,7 +22,7 @@ jobs:
     name: Buid iOS app - SPM
     permissions:
       contents: read
-    runs-on: macos-latest
+    runs-on: macos-13
     defaults:
       run:
         working-directory: ${{ env.spm_dir }}
@@ -40,7 +40,7 @@ jobs:
     name: Buid iOS app - CocoaPods
     permissions:
       contents: read
-    runs-on: macos-latest
+    runs-on: macos-13
     defaults:
       run:
         working-directory:  ${{ env.cocoapods_dir }}
