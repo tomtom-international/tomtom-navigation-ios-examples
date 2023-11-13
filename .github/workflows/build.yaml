@@ -7,22 +7,52 @@ name: Buid iOS app
 on:
   workflow_call:
 
+env:
+  spm_dir: './SPM'
+  cocoapods_dir: './CocoaPods'
+  platform: 'iOS Simulator'
+  device_name: 'iPhone 14'
+  ios_version: '16.4'
+
 # clear out default permissions
 permissions: {}
 
 jobs:
-  build:
-    name: Buid iOS app
+  build-spm:
+    name: Buid iOS app - SPM
     permissions:
       contents: read
-    runs-on: macos-latest
+    runs-on: macos-13
+    defaults:
+      run:
+        working-directory: ${{ env.spm_dir }}
     steps:
       - uses: actions/checkout@v3
+
+      - name: Build iOS app
+        run: >
+          xcodebuild
+          -project 'TomTomSDKExamples.xcodeproj'
+          -scheme 'TomTomSDKExamples'
+          -destination 'platform=${{ env.platform }},name=${{ env.device_name }},OS=${{ env.ios_version }}'
+
+  build-cocoapods:
+    name: Buid iOS app - CocoaPods
+    permissions:
+      contents: read
+    runs-on: macos-13
+    defaults:
+      run:
+        working-directory:  ${{ env.cocoapods_dir }}
+    steps:
+      - uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+        env:
+          BUNDLE_GEMFILE: '${{ env.cocoapods_dir }}/Gemfile'
 
       - name: Add Cocoapods repository
         # Ensure we have repos dir created
@@ -39,4 +69,4 @@ jobs:
           xcodebuild
           -workspace 'TomTomSDKExamples.xcworkspace'
           -scheme 'TomTomSDKExamples'
-          -destination 'platform=iOS Simulator,name=iPhone 14'
+          -destination 'platform=${{ env.platform }},name=${{ env.device_name }},OS=${{ env.ios_version }}'
