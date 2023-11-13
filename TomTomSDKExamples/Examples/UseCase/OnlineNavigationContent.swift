@@ -47,7 +47,9 @@ final class NavigationController: ObservableObject {
     // MARK: Lifecycle
 
     convenience init() {
-        let textToSpeech = SystemTextToSpeechEngine()
+        guard let textToSpeech = try? SystemTextToSpeechEngine() else {
+            fatalError("The text to speech engine object could not be created!")
+        }
         let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.apiKey)
         let routeReplanner = RouteReplannerFactory.create(routePlanner: routePlanner)
         let locationProvider = DefaultCLLocationProvider()
