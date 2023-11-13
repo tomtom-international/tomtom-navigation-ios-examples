@@ -13,6 +13,8 @@ Hello and welcome to this repository with examples showcasing the [TomTom Naviga
 Before beginning, make sure you have Xcode 13 or 14 installed.
 
 SPM or CocoaPods can be used to install the Navigation SDK. Both configurations are available in the examples. Please navigate to the related directory and find the project setup configuration.
+- [Project setup for SPM]
+- [Project setup for CocoaPods]
 
 ## API Keys
 
@@ -43,3 +45,5 @@ If you have a **black screen** when launching the Basic driving app, please foll
 [register]: https://developer.tomtom.com/user/register
 [TomTom Navigation SDK for iOS]: https://developer.tomtom.com/ios/navigation/documentation/overview/introduction
 [TomTom Developer Portal]: https://developer.tomtom.com/user/me/apps
+[Project setup for SPM]: /SPM
+[Project setup for CocoaPods]: /CocoaPods
