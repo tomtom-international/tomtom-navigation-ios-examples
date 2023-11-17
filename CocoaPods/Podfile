@@ -12,8 +12,6 @@ plugin 'cocoapods-art', :sources => [
 ]
 
 target 'TomTomSDKExamples' do
-  pod 'TomTomSDKCommon', '0.33.1'
-  pod 'TomTomSDKCommonUI', '0.33.1'
   pod 'TomTomSDKDefaultTextToSpeech', '0.33.1'
   pod 'TomTomSDKLocationProvider', '0.33.1'
   pod 'TomTomSDKMapDisplay', '0.33.1'

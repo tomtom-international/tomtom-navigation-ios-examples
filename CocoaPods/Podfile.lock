@@ -183,8 +183,6 @@ PODS:
     - TomTomSDKCommon (= 0.33.1)
 
 DEPENDENCIES:
-  - TomTomSDKCommon (= 0.33.1)
-  - TomTomSDKCommonUI (= 0.33.1)
   - TomTomSDKDefaultTextToSpeech (= 0.33.1)
   - TomTomSDKLocationProvider (= 0.33.1)
   - TomTomSDKMapDisplay (= 0.33.1)
@@ -292,6 +290,6 @@ SPEC CHECKSUMS:
   TomTomSDKUnifiedLocationDecoder: de02837a708cf6f44577990ae99ca59d8390e60b
   TomTomSDKVehicle: 993c36b32a1b7472c5c18d6ef216f9ba9b75f067
 
-PODFILE CHECKSUM: 988ec4108ef6a124719763a883c56ef92400805a
+PODFILE CHECKSUM: f365646556ce092d9ae2d7540297aba655bcdeb8
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.2

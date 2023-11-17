@@ -14,8 +14,6 @@ import Foundation
 import SwiftUI
 
 // TomTomSDK modules
-import TomTomSDKCommon
-import TomTomSDKCommonUI
 import TomTomSDKDefaultTextToSpeech
 import TomTomSDKLocationProvider
 import TomTomSDKMapDisplay
