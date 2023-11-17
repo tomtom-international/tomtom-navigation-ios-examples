@@ -25,8 +25,6 @@
 		9D0D46D92AF93379009E9B53 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D46C72AF93379009E9B53 /* README.md */; };
 		9D0D46DA2AF93379009E9B53 /* OnlineNavigationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46C82AF93379009E9B53 /* OnlineNavigationContent.swift */; };
 		9D0D46DB2AF93379009E9B53 /* TomTomSDKExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46C92AF93379009E9B53 /* TomTomSDKExamplesApp.swift */; };
-		9D0D47412AF935B5009E9B53 /* TomTomSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47402AF935B5009E9B53 /* TomTomSDKCommon */; };
-		9D0D47432AF935B9009E9B53 /* TomTomSDKCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47422AF935B9009E9B53 /* TomTomSDKCommonUI */; };
 		9D0D47452AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47442AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech */; };
 		9D0D47472AF935C4009E9B53 /* TomTomSDKLocationProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47462AF935C4009E9B53 /* TomTomSDKLocationProvider */; };
 		9D0D47492AF935CA009E9B53 /* TomTomSDKMapDisplay in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47482AF935CA009E9B53 /* TomTomSDKMapDisplay */; };
@@ -77,8 +75,6 @@
 				9D0D47452AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech in Frameworks */,
 				9D0D47532AF935F6009E9B53 /* TomTomSDKRoute in Frameworks */,
 				9D0D474D2AF935D6009E9B53 /* TomTomSDKNavigationEngines in Frameworks */,
-				9D0D47432AF935B9009E9B53 /* TomTomSDKCommonUI in Frameworks */,
-				9D0D47412AF935B5009E9B53 /* TomTomSDKCommon in Frameworks */,
 				9D0D47592AF93609009E9B53 /* TomTomSDKRouteReplannerDefault in Frameworks */,
 				9D0D47492AF935CA009E9B53 /* TomTomSDKMapDisplay in Frameworks */,
 				9D0D47472AF935C4009E9B53 /* TomTomSDKLocationProvider in Frameworks */,
@@ -238,8 +234,6 @@
 			);
 			name = TomTomSDKExamples;
 			packageProductDependencies = (
-				9D0D47402AF935B5009E9B53 /* TomTomSDKCommon */,
-				9D0D47422AF935B9009E9B53 /* TomTomSDKCommonUI */,
 				9D0D47442AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech */,
 				9D0D47462AF935C4009E9B53 /* TomTomSDKLocationProvider */,
 				9D0D47482AF935CA009E9B53 /* TomTomSDKMapDisplay */,
@@ -558,16 +552,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D0D47402AF935B5009E9B53 /* TomTomSDKCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKCommon;
-		};
-		9D0D47422AF935B9009E9B53 /* TomTomSDKCommonUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKCommonUI;
-		};
 		9D0D47442AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */;
