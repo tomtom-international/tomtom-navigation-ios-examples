@@ -7,6 +7,9 @@ on:
   schedule:
     - cron: '5 0 * * *'  # at 00:05 am every day
 
+env:
+  cocoapods_dir: './CocoaPods'
+
 # clear out default permissions
 permissions: {}
 
@@ -19,11 +22,16 @@ jobs:
       id-token: write
     env:
       CP_HOME_DIR: "~"
+    defaults:
+      run:
+        working-directory:  ${{ env.cocoapods_dir }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
+        env:
+          BUNDLE_GEMFILE: '${{ env.cocoapods_dir }}/Gemfile'
 
       # Install dependencies manually in order to preserve context for renovate post upgrade tasks
       - name: Install bundle dependencies
@@ -31,12 +39,6 @@ jobs:
 
       - name: Install renovate npm package
         run: npm install renovate
-
-      - name: Configure Artifactory access
-        run: |
-          echo "machine repositories.tomtom.com" > ~/.netrc
-          echo "login ${{ secrets.ARTIFACTORY_USERNAME }}" >> ~/.netrc
-          echo "password ${{ secrets.ARTIFACTORY_PASSWORD }}" >> ~/.netrc
 
       - name: Add Cocoapods repository
         # Ensure we have repos dir created
@@ -57,11 +59,5 @@ jobs:
           LOG_LEVEL: debug
           RENOVATE_CONFIG_FILE: .github/renovate-config.js
           RENOVATE_TARGET_REPOSITORY: ${{ github.repository }}
-          RENOVATE_ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
-          RENOVATE_ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
           RENOVATE_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: npx renovate
-
-      - name: Clear .netrc file
-        if: always()
-        run: echo -n > ~/.netrc
