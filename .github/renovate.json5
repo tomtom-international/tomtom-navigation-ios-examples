@@ -12,12 +12,12 @@
   "packageRules": [
     {
       "matchManagers": ["regex"],
-      "matchPaths": ["Podfile"],
+      "matchPaths": ["CocoaPods/Podfile"],
       "groupName": "iOS cocoapods deps",
       "postUpgradeTasks" : {
         "commands" : [
           "bundle exec pod install"],
-        "fileFilters" : ["Podfile.lock"],
+        "fileFilters" : ["CocoaPods/Podfile.lock"],
         "executionMode": "branch"
       }
     },
@@ -28,7 +28,7 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["Podfile"],
+      "fileMatch": ["CocoaPods/Podfile"],
       "matchStrings": [
         "\\s+pod\\s+['\"](?<depName>[a-zA-Z0-9_-]+)['\"],\\s+['\"](?<currentValue>[^'\"]+)['\"]"
       ],

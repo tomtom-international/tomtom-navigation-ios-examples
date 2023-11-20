@@ -13,7 +13,8 @@ module.exports = {
   ],
   customEnvVariables: {
     // build variables
-    "CP_HOME_DIR": process.env.CP_HOME_DIR
+    "CP_HOME_DIR": process.env.CP_HOME_DIR,
+    "BUNDLE_GEMFILE": process.env.BUNDLE_GEMFILE
   },
   hostRules: [
     {
