@@ -16,7 +16,8 @@
       "groupName": "iOS cocoapods deps",
       "postUpgradeTasks" : {
         "commands" : [
-          "bundle exec pod install"],
+          "bundle exec pod install --project-directory=CocoaPods"
+        ],
         "fileFilters" : ["CocoaPods/Podfile.lock"],
         "executionMode": "branch"
       }
