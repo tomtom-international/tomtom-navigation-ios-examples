@@ -25,6 +25,7 @@ import TomTomSDKRoute
 import TomTomSDKRoutePlanner
 import TomTomSDKRoutePlannerOnline
 import TomTomSDKRouteReplannerDefault
+import TomTomSDKRoutingCommon
 
 /// This example shows how to build a simple navigation application using the TomTom Navigation SDK for iOS.
 /// The application displays a map and shows the user’s location. After the user selects a destination with a long press, the app plans a route and draws it on the map.
