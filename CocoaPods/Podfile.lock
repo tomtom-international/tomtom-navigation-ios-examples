@@ -1,212 +1,211 @@
 PODS:
-  - TomTomSDKBindingFrameworkHTTPInternal (0.35.0)
-  - TomTomSDKBindingFrameworkLoggingInternal (0.35.0)
-  - TomTomSDKBindingFrameworkSecurityInternal (0.35.0)
-  - TomTomSDKBindingMapDisplayElasticDataProviderInternal (0.35.0)
-  - TomTomSDKBindingMapDisplayEngineInternal (0.35.0)
-  - TomTomSDKBindingMapMatchingInternal (0.35.0)
-  - TomTomSDKBindingNavigationTextGenerationInternal (0.35.0)
-  - TomTomSDKBindingNavigationTileStoreAccessInternal (0.35.0):
-    - TomTomSDKBindingFrameworkLoggingInternal (= 0.35.0)
-  - TomTomSDKBindingNavigationTilingInternal (0.35.0)
-  - TomTomSDKBindingNDSLiveTileStoreAccessInternal (0.35.0):
-    - TomTomSDKBindingFrameworkLoggingInternal (= 0.35.0)
-  - TomTomSDKBindingOpenLRProjectionInternal (0.35.0):
-    - TomTomSDKBindingFrameworkLoggingInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKBindingRouteProjectionInternal (0.35.0)
-  - TomTomSDKBindingVehicleHorizonInternal (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKBindingVehicleHorizonTileStoreMapInternal (0.35.0):
-    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.35.0)
-  - TomTomSDKCommon (0.35.0):
-    - TomTomSDKBindingFrameworkLoggingInternal (= 0.35.0)
-  - TomTomSDKCommonUI (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKDataManagement (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKDataStoreMaintenanceEngine (0.35.0):
-    - TomTomSDKDataManagement (= 0.35.0)
-    - TomTomSDKNavigation (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-  - TomTomSDKDefaultTextToSpeech (0.35.0):
-    - TomTomSDKFeatureToggle (= 0.35.0)
-    - TomTomSDKTextToSpeechEngine (= 0.35.0)
-  - TomTomSDKFeatureToggle (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKHorizonEngineCommon (0.35.0):
-    - TomTomSDKBindingVehicleHorizonInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKDataManagement (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKNavigationHorizonDataAdapter (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-  - TomTomSDKHorizonEngineTileStore (0.35.0):
-    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.35.0)
-    - TomTomSDKBindingVehicleHorizonTileStoreMapInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKDataManagement (= 0.35.0)
-    - TomTomSDKHorizonEngineCommon (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKNavigationHorizonDataAdapter (= 0.35.0)
-    - TomTomSDKNavigationTileStore (= 0.35.0)
-    - TomTomSDKUnifiedLocationDecoder (= 0.35.0)
-  - TomTomSDKLocationProvider (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKMapDisplay (0.35.0):
-    - TomTomSDKBindingMapDisplayElasticDataProviderInternal (= 0.35.0)
-    - TomTomSDKBindingMapDisplayEngineInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKFeatureToggle (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-  - TomTomSDKMapMatchingEngineCommon (0.35.0):
-    - TomTomSDKBindingMapMatchingInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-  - TomTomSDKMapMatchingEngineTileStore (0.35.0):
-    - TomTomSDKBindingMapMatchingInternal (= 0.35.0)
-    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKDataManagement (= 0.35.0)
-    - TomTomSDKFeatureToggle (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKMapMatchingEngineCommon (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKNavigationTileStore (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-  - TomTomSDKNavigation (0.35.0):
-    - TomTomSDKBindingNavigationTextGenerationInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKMapMatchingEngineCommon (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutePlanner (= 0.35.0)
-    - TomTomSDKRouteReplanner (= 0.35.0)
-    - TomTomSDKRouteReplannerInternal (= 0.35.0)
-    - TomTomSDKVehicle (= 0.35.0)
-  - TomTomSDKNavigationEngines (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutePlanner (= 0.35.0)
-    - TomTomSDKRouteReplanner (= 0.35.0)
-  - TomTomSDKNavigationHorizonDataAdapter (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKDataManagement (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-  - TomTomSDKNavigationOnline (0.35.0):
-    - TomTomSDKDataStoreMaintenanceEngine (= 0.35.0)
-    - TomTomSDKHorizonEngineTileStore (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKMapMatchingEngineTileStore (= 0.35.0)
-    - TomTomSDKNavigation (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKNavigationTileStore (= 0.35.0)
-    - TomTomSDKRouteProjectionEngineTileStore (= 0.35.0)
-    - TomTomSDKRouteReplanner (= 0.35.0)
-    - TomTomSDKVehicle (= 0.35.0)
-  - TomTomSDKNavigationTileStore (0.35.0):
-    - TomTomSDKBindingFrameworkSecurityInternal (= 0.35.0)
-    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.35.0)
-    - TomTomSDKBindingNavigationTilingInternal (= 0.35.0)
-    - TomTomSDKBindingNDSLiveTileStoreAccessInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKDataManagement (= 0.35.0)
-    - TomTomSDKFeatureToggle (= 0.35.0)
-    - TomTomSDKNetworking (= 0.35.0)
-  - TomTomSDKNavigationUI (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKCommonUI (= 0.35.0)
-    - TomTomSDKDefaultTextToSpeech (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKNavigation (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutePlanner (= 0.35.0)
-    - TomTomSDKTextToSpeech (= 0.35.0)
-    - TomTomSDKTextToSpeechEngine (= 0.35.0)
-    - TomTomSDKVehicle (= 0.35.0)
-  - TomTomSDKNetworking (0.35.0):
-    - TomTomSDKBindingFrameworkHTTPInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKRoute (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKRoutePlanner (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutingCommon (= 0.35.0)
-  - TomTomSDKRoutePlannerOnline (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKFeatureToggle (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutePlanner (= 0.35.0)
-    - TomTomSDKRoutingCommon (= 0.35.0)
-  - TomTomSDKRouteProjectionEngineCommon (0.35.0):
-    - TomTomSDKBindingRouteProjectionInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-  - TomTomSDKRouteProjectionEngineTileStore (0.35.0):
-    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.35.0)
-    - TomTomSDKBindingRouteProjectionInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKNavigationEngines (= 0.35.0)
-    - TomTomSDKNavigationTileStore (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRouteProjectionEngineCommon (= 0.35.0)
-  - TomTomSDKRouteReplanner (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKLocationProvider (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutePlanner (= 0.35.0)
-  - TomTomSDKRouteReplannerDefault (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutePlanner (= 0.35.0)
-    - TomTomSDKRouteReplanner (= 0.35.0)
-    - TomTomSDKRouteReplannerInternal (= 0.35.0)
-  - TomTomSDKRouteReplannerInternal (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKRoute (= 0.35.0)
-    - TomTomSDKRoutePlanner (= 0.35.0)
-    - TomTomSDKRouteReplanner (= 0.35.0)
-    - TomTomSDKRoutingCommon (= 0.35.0)
-  - TomTomSDKRoutingCommon (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
-  - TomTomSDKTextToSpeech (0.35.0):
-    - TomTomSDKTextToSpeechEngine (= 0.35.0)
-  - TomTomSDKTextToSpeechEngine (0.35.0)
-  - TomTomSDKUnifiedLocationDecoder (0.35.0):
-    - TomTomSDKBindingOpenLRProjectionInternal (= 0.35.0)
-    - TomTomSDKCommon (= 0.35.0)
-    - TomTomSDKDataManagement (= 0.35.0)
-  - TomTomSDKVehicle (0.35.0):
-    - TomTomSDKCommon (= 0.35.0)
+  - TomTomSDKBindingFrameworkHTTPInternal (0.36.0)
+  - TomTomSDKBindingFrameworkLoggingInternal (0.36.0)
+  - TomTomSDKBindingFrameworkSecurityInternal (0.36.0)
+  - TomTomSDKBindingMapDisplayEngineInternal (0.36.0)
+  - TomTomSDKBindingMapMatchingInternal (0.36.0)
+  - TomTomSDKBindingNavigationTextGenerationInternal (0.36.0)
+  - TomTomSDKBindingNavigationTileStoreAccessInternal (0.36.0):
+    - TomTomSDKBindingFrameworkLoggingInternal (= 0.36.0)
+  - TomTomSDKBindingNavigationTilingInternal (0.36.0)
+  - TomTomSDKBindingNDSLiveTileStoreAccessInternal (0.36.0):
+    - TomTomSDKBindingFrameworkLoggingInternal (= 0.36.0)
+  - TomTomSDKBindingOpenLRProjectionInternal (0.36.0):
+    - TomTomSDKBindingFrameworkLoggingInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKBindingRouteProjectionInternal (0.36.0)
+  - TomTomSDKBindingVehicleHorizonInternal (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKBindingVehicleHorizonTileStoreMapInternal (0.36.0):
+    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.36.0)
+  - TomTomSDKCommon (0.36.0):
+    - TomTomSDKBindingFrameworkLoggingInternal (= 0.36.0)
+  - TomTomSDKCommonUI (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKDataManagement (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKDataStoreMaintenanceEngine (0.36.0):
+    - TomTomSDKDataManagement (= 0.36.0)
+    - TomTomSDKNavigation (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+  - TomTomSDKDefaultTextToSpeech (0.36.0):
+    - TomTomSDKFeatureToggle (= 0.36.0)
+    - TomTomSDKTextToSpeechEngine (= 0.36.0)
+  - TomTomSDKFeatureToggle (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKHorizonEngineCommon (0.36.0):
+    - TomTomSDKBindingVehicleHorizonInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKDataManagement (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKNavigationHorizonDataAdapter (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+  - TomTomSDKHorizonEngineTileStore (0.36.0):
+    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.36.0)
+    - TomTomSDKBindingVehicleHorizonTileStoreMapInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKDataManagement (= 0.36.0)
+    - TomTomSDKHorizonEngineCommon (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKNavigationHorizonDataAdapter (= 0.36.0)
+    - TomTomSDKNavigationTileStore (= 0.36.0)
+    - TomTomSDKUnifiedLocationDecoder (= 0.36.0)
+  - TomTomSDKLocationProvider (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKMapDisplay (0.36.0):
+    - TomTomSDKBindingMapDisplayEngineInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKFeatureToggle (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+  - TomTomSDKMapMatchingEngineCommon (0.36.0):
+    - TomTomSDKBindingMapMatchingInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+  - TomTomSDKMapMatchingEngineTileStore (0.36.0):
+    - TomTomSDKBindingMapMatchingInternal (= 0.36.0)
+    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKDataManagement (= 0.36.0)
+    - TomTomSDKFeatureToggle (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKMapMatchingEngineCommon (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKNavigationTileStore (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+  - TomTomSDKNavigation (0.36.0):
+    - TomTomSDKBindingNavigationTextGenerationInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKMapMatchingEngineCommon (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutePlanner (= 0.36.0)
+    - TomTomSDKRouteReplanner (= 0.36.0)
+    - TomTomSDKRouteReplannerInternal (= 0.36.0)
+    - TomTomSDKRoutingCommon (= 0.36.0)
+    - TomTomSDKVehicle (= 0.36.0)
+  - TomTomSDKNavigationEngines (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutePlanner (= 0.36.0)
+    - TomTomSDKRouteReplanner (= 0.36.0)
+  - TomTomSDKNavigationHorizonDataAdapter (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKDataManagement (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+  - TomTomSDKNavigationOnline (0.36.0):
+    - TomTomSDKDataStoreMaintenanceEngine (= 0.36.0)
+    - TomTomSDKHorizonEngineTileStore (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKMapMatchingEngineTileStore (= 0.36.0)
+    - TomTomSDKNavigation (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKNavigationTileStore (= 0.36.0)
+    - TomTomSDKRouteProjectionEngineTileStore (= 0.36.0)
+    - TomTomSDKRouteReplanner (= 0.36.0)
+    - TomTomSDKVehicle (= 0.36.0)
+  - TomTomSDKNavigationTileStore (0.36.0):
+    - TomTomSDKBindingFrameworkSecurityInternal (= 0.36.0)
+    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.36.0)
+    - TomTomSDKBindingNavigationTilingInternal (= 0.36.0)
+    - TomTomSDKBindingNDSLiveTileStoreAccessInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKDataManagement (= 0.36.0)
+    - TomTomSDKFeatureToggle (= 0.36.0)
+    - TomTomSDKNetworking (= 0.36.0)
+  - TomTomSDKNavigationUI (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKCommonUI (= 0.36.0)
+    - TomTomSDKDefaultTextToSpeech (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKNavigation (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutePlanner (= 0.36.0)
+    - TomTomSDKTextToSpeech (= 0.36.0)
+    - TomTomSDKTextToSpeechEngine (= 0.36.0)
+    - TomTomSDKVehicle (= 0.36.0)
+  - TomTomSDKNetworking (0.36.0):
+    - TomTomSDKBindingFrameworkHTTPInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKRoute (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKRoutePlanner (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKFeatureToggle (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutingCommon (= 0.36.0)
+  - TomTomSDKRoutePlannerOnline (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKFeatureToggle (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutePlanner (= 0.36.0)
+    - TomTomSDKRoutingCommon (= 0.36.0)
+  - TomTomSDKRouteProjectionEngineCommon (0.36.0):
+    - TomTomSDKBindingRouteProjectionInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+  - TomTomSDKRouteProjectionEngineTileStore (0.36.0):
+    - TomTomSDKBindingNavigationTileStoreAccessInternal (= 0.36.0)
+    - TomTomSDKBindingRouteProjectionInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKNavigationEngines (= 0.36.0)
+    - TomTomSDKNavigationTileStore (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRouteProjectionEngineCommon (= 0.36.0)
+  - TomTomSDKRouteReplanner (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKLocationProvider (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutePlanner (= 0.36.0)
+  - TomTomSDKRouteReplannerDefault (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutePlanner (= 0.36.0)
+    - TomTomSDKRouteReplanner (= 0.36.0)
+    - TomTomSDKRouteReplannerInternal (= 0.36.0)
+  - TomTomSDKRouteReplannerInternal (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKRoute (= 0.36.0)
+    - TomTomSDKRoutePlanner (= 0.36.0)
+    - TomTomSDKRouteReplanner (= 0.36.0)
+    - TomTomSDKRoutingCommon (= 0.36.0)
+  - TomTomSDKRoutingCommon (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
+  - TomTomSDKTextToSpeech (0.36.0):
+    - TomTomSDKTextToSpeechEngine (= 0.36.0)
+  - TomTomSDKTextToSpeechEngine (0.36.0)
+  - TomTomSDKUnifiedLocationDecoder (0.36.0):
+    - TomTomSDKBindingOpenLRProjectionInternal (= 0.36.0)
+    - TomTomSDKCommon (= 0.36.0)
+    - TomTomSDKDataManagement (= 0.36.0)
+  - TomTomSDKVehicle (0.36.0):
+    - TomTomSDKCommon (= 0.36.0)
 
 DEPENDENCIES:
-  - TomTomSDKDefaultTextToSpeech (= 0.35.0)
-  - TomTomSDKLocationProvider (= 0.35.0)
-  - TomTomSDKMapDisplay (= 0.35.0)
-  - TomTomSDKNavigation (= 0.35.0)
-  - TomTomSDKNavigationEngines (= 0.35.0)
-  - TomTomSDKNavigationOnline (= 0.35.0)
-  - TomTomSDKNavigationUI (= 0.35.0)
-  - TomTomSDKRoute (= 0.35.0)
-  - TomTomSDKRoutePlanner (= 0.35.0)
-  - TomTomSDKRoutePlannerOnline (= 0.35.0)
-  - TomTomSDKRouteReplannerDefault (= 0.35.0)
+  - TomTomSDKDefaultTextToSpeech (= 0.36.0)
+  - TomTomSDKLocationProvider (= 0.36.0)
+  - TomTomSDKMapDisplay (= 0.36.0)
+  - TomTomSDKNavigation (= 0.36.0)
+  - TomTomSDKNavigationEngines (= 0.36.0)
+  - TomTomSDKNavigationOnline (= 0.36.0)
+  - TomTomSDKNavigationUI (= 0.36.0)
+  - TomTomSDKRoute (= 0.36.0)
+  - TomTomSDKRoutePlanner (= 0.36.0)
+  - TomTomSDKRoutePlannerOnline (= 0.36.0)
+  - TomTomSDKRouteReplannerDefault (= 0.36.0)
 
 SPEC REPOS:
   https://repositories.tomtom.com/artifactory/api/pods/cocoapods:
     - TomTomSDKBindingFrameworkHTTPInternal
     - TomTomSDKBindingFrameworkLoggingInternal
     - TomTomSDKBindingFrameworkSecurityInternal
-    - TomTomSDKBindingMapDisplayElasticDataProviderInternal
     - TomTomSDKBindingMapDisplayEngineInternal
     - TomTomSDKBindingMapMatchingInternal
     - TomTomSDKBindingNavigationTextGenerationInternal
@@ -251,53 +250,52 @@ SPEC REPOS:
     - TomTomSDKVehicle
 
 SPEC CHECKSUMS:
-  TomTomSDKBindingFrameworkHTTPInternal: 005b5d6dbbad730bd10d15fccaae7c929984ca77
-  TomTomSDKBindingFrameworkLoggingInternal: bf274e2854ff99156d0184b3fd1dee43e24880db
-  TomTomSDKBindingFrameworkSecurityInternal: d200826e93ebb387cd5f7f9805997dcb50204b9f
-  TomTomSDKBindingMapDisplayElasticDataProviderInternal: b33c5001233629cee5c3208088ca06e3cbaa03f4
-  TomTomSDKBindingMapDisplayEngineInternal: 68ab49a84d435a274d1ea7f79e08096b367d0c8b
-  TomTomSDKBindingMapMatchingInternal: 473b4ef9cbdabd4ec4b6b1cf0b6c4498a9c95393
-  TomTomSDKBindingNavigationTextGenerationInternal: 8e728a8f06e0d95a794aa9b68fed25fea38632d6
-  TomTomSDKBindingNavigationTileStoreAccessInternal: bc8b91dbafb5762f6624a4b3b8f50fa3f40aed76
-  TomTomSDKBindingNavigationTilingInternal: d7ad1e28a46341c7648630ba136bb0ec1695f58c
-  TomTomSDKBindingNDSLiveTileStoreAccessInternal: 5c94101d01366aa7d8fdf8c2c03a94a95b2503f2
-  TomTomSDKBindingOpenLRProjectionInternal: 576c484c9a488142625070da836c2670a496a4fc
-  TomTomSDKBindingRouteProjectionInternal: 0a52f26df22f70aca0abf93c8840c2109303a58b
-  TomTomSDKBindingVehicleHorizonInternal: 5fe5861d79ea8cf561cf2cff1d5d653ec23f3437
-  TomTomSDKBindingVehicleHorizonTileStoreMapInternal: c3c1a49f31404cce6e4f05bcf684603e34d34407
-  TomTomSDKCommon: 1a3c1bd96cc90ce4f25774d341026c1fed4b90a0
-  TomTomSDKCommonUI: f273cc5d35ef50b7d9c8107a6e84dc7169b159d2
-  TomTomSDKDataManagement: 6085427519e4d66b701986bb0c09a8f7183f332e
-  TomTomSDKDataStoreMaintenanceEngine: 597d7e490878ba46a3bd964a6b493cd6fe958d27
-  TomTomSDKDefaultTextToSpeech: c1de913deadae58fe9ac97fe8f4e310fca4a8f96
-  TomTomSDKFeatureToggle: b0877e3f4b80df1b42578c7be496a6d540a18303
-  TomTomSDKHorizonEngineCommon: cf2da56310b243e22b03dba5d0d064bbfaddd004
-  TomTomSDKHorizonEngineTileStore: 926321853b2d43c554716c4771da3ed43a989ea6
-  TomTomSDKLocationProvider: 12b941c8d9c69e12ae193d728d4c2ede3ba34497
-  TomTomSDKMapDisplay: 7fa1b023ed5ee49c65958eb2f8fde4d6e609f326
-  TomTomSDKMapMatchingEngineCommon: 5b87ed7eb156904d4dfae6ce218c9e19693486cf
-  TomTomSDKMapMatchingEngineTileStore: 7cdca41d2cb124b50fc306e356303c2dd0331aa9
-  TomTomSDKNavigation: 0c644fd64c125acd678f49410dceb6fdf5c101cb
-  TomTomSDKNavigationEngines: 5f04ffd197851f07bb53fe9a1f4acc743f2162c2
-  TomTomSDKNavigationHorizonDataAdapter: 2f155bc90b308462705c3c69e1c8922541c8f1e4
-  TomTomSDKNavigationOnline: 51c84fc2419be36568128288c6d8c619f9caa50e
-  TomTomSDKNavigationTileStore: 904700e11987bd5aea4ae10784fd45e55177fa52
-  TomTomSDKNavigationUI: 0071659c3b6017fe0ac5c08ff909f16d3b7f8eb5
-  TomTomSDKNetworking: b2d780918a656680f28a0a811282bac986613db5
-  TomTomSDKRoute: 9a4f5cf6191dc25b467a9729eb5a8871a64c9ddd
-  TomTomSDKRoutePlanner: 58ab3aa33c5b40174267d962efecd0a2a2343e0c
-  TomTomSDKRoutePlannerOnline: 26c2261aca994830a5ec26f908e18e1de1437ee9
-  TomTomSDKRouteProjectionEngineCommon: 4c7b04d0f341783d456910b79215890750cc159b
-  TomTomSDKRouteProjectionEngineTileStore: 16609d5a1a7d3ada78c0c3d3c0cdd1b3b3d6ae04
-  TomTomSDKRouteReplanner: 5cd7f55a19fb2c7b023241308050ac5381053fa7
-  TomTomSDKRouteReplannerDefault: 00b2fe89be1bb608446bac83c3865fb345b1dddb
-  TomTomSDKRouteReplannerInternal: 0056dd30178fd3e2777fe18c16f24fd71ff49292
-  TomTomSDKRoutingCommon: 3c92469fbf342d14588e85c113f5af1d61adbac2
-  TomTomSDKTextToSpeech: 0fe9ed2ecc9afb7f016008c56b12e21320b1e9b4
-  TomTomSDKTextToSpeechEngine: 62be98e1cf279a21273842737b88bae023251d77
-  TomTomSDKUnifiedLocationDecoder: 40cadf5867659bf55de49b486f03a0c91093b37a
-  TomTomSDKVehicle: ebc8c1e32b8626ee9f396421386a0984ea023f09
+  TomTomSDKBindingFrameworkHTTPInternal: e44b46501f523c87dfe69f9358622d2c1f1c7be4
+  TomTomSDKBindingFrameworkLoggingInternal: 182b80134f1be6b07620fad7f6cf2e7e6ae9c82d
+  TomTomSDKBindingFrameworkSecurityInternal: 653f2f6918c7f5585386431a0a7133233ccd3707
+  TomTomSDKBindingMapDisplayEngineInternal: 5c8f36f1036fd05fc54c2a11baa4e2b6f1ef18aa
+  TomTomSDKBindingMapMatchingInternal: 644a02a8254be8c38f6e57749bec3b0715b94f91
+  TomTomSDKBindingNavigationTextGenerationInternal: 0335f22a8c7a15bc6b858e6675d725e7330c6ff2
+  TomTomSDKBindingNavigationTileStoreAccessInternal: 49e0db49f7393f16d944b3d0fed75baa167d8e8d
+  TomTomSDKBindingNavigationTilingInternal: c1227f39e6fd5d0ce1efb70fc731fcaaa53a5a8b
+  TomTomSDKBindingNDSLiveTileStoreAccessInternal: 135616f6dfab3443e4105b2df92776b4fa490e1c
+  TomTomSDKBindingOpenLRProjectionInternal: 791bb5e9e6a98e0cd111fe2f1ad3b565ed145719
+  TomTomSDKBindingRouteProjectionInternal: 636c4d7e1b0a79df072ba4955c12a80a05e81749
+  TomTomSDKBindingVehicleHorizonInternal: 56de221979823053343dd4c31b97d03633753fe5
+  TomTomSDKBindingVehicleHorizonTileStoreMapInternal: a9c43582fc5d369dccd14b395560f5d620b7d453
+  TomTomSDKCommon: 48a04169eef44c645607c4c09f6fa7fb2a845db1
+  TomTomSDKCommonUI: dd7cc2ea11e16dbf354f72bfdaea040692320ad8
+  TomTomSDKDataManagement: acfce4653c3cb596fe3ef055be388df00871bc4e
+  TomTomSDKDataStoreMaintenanceEngine: e2c962bd1d46f5958ac2fbb7e16ef610b40be58c
+  TomTomSDKDefaultTextToSpeech: 6aa885279a3a7aada4a85afb26377fb21e9fb630
+  TomTomSDKFeatureToggle: 76e14a779eb6691033ff8ef0e22d6dc8bfed2eab
+  TomTomSDKHorizonEngineCommon: 9fff5385d6288cf61a1bbbeb547f043132a24130
+  TomTomSDKHorizonEngineTileStore: bac5a5075d1a1c68884bd4b11dc71ece48d7345f
+  TomTomSDKLocationProvider: 3f039ffe4062dd8f7036d5c37b80bb86f5fdff78
+  TomTomSDKMapDisplay: 30d04679bbfefa10ce5378a2361df00854b67130
+  TomTomSDKMapMatchingEngineCommon: 498eb753f5c53fd9a7b5dc153b8b9e748401fae4
+  TomTomSDKMapMatchingEngineTileStore: 0fae3a04e3facd82cd4ffb55fadc549584292f37
+  TomTomSDKNavigation: 5e73bf42eb507d3174e68e55fe3e37b227875387
+  TomTomSDKNavigationEngines: 12a5611c744d5662aa72d1f3518e49445ce8f2eb
+  TomTomSDKNavigationHorizonDataAdapter: 501a7e6770ea5cf85b898b648f96e88dcef7609c
+  TomTomSDKNavigationOnline: 079b73fd157fdff8a566609ed320385c9b139ef9
+  TomTomSDKNavigationTileStore: 9717a8075625b5a53c22f7966a233d526ec3085a
+  TomTomSDKNavigationUI: 04edbb4641cd4869e669cb8982abfd9dda6b8389
+  TomTomSDKNetworking: dab9106dcc8ec11f8d0a6fa0cd193ebb02dd7160
+  TomTomSDKRoute: 397eb2a9c44e95c358397ed776d7e19645fa051c
+  TomTomSDKRoutePlanner: dea3b2a68dd5b11dc139d0ffc31759543479cce7
+  TomTomSDKRoutePlannerOnline: 5472fe4ccd70086628dc93de9c03cf8c1a9712fe
+  TomTomSDKRouteProjectionEngineCommon: eb92e226a11971e76881701f9043223d808e93d3
+  TomTomSDKRouteProjectionEngineTileStore: c61c6f24f83e080062e50792cc93609b7adfbe9c
+  TomTomSDKRouteReplanner: a156e59e977f816826a06e0899a508737a8e69fb
+  TomTomSDKRouteReplannerDefault: 984e5629648d9b80197b3204a79fe5fa6f907998
+  TomTomSDKRouteReplannerInternal: 87fdecadaade7b79bb3286bd208cdf54ce0027d7
+  TomTomSDKRoutingCommon: 728412d4682967ca9494516d7aaf85d0813e1c4b
+  TomTomSDKTextToSpeech: 0af3411d27262bbeaa8086206e2ec5a3f0487425
+  TomTomSDKTextToSpeechEngine: 91e23304d788a6fdbba4e4dc77deb904e51eafaa
+  TomTomSDKUnifiedLocationDecoder: 2600ce0e6aaa03e3f7adde8046697bb658f555d3
+  TomTomSDKVehicle: 554883bf39a3a8f90fa079b19ba54f84873d5b77
 
-PODFILE CHECKSUM: 10bce8f1af47f581ab3c51b5ee1abfcdbf53fe65
+PODFILE CHECKSUM: 17d12b96b125a29e783cbf624f892d215da522b3
 
 COCOAPODS: 1.14.2
