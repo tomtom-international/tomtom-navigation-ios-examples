@@ -8,11 +8,13 @@ DerivedData/
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
 Package.resolved
-Package.swift
+Package_template.swift
 
-Podfile
+Podfile_template
 Pods/
 
 fastlane/
 project.yml
 Online/PublicExamplesOnline.xcodeproj
+
+/*.lock
