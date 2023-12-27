@@ -18,19 +18,11 @@ let sdkVersion: Version = "<version_placeholder>"
 ///
 /// Add only the packages for which you have products.
 let dependencies: [String: [String]] = [
-    "tomtom-sdk-spm-core<repo_placeholder>": [
-        "TomTomSDKCommon",
-        "TomTomSDKRoutingCommon",
+    "tomtom-sdk-spm-core": [
         "TomTomSDKMapDisplay",
-        "TomTomSDKLocationProvider",
-        "TomTomSDKRoute",
-        "TomTomSDKRoutePlanner",
         "TomTomSDKRoutePlannerOnline",
         "TomTomSDKRouteReplannerDefault"],
-    "tomtom-sdk-spm-navigation<repo_placeholder>": [
-        "TomTomSDKNavigationEngines",
-        "TomTomSDKDefaultTextToSpeech",
-        "TomTomSDKNavigation",
+    "tomtom-sdk-spm-navigation": [
         "TomTomSDKNavigationOnline",
         "TomTomSDKNavigationUI"],
 ]
