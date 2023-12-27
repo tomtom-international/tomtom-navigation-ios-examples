@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B123AC71A09551EDEE60976 /* ProxyPackage in Sources */ = {isa = PBXBuildFile; fileRef = 4DF11155D24E621ED31135A4 /* ProxyPackage */; };
 		9D0D46CA2AF93379009E9B53 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D46AF2AF93379009E9B53 /* Colors.xcassets */; };
 		9D0D46CB2AF93379009E9B53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D46B02AF93379009E9B53 /* Assets.xcassets */; };
 		9D0D46CC2AF93379009E9B53 /* GPX-Amsterdam.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D46B12AF93379009E9B53 /* GPX-Amsterdam.gpx */; };
@@ -24,24 +25,15 @@
 		9D0D46D92AF93379009E9B53 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D46C72AF93379009E9B53 /* README.md */; };
 		9D0D46DA2AF93379009E9B53 /* OnlineNavigationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46C82AF93379009E9B53 /* OnlineNavigationContent.swift */; };
 		9D0D46DB2AF93379009E9B53 /* TomTomSDKExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D46C92AF93379009E9B53 /* TomTomSDKExamplesApp.swift */; };
-		9D0D47452AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47442AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech */; };
-		9D0D47472AF935C4009E9B53 /* TomTomSDKLocationProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47462AF935C4009E9B53 /* TomTomSDKLocationProvider */; };
-		9D0D47492AF935CA009E9B53 /* TomTomSDKMapDisplay in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47482AF935CA009E9B53 /* TomTomSDKMapDisplay */; };
-		9D0D474B2AF935D0009E9B53 /* TomTomSDKNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D474A2AF935D0009E9B53 /* TomTomSDKNavigation */; };
-		9D0D474D2AF935D6009E9B53 /* TomTomSDKNavigationEngines in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D474C2AF935D6009E9B53 /* TomTomSDKNavigationEngines */; };
-		9D0D474F2AF935EA009E9B53 /* TomTomSDKNavigationOnline in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D474E2AF935EA009E9B53 /* TomTomSDKNavigationOnline */; };
-		9D0D47512AF935EF009E9B53 /* TomTomSDKNavigationUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47502AF935EF009E9B53 /* TomTomSDKNavigationUI */; };
-		9D0D47532AF935F6009E9B53 /* TomTomSDKRoute in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47522AF935F6009E9B53 /* TomTomSDKRoute */; };
-		9D0D47552AF935FD009E9B53 /* TomTomSDKRoutePlanner in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47542AF935FD009E9B53 /* TomTomSDKRoutePlanner */; };
-		9D0D47572AF93603009E9B53 /* TomTomSDKRoutePlannerOnline in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47562AF93603009E9B53 /* TomTomSDKRoutePlannerOnline */; };
-		9D0D47592AF93609009E9B53 /* TomTomSDKRouteReplannerDefault in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0D47582AF93609009E9B53 /* TomTomSDKRouteReplannerDefault */; };
 		9D0D475B2AF941E4009E9B53 /* TomTomSDKExamplesInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D475A2AF941E4009E9B53 /* TomTomSDKExamplesInfo.plist */; };
 		E10BF3242B274B1F004B737B /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BF3232B274B1F004B737B /* BackButton.swift */; };
-		E12C547D2B2202A6007871E4 /* TomTomSDKRoutingCommon in Frameworks */ = {isa = PBXBuildFile; productRef = E12C547C2B2202A6007871E4 /* TomTomSDKRoutingCommon */; };
+		E17AAD942B3C3A9E000B414F /* TomTomSPMDependencies in Frameworks */ = {isa = PBXBuildFile; productRef = E17AAD932B3C3A9E000B414F /* TomTomSPMDependencies */; };
+		E1CDE684AAB545C362BD90A3 /* ProxyPackage in Sources */ = {isa = PBXBuildFile; fileRef = E1E7EC1516F921DA39D5F1F1 /* ProxyPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182816C2A2C71B776131AB66 /* Pods_TomTomSDKExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomTomSDKExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF11155D24E621ED31135A4 /* ProxyPackage */ = {isa = PBXFileReference; includeInIndex = 1; path = ProxyPackage; sourceTree = "<group>"; };
 		9D0D46AF2AF93379009E9B53 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9D0D46B02AF93379009E9B53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D0D46B12AF93379009E9B53 /* GPX-Amsterdam.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GPX-Amsterdam.gpx"; sourceTree = "<group>"; };
@@ -62,6 +54,7 @@
 		9D0D475A2AF941E4009E9B53 /* TomTomSDKExamplesInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TomTomSDKExamplesInfo.plist; sourceTree = "<group>"; };
 		9D2F394929A379FC0093F702 /* TomTomSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomTomSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10BF3232B274B1F004B737B /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		E1E7EC1516F921DA39D5F1F1 /* ProxyPackage */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper; path = ProxyPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,30 +62,147 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D0D47552AF935FD009E9B53 /* TomTomSDKRoutePlanner in Frameworks */,
-				9D0D47572AF93603009E9B53 /* TomTomSDKRoutePlannerOnline in Frameworks */,
-				9D0D47512AF935EF009E9B53 /* TomTomSDKNavigationUI in Frameworks */,
-				9D0D474F2AF935EA009E9B53 /* TomTomSDKNavigationOnline in Frameworks */,
-				9D0D47452AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech in Frameworks */,
-				E12C547D2B2202A6007871E4 /* TomTomSDKRoutingCommon in Frameworks */,
-				9D0D47532AF935F6009E9B53 /* TomTomSDKRoute in Frameworks */,
-				9D0D474D2AF935D6009E9B53 /* TomTomSDKNavigationEngines in Frameworks */,
-				9D0D47592AF93609009E9B53 /* TomTomSDKRouteReplannerDefault in Frameworks */,
-				9D0D47492AF935CA009E9B53 /* TomTomSDKMapDisplay in Frameworks */,
-				9D0D47472AF935C4009E9B53 /* TomTomSDKLocationProvider in Frameworks */,
-				9D0D474B2AF935D0009E9B53 /* TomTomSDKNavigation in Frameworks */,
+				E17AAD942B3C3A9E000B414F /* TomTomSPMDependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0B300E85528279DA68D437 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				61D7163A9C3876B8BDA72B84 /* Users */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		0EC06F6F3CDF5F403C7B1AB9 /* pedroalcobia-tomtom */ = {
+			isa = PBXGroup;
+			children = (
+				C99044EE655F53809BDA24C9 /* Documents */,
+			);
+			name = "pedroalcobia-tomtom";
+			sourceTree = "<group>";
+		};
+		13FD04F2C273DE5CCB288408 /* TomTomNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				55F6763C4B65E09FDEF22BF1 /* GitHub */,
+			);
+			name = TomTomNavigation;
+			sourceTree = "<group>";
+		};
+		1A3ACAC6F7BC86A064B4920D /* go-sdk-ios */ = {
+			isa = PBXGroup;
+			children = (
+				9D0A755B896EB21E8E955AD1 /* Go-sdk-ios */,
+			);
+			name = "go-sdk-ios";
+			sourceTree = "<group>";
+		};
+		1FBD89D040E650B7275EFE09 /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				60AFB062929C99FCF4BBF1C5 /* SPM */,
+			);
+			name = Online;
+			sourceTree = "<group>";
+		};
+		230BB174CC7A747DB5EF63D5 /* TomTom */ = {
+			isa = PBXGroup;
+			children = (
+				FE47F596B1013958129B8F7A /* TomTomNavigation */,
+			);
+			name = TomTom;
+			sourceTree = "<group>";
+		};
+		542879EF76B1CC7BEBDEB392 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				C46322DB0834C347E0F05F89 /* TomTom */,
+			);
+			name = Documents;
+			sourceTree = "<group>";
+		};
+		55F6763C4B65E09FDEF22BF1 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				1A3ACAC6F7BC86A064B4920D /* go-sdk-ios */,
+			);
+			name = GitHub;
+			sourceTree = "<group>";
+		};
+		60AFB062929C99FCF4BBF1C5 /* SPM */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7EC1516F921DA39D5F1F1 /* ProxyPackage */,
+			);
+			name = SPM;
+			sourceTree = "<group>";
+		};
+		61D7163A9C3876B8BDA72B84 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				8DE8D13635CB409564782A34 /* pedroalcobia-tomtom */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		75BDA992281210ABD1B37EF6 /* TomTom */ = {
+			isa = PBXGroup;
+			children = (
+				8F7AEA866E6071B8D409998F /* TomTom */,
+			);
+			name = TomTom;
+			sourceTree = "<group>";
+		};
+		814242D1BE562B7A1D81F670 /* PublicExamples */ = {
+			isa = PBXGroup;
+			children = (
+				1FBD89D040E650B7275EFE09 /* Online */,
+			);
+			name = PublicExamples;
+			sourceTree = "<group>";
+		};
 		8C16E916058AB376AE1D4195 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				182816C2A2C71B776131AB66 /* Pods_TomTomSDKExamples.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DE8D13635CB409564782A34 /* pedroalcobia-tomtom */ = {
+			isa = PBXGroup;
+			children = (
+				542879EF76B1CC7BEBDEB392 /* Documents */,
+			);
+			name = "pedroalcobia-tomtom";
+			sourceTree = "<group>";
+		};
+		8F7AEA866E6071B8D409998F /* TomTom */ = {
+			isa = PBXGroup;
+			children = (
+				13FD04F2C273DE5CCB288408 /* TomTomNavigation */,
+			);
+			name = TomTom;
+			sourceTree = "<group>";
+		};
+		932485AF0A75C97CD73838B4 /* SPM */ = {
+			isa = PBXGroup;
+			children = (
+				4DF11155D24E621ED31135A4 /* ProxyPackage */,
+			);
+			name = SPM;
+			sourceTree = "<group>";
+		};
+		9D0A755B896EB21E8E955AD1 /* Go-sdk-ios */ = {
+			isa = PBXGroup;
+			children = (
+				814242D1BE562B7A1D81F670 /* PublicExamples */,
+			);
+			name = "Go-sdk-ios";
 			sourceTree = "<group>";
 		};
 		9D0D46AD2AF93379009E9B53 /* TomTomSDKExamples */ = {
@@ -200,6 +310,8 @@
 				9D0D46AD2AF93379009E9B53 /* TomTomSDKExamples */,
 				9D2F394A29A379FC0093F702 /* Products */,
 				8C16E916058AB376AE1D4195 /* Frameworks */,
+				BE02AC06FD84F1FD9965B314 /*  */,
+				0C0B300E85528279DA68D437 /*  */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,12 +323,91 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A735694ABCC8CAF402961902 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				0EC06F6F3CDF5F403C7B1AB9 /* pedroalcobia-tomtom */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		B2CB32830093993A65230057 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				C430A41757F57B4508482B7F /* go-sdk-ios */,
+			);
+			name = GitHub;
+			sourceTree = "<group>";
+		};
+		BC33A4587647FC09A50EB9B5 /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				932485AF0A75C97CD73838B4 /* SPM */,
+			);
+			name = Online;
+			sourceTree = "<group>";
+		};
+		BE02AC06FD84F1FD9965B314 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				A735694ABCC8CAF402961902 /* Users */,
+			);
+			sourceTree = "<group>";
+		};
+		C430A41757F57B4508482B7F /* go-sdk-ios */ = {
+			isa = PBXGroup;
+			children = (
+				EE8A7CD0E7E0A30E61AF2598 /* Go-sdk-ios */,
+			);
+			name = "go-sdk-ios";
+			sourceTree = "<group>";
+		};
+		C46322DB0834C347E0F05F89 /* TomTom */ = {
+			isa = PBXGroup;
+			children = (
+				230BB174CC7A747DB5EF63D5 /* TomTom */,
+			);
+			name = TomTom;
+			sourceTree = "<group>";
+		};
+		C99044EE655F53809BDA24C9 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				75BDA992281210ABD1B37EF6 /* TomTom */,
+			);
+			name = Documents;
+			sourceTree = "<group>";
+		};
 		E10BF3222B274B1F004B737B /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
 				E10BF3232B274B1F004B737B /* BackButton.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		EE8A7CD0E7E0A30E61AF2598 /* Go-sdk-ios */ = {
+			isa = PBXGroup;
+			children = (
+				EFED3028D9DC716C0CA3F2E5 /* PublicExamples */,
+			);
+			name = "Go-sdk-ios";
+			sourceTree = "<group>";
+		};
+		EFED3028D9DC716C0CA3F2E5 /* PublicExamples */ = {
+			isa = PBXGroup;
+			children = (
+				BC33A4587647FC09A50EB9B5 /* Online */,
+			);
+			name = PublicExamples;
+			sourceTree = "<group>";
+		};
+		FE47F596B1013958129B8F7A /* TomTomNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				B2CB32830093993A65230057 /* GitHub */,
+			);
+			name = TomTomNavigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,18 +427,7 @@
 			);
 			name = TomTomSDKExamples;
 			packageProductDependencies = (
-				9D0D47442AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech */,
-				9D0D47462AF935C4009E9B53 /* TomTomSDKLocationProvider */,
-				9D0D47482AF935CA009E9B53 /* TomTomSDKMapDisplay */,
-				9D0D474A2AF935D0009E9B53 /* TomTomSDKNavigation */,
-				9D0D474C2AF935D6009E9B53 /* TomTomSDKNavigationEngines */,
-				9D0D474E2AF935EA009E9B53 /* TomTomSDKNavigationOnline */,
-				9D0D47502AF935EF009E9B53 /* TomTomSDKNavigationUI */,
-				9D0D47522AF935F6009E9B53 /* TomTomSDKRoute */,
-				9D0D47542AF935FD009E9B53 /* TomTomSDKRoutePlanner */,
-				9D0D47562AF93603009E9B53 /* TomTomSDKRoutePlannerOnline */,
-				9D0D47582AF93609009E9B53 /* TomTomSDKRouteReplannerDefault */,
-				E12C547C2B2202A6007871E4 /* TomTomSDKRoutingCommon */,
+				E17AAD932B3C3A9E000B414F /* TomTomSPMDependencies */,
 			);
 			productName = "TomTom SDK Examples";
 			productReference = 9D2F394929A379FC0093F702 /* TomTomSDKExamples.app */;
@@ -278,8 +458,7 @@
 			);
 			mainGroup = 9D2F394029A379FC0093F702;
 			packageReferences = (
-				9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */,
-				9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */,
+				E17AAD922B3C3A9E000B414F /* XCLocalSwiftPackageReference "ProxyPackage" */,
 			);
 			productRefGroup = 9D2F394A29A379FC0093F702 /* Products */;
 			projectDirPath = "";
@@ -324,6 +503,8 @@
 				9D0D46CF2AF93379009E9B53 /* Keys.swift in Sources */,
 				9D0D46DA2AF93379009E9B53 /* OnlineNavigationContent.swift in Sources */,
 				9D0D46D82AF93379009E9B53 /* OnlineNavigationView.swift in Sources */,
+				E1CDE684AAB545C362BD90A3 /* ProxyPackage in Sources */,
+				1B123AC71A09551EDEE60976 /* ProxyPackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,85 +716,17 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tomtom-international/tomtom-sdk-spm-navigation";
-			requirement = {
-				kind = exactVersion;
-				version = 0.34.2;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		E17AAD922B3C3A9E000B414F /* XCLocalSwiftPackageReference "ProxyPackage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ProxyPackage;
 		};
-		9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tomtom-international/tomtom-sdk-spm-core";
-			requirement = {
-				kind = exactVersion;
-				version = 0.34.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D0D47442AF935BE009E9B53 /* TomTomSDKDefaultTextToSpeech */ = {
+		E17AAD932B3C3A9E000B414F /* TomTomSPMDependencies */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */;
-			productName = TomTomSDKDefaultTextToSpeech;
-		};
-		9D0D47462AF935C4009E9B53 /* TomTomSDKLocationProvider */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKLocationProvider;
-		};
-		9D0D47482AF935CA009E9B53 /* TomTomSDKMapDisplay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKMapDisplay;
-		};
-		9D0D474A2AF935D0009E9B53 /* TomTomSDKNavigation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */;
-			productName = TomTomSDKNavigation;
-		};
-		9D0D474C2AF935D6009E9B53 /* TomTomSDKNavigationEngines */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */;
-			productName = TomTomSDKNavigationEngines;
-		};
-		9D0D474E2AF935EA009E9B53 /* TomTomSDKNavigationOnline */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */;
-			productName = TomTomSDKNavigationOnline;
-		};
-		9D0D47502AF935EF009E9B53 /* TomTomSDKNavigationUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */;
-			productName = TomTomSDKNavigationUI;
-		};
-		9D0D47522AF935F6009E9B53 /* TomTomSDKRoute */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKRoute;
-		};
-		9D0D47542AF935FD009E9B53 /* TomTomSDKRoutePlanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKRoutePlanner;
-		};
-		9D0D47562AF93603009E9B53 /* TomTomSDKRoutePlannerOnline */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKRoutePlannerOnline;
-		};
-		9D0D47582AF93609009E9B53 /* TomTomSDKRouteReplannerDefault */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D46DE2AF933E7009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-navigation" */;
-			productName = TomTomSDKRouteReplannerDefault;
-		};
-		E12C547C2B2202A6007871E4 /* TomTomSDKRoutingCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
-			productName = TomTomSDKRoutingCommon;
+			productName = TomTomSPMDependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

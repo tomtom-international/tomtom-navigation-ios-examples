@@ -17,4 +17,4 @@ fastlane/
 project.yml
 Online/PublicExamplesOnline.xcodeproj
 
-/*.lock
+Offline/

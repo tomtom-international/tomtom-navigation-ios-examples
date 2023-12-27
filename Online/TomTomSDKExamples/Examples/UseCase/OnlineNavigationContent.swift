@@ -127,12 +127,12 @@ extension NavigationController: NavigationProgressObserver {
 
 /// Allows observing route changes.
 extension NavigationController: NavigationRouteObserver {
-    func didDeviateFromRoute(currentRoute _: TomTomSDKRoute.Route, location _: TomTomSDKLocationProvider.GeoLocation) {}
-
     func didProposeRoutePlan(
-        routePlan _: TomTomSDKNavigationEngines.RoutePlan,
-        reason _: TomTomSDKNavigationEngines.RouteReplanningReason
+        routePlan: TomTomSDKNavigationEngines.RoutePlan,
+        reason: TomTomSDKNavigationEngines.RouteReplanningReason
     ) {}
+
+    func didDeviateFromRoute(currentRoute _: TomTomSDKRoute.Route, location _: TomTomSDKLocationProvider.GeoLocation) {}
 
     func didReplanRoute(
         replannedRoute: TomTomSDKRoute.Route,
