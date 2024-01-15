@@ -326,7 +326,7 @@ extension MapCoordinator {
         map?.cameraTrackingMode = trackingMode
 
         // Update chevron position on the screen so it is not hidden behind the navigation panel
-        if trackingMode == .followRoute || trackingMode == .follow {
+        if trackingMode == .followRoute() || trackingMode == .followRouteNorthUp() {
             let cameraUpdate = CameraUpdate(positionMarkerVerticalOffset: 0.4)
             moveCamera(cameraUpdate: cameraUpdate)
         }
@@ -551,11 +551,11 @@ extension MapCoordinator {
             guard let self = self else { return }
             if let route = route {
                 self.addRouteToMap(route: route)
-                self.setCamera(trackingMode: .followRoute)
+                self.setCamera(trackingMode: .followRoute())
             } else {
                 self.routeOnMap = nil
                 self.map?.removeRoutes()
-                self.setCamera(trackingMode: .follow)
+                self.setCamera(trackingMode: .followRouteNorthUp())
             }
         }.store(in: &cancellableBag)
 
