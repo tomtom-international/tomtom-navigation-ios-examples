@@ -94,7 +94,6 @@ final class NavigationController: ObservableObject {
         self.navigationViewModel = navigationModel
 
         self.navigation.addProgressObserver(self)
-        self.navigation.addRouteObserver(self)
         locationProvider.start()
     }
 
@@ -123,35 +122,14 @@ extension NavigationController: NavigationProgressObserver {
     }
 }
 
-// MARK: NavigationRouteObserver
+// MARK: NavigationRouteAddedObserver
 
-/// Allows observing route changes.
-extension NavigationController: NavigationRouteObserver {
-    func didProposeRoutePlan(
-        routePlan: TomTomSDKNavigationEngines.RoutePlan,
-        reason: TomTomSDKNavigationEngines.RouteReplanningReason
-    ) {}
-
-    func didDeviateFromRoute(currentRoute _: TomTomSDKRoute.Route, location _: TomTomSDKLocationProvider.GeoLocation) {}
-
-    func didReplanRoute(
-        replannedRoute: TomTomSDKRoute.Route,
-        reason: TomTomSDKNavigationEngines.RouteReplanningReason
-    ) {
-        let nonTriggeringReasons: [RouteReplanningReason] = [.refresh, .increment, .languageChange]
-        if nonTriggeringReasons.contains(reason) == false {
-            displayedRouteSubject.send(nil)
-            displayedRouteSubject.send(replannedRoute)
-        }
+/// Allows observing route additions.
+extension NavigationController: NavigationRouteAddedObserver {
+    func didAddRoute(route: TomTomSDKRoute.Route, options: RoutePlanningOptions, reason: RouteAddedReason) {
+        displayedRouteSubject.send(nil)
+        displayedRouteSubject.send(route)
     }
-
-    func didChangeRoutes(navigatedRoutes _: TomTomSDKNavigation.NavigatedRoutes) {}
-
-    func didReplanRouteOnLanguageChange(
-        replannedRoute _: TomTomSDKRoute.Route,
-        reason _: TomTomSDKNavigationEngines.RouteReplanningReason,
-        language _: Locale
-    ) {}
 }
 
 // MARK: - MainView

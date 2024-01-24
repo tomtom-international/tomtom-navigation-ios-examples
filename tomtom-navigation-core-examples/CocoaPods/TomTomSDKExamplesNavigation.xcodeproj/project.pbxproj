@@ -32,10 +32,10 @@
 		7D4CB832A059A1CE0D9113C7 /* TomTomSDKRoutePlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93DDEF986302E6135712D049 /* TomTomSDKRoutePlanner.framework */; };
 		860A7107377D2098B7B92B8F /* OnlineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F10B4F0E2C3DC9E31C16D2 /* OnlineNavigationView.swift */; };
 		B2199BDE4993890315E738CD /* TomTomSDKDefaultTextToSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1F9AC86BF63EDF9D051B3D /* TomTomSDKDefaultTextToSpeech.framework */; };
+		B65D52B9639E343EDF657EBA /* Pods_TomTomSDKExamplesNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81F15A6BDA0DB49819B86D0 /* Pods_TomTomSDKExamplesNavigation.framework */; };
 		C12E22A60B58DF63B185E9BC /* MapExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980640FA952374F3E4464BE4 /* MapExamplesView.swift */; };
 		CA2A516ABF49BAFD7E7FFC79 /* NavigationExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDF567B0B48B14F46AEEFD /* NavigationExamplesView.swift */; };
 		CDD8BB2FA392AFCB9E9AAA19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B6127D88C8013015D191E9D /* Localizable.strings */; };
-		D2EE4F9FC30994C5140267EE /* Pods_TomTomSDKExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86C6369208434F74D95F1EC /* Pods_TomTomSDKExamples.framework */; };
 		E00C94E3484946171D4F9B34 /* TomTomSDKMapDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1A038DE32E2D8C812AA86C /* TomTomSDKMapDisplay.framework */; };
 		E10BF3272B274B5D004B737B /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BF3262B274B5D004B737B /* BackButton.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,7 @@
 		057C3E186F3DA98EE6615E6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0E19783CFBAF5F548C73DA85 /* TomTomSDKRoute.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKRoute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171EDF842E9A83A3861E7CD8 /* GPX-Amsterdam.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GPX-Amsterdam.gpx"; sourceTree = "<group>"; };
-		1BEA01338067F8A1A1AC3792 /* TomTomSDKExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomTomSDKExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA01338067F8A1A1AC3792 /* TomTomSDKExamplesNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomTomSDKExamplesNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF334AEC9F84207CB03EEE7 /* TomTomSDKLocationProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKLocationProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7F2314E940C8639D1AC406 /* TomTomServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTomServices.swift; sourceTree = "<group>"; };
 		3213CB7DEABE07B289061B4A /* Pods-TomTomSDKExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTomSDKExamples.release.xcconfig"; path = "Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +70,7 @@
 		5E1F9AC86BF63EDF9D051B3D /* TomTomSDKDefaultTextToSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKDefaultTextToSpeech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEBF4E3CD30572D35E8CA87 /* TomTomSDKRouteReplannerDefault.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKRouteReplannerDefault.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3C1149506A9944899FB649 /* TomTomSDKNavigationUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKNavigationUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0E623E4A55527CDBC64F54 /* Pods-TomTomSDKExamplesNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTomSDKExamplesNavigation.release.xcconfig"; path = "Target Support Files/Pods-TomTomSDKExamplesNavigation/Pods-TomTomSDKExamplesNavigation.release.xcconfig"; sourceTree = "<group>"; };
 		7C1735847E75266ED917A6E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82AA59EDCDBF5E51A4DEEF2E /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		89201CCEEE54B6CD4EED38FB /* TomTomSDKRoutePlannerOnline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKRoutePlannerOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,13 +80,14 @@
 		980640FA952374F3E4464BE4 /* MapExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExamplesView.swift; sourceTree = "<group>"; };
 		A2F10B4F0E2C3DC9E31C16D2 /* OnlineNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineNavigationView.swift; sourceTree = "<group>"; };
 		AF533C4F5F60C65C692AB367 /* TomTomSDKExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomTomSDKExamplesApp.swift; sourceTree = "<group>"; };
-		B86C6369208434F74D95F1EC /* Pods_TomTomSDKExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomTomSDKExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81F15A6BDA0DB49819B86D0 /* Pods_TomTomSDKExamplesNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomTomSDKExamplesNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1A038DE32E2D8C812AA86C /* TomTomSDKMapDisplay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKMapDisplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC48D091F282A084561D529 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E090380BA5468E613FCC4FC4 /* TomTomSDKNavigationOnline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKNavigationOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10BF3262B274B5D004B737B /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		E33C2075001CC5EC1CD43D52 /* TomTomSDKNavigationEngines.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKNavigationEngines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBDF567B0B48B14F46AEEFD /* NavigationExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExamplesView.swift; sourceTree = "<group>"; };
+		F1844D13FDDC02915FB6F5F9 /* Pods-TomTomSDKExamplesNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomTomSDKExamplesNavigation.debug.xcconfig"; path = "Target Support Files/Pods-TomTomSDKExamplesNavigation/Pods-TomTomSDKExamplesNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 		F74C368F61B7BBDFA54A8FDC /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		F7BF46DEEE4323A8FCACC330 /* TomTomSDKNavigation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TomTomSDKNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +108,7 @@
 				7D4CB832A059A1CE0D9113C7 /* TomTomSDKRoutePlanner.framework in Frameworks */,
 				6DC5C4A257C4015565EB49EA /* TomTomSDKRoutePlannerOnline.framework in Frameworks */,
 				417E20DB389194877C9C76F4 /* TomTomSDKRouteReplannerDefault.framework in Frameworks */,
-				D2EE4F9FC30994C5140267EE /* Pods_TomTomSDKExamples.framework in Frameworks */,
+				B65D52B9639E343EDF657EBA /* Pods_TomTomSDKExamplesNavigation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +129,7 @@
 				93DDEF986302E6135712D049 /* TomTomSDKRoutePlanner.framework */,
 				89201CCEEE54B6CD4EED38FB /* TomTomSDKRoutePlannerOnline.framework */,
 				5EEBF4E3CD30572D35E8CA87 /* TomTomSDKRouteReplannerDefault.framework */,
-				B86C6369208434F74D95F1EC /* Pods_TomTomSDKExamples.framework */,
+				C81F15A6BDA0DB49819B86D0 /* Pods_TomTomSDKExamplesNavigation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,7 +155,7 @@
 		79DE5AFE2C1C4FF9A95D8DF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BEA01338067F8A1A1AC3792 /* TomTomSDKExamples.app */,
+				1BEA01338067F8A1A1AC3792 /* TomTomSDKExamplesNavigation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +178,8 @@
 			children = (
 				4ABEC324E67909B3106CCAD9 /* Pods-TomTomSDKExamples.debug.xcconfig */,
 				3213CB7DEABE07B289061B4A /* Pods-TomTomSDKExamples.release.xcconfig */,
+				F1844D13FDDC02915FB6F5F9 /* Pods-TomTomSDKExamplesNavigation.debug.xcconfig */,
+				6F0E623E4A55527CDBC64F54 /* Pods-TomTomSDKExamplesNavigation.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -270,9 +274,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C58CA1616A6063118F5F526 /* TomTomSDKExamples */ = {
+		8C58CA1616A6063118F5F526 /* TomTomSDKExamplesNavigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CD827AAF21BA9140F0E7F09 /* Build configuration list for PBXNativeTarget "TomTomSDKExamples" */;
+			buildConfigurationList = 3CD827AAF21BA9140F0E7F09 /* Build configuration list for PBXNativeTarget "TomTomSDKExamplesNavigation" */;
 			buildPhases = (
 				4C14EF48DF79ADF85698BCC1 /* [CP] Check Pods Manifest.lock */,
 				12A7BD1439F5110F1A43B891 /* Sources */,
@@ -285,9 +289,9 @@
 			);
 			dependencies = (
 			);
-			name = TomTomSDKExamples;
+			name = TomTomSDKExamplesNavigation;
 			productName = TomTomSDKExamples;
-			productReference = 1BEA01338067F8A1A1AC3792 /* TomTomSDKExamples.app */;
+			productReference = 1BEA01338067F8A1A1AC3792 /* TomTomSDKExamplesNavigation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +302,7 @@
 			attributes = {
 				LastUpgradeCheck = 1200;
 			};
-			buildConfigurationList = F6F4F3C5FD4BA89B58E873BF /* Build configuration list for PBXProject "TomTomSDKExamples" */;
+			buildConfigurationList = F6F4F3C5FD4BA89B58E873BF /* Build configuration list for PBXProject "TomTomSDKExamplesNavigation" */;
 			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -311,7 +315,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C58CA1616A6063118F5F526 /* TomTomSDKExamples */,
+				8C58CA1616A6063118F5F526 /* TomTomSDKExamplesNavigation */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +353,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TomTomSDKExamples-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TomTomSDKExamplesNavigation-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -362,15 +366,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKExamplesNavigation/Pods-TomTomSDKExamplesNavigation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKExamplesNavigation/Pods-TomTomSDKExamplesNavigation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKExamples/Pods-TomTomSDKExamples-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TomTomSDKExamplesNavigation/Pods-TomTomSDKExamplesNavigation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -559,7 +563,7 @@
 		};
 		45D4FA3AD4463A1EF463854D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3213CB7DEABE07B289061B4A /* Pods-TomTomSDKExamples.release.xcconfig */;
+			baseConfigurationReference = 6F0E623E4A55527CDBC64F54 /* Pods-TomTomSDKExamplesNavigation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -583,7 +587,7 @@
 		};
 		7401939595F1FE171F67EC5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ABEC324E67909B3106CCAD9 /* Pods-TomTomSDKExamples.debug.xcconfig */;
+			baseConfigurationReference = F1844D13FDDC02915FB6F5F9 /* Pods-TomTomSDKExamplesNavigation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -607,7 +611,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3CD827AAF21BA9140F0E7F09 /* Build configuration list for PBXNativeTarget "TomTomSDKExamples" */ = {
+		3CD827AAF21BA9140F0E7F09 /* Build configuration list for PBXNativeTarget "TomTomSDKExamplesNavigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7401939595F1FE171F67EC5A /* Debug */,
@@ -616,7 +620,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6F4F3C5FD4BA89B58E873BF /* Build configuration list for PBXProject "TomTomSDKExamples" */ = {
+		F6F4F3C5FD4BA89B58E873BF /* Build configuration list for PBXProject "TomTomSDKExamplesNavigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0DACF23F272CF294D7302A59 /* Debug */,

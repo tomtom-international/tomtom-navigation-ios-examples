@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1410"
+   LastUpgradeVersion = "1500"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D2F394829A379FC0093F702"
-               BuildableName = "TomTomSDKExamples.app"
-               BlueprintName = "TomTomSDKExamples"
-               ReferencedContainer = "container:TomTomSDKExamples.xcodeproj">
+               BuildableName = "TomTomSDKExamplesNavigation.app"
+               BlueprintName = "TomTomSDKExamplesNavigation"
+               ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,9 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-      </Testables>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -45,15 +44,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D2F394829A379FC0093F702"
-            BuildableName = "TomTomSDKExamples.app"
-            BlueprintName = "TomTomSDKExamples"
-            ReferencedContainer = "container:TomTomSDKExamples.xcodeproj">
+            BuildableName = "TomTomSDKExamplesNavigation.app"
+            BlueprintName = "TomTomSDKExamplesNavigation"
+            ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <LocationScenarioReference
-         identifier = "../TomTomSDKExamples/Resources/GPX-Amsterdam.gpx"
-         referenceType = "0">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -66,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D2F394829A379FC0093F702"
-            BuildableName = "TomTomSDKExamples.app"
-            BlueprintName = "TomTomSDKExamples"
-            ReferencedContainer = "container:TomTomSDKExamples.xcodeproj">
+            BuildableName = "TomTomSDKExamplesNavigation.app"
+            BlueprintName = "TomTomSDKExamplesNavigation"
+            ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

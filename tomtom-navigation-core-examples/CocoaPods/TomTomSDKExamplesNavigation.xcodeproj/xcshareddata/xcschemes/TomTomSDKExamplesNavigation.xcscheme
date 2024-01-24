@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1200"
+   LastUpgradeVersion = "1500"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES"
-      runPostActionsOnFailure = "NO">
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -15,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCF35EA8BC8176D30DC15200"
-               BuildableName = "TomTomSDKExamplesOnline.app"
-               BlueprintName = "TomTomSDKExamplesOnline"
-               ReferencedContainer = "container:PublicExamplesOnline.xcodeproj">
+               BlueprintIdentifier = "8C58CA1616A6063118F5F526"
+               BuildableName = "TomTomSDKExamplesNavigation.app"
+               BlueprintName = "TomTomSDKExamplesNavigation"
+               ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,18 +27,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "NO">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCF35EA8BC8176D30DC15200"
-            BuildableName = "TomTomSDKExamplesOnline.app"
-            BlueprintName = "TomTomSDKExamplesOnline"
-            ReferencedContainer = "container:PublicExamplesOnline.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <Testables>
-      </Testables>
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -55,10 +43,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCF35EA8BC8176D30DC15200"
-            BuildableName = "TomTomSDKExamplesOnline.app"
-            BlueprintName = "TomTomSDKExamplesOnline"
-            ReferencedContainer = "container:PublicExamplesOnline.xcodeproj">
+            BlueprintIdentifier = "8C58CA1616A6063118F5F526"
+            BuildableName = "TomTomSDKExamplesNavigation.app"
+            BlueprintName = "TomTomSDKExamplesNavigation"
+            ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,10 +60,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCF35EA8BC8176D30DC15200"
-            BuildableName = "TomTomSDKExamplesOnline.app"
-            BlueprintName = "TomTomSDKExamplesOnline"
-            ReferencedContainer = "container:PublicExamplesOnline.xcodeproj">
+            BlueprintIdentifier = "8C58CA1616A6063118F5F526"
+            BuildableName = "TomTomSDKExamplesNavigation.app"
+            BlueprintName = "TomTomSDKExamplesNavigation"
+            ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

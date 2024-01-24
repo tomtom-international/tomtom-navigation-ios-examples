@@ -1,49 +1,27 @@
-# TomTom Navigation iOS SDK Examples
+# TomTom Navigation SDK examples
 
-Hello and welcome to this repository with examples showcasing the [TomTom Navigation SDK for iOS].
+This repository contains a set of individual Xcode projects showcasing features for TomTom Navigation SDK for
+iOS.
 
-> **Note** Navigation SDK for iOS is only available upon request. In order to get access, [contact us].
+For more information,
+please [read the documentation](https://developer.tomtom.com/ios/navigation/documentation/overview/introduction).
 
-<div align="center">
-  <img align="center" src=".github/nav-sdk-phone.png" width="400"/>
-</div>
+💻 Requirements
+------------
+> **Note**  TomTom Navigation SDK for iOS is only available upon
+> request. [Contact us](https://developer.tomtom.com/tomtom-sdk-for-ios/request-access "Contact us") to get access.
 
-## Development setup
+Once you have obtained access, do the following:
 
-Before beginning, make sure you have Xcode 13 or 14 installed.
+* Install Xcode 13 or 14.
+* Set the deployment target to at least 13.0.
 
-SPM or CocoaPods can be used to install the Navigation SDK. Both configurations are available in the examples. Please navigate to the related directory and find the project setup configuration.
-- [Project setup for SPM]
-- [Project setup for CocoaPods]
+## Cloning the repository
+Clone the repository `https://github.com/tomtom-international/tomtom-navigation-ios-examples.git`
 
-## API Keys
+🚀 Examples
+------------
 
-In order to manage, create or delete your API keys, you need to have a [TomTom Developer Portal] account.
-If you don't have one, you need to [register] for one.
-Follow the steps from [How to get a TomTom API Key] to learn how to create an API key.
-
-> **Note** Using an invalid API key will cause issues loading the map or running navigation.
-
-In order to insert your API key in the project, you need to change the `Keys.swift` file.
-
-```swift
-enum Keys {
-    static let apiKey = "YOUR_API_KEY"
-}
-```
-
-## Troubleshooting
-
-If you have a **black screen** when launching the Basic driving app, please follow the steps below.
-
-- Check that you have updated the `API key` with yours in the `Keys.swift` file.
-- Check that your `API key` is valid for the requested features
-- Check your internet connection
-
-[contact us]: https://developer.tomtom.com/tomtom-sdk-for-ios/request-access
-[How to get a TomTom API Key]: https://developer.tomtom.com/how-to-get-tomtom-api-key
-[register]: https://developer.tomtom.com/user/register
-[TomTom Navigation SDK for iOS]: https://developer.tomtom.com/ios/navigation/documentation/overview/introduction
-[TomTom Developer Portal]: https://developer.tomtom.com/user/me/apps
-[Project setup for SPM]: tomtom-navigation-core-examples/SPM
-[Project setup for CocoaPods]: tomtom-navigation-core-examples/CocoaPods
+|Project|||
+|-|-|-|
+|<b>tomtom-navigation-core-examples</b><br><br>A collection of examples showcasing online use cases, including a basic driving application that displays a map, shows the user’s location, calculates and displays routes, and enables turn-by-turn navigation using built-in UI components.<br><br> **[> Browse](tomtom-navigation-core-examples/)**|<img src="tomtom-navigation-core-examples/assets/nav-sdk-online.png" width="320" alt="Core"></img>|<img src="tomtom-navigation-core-examples/assets/nav-sdk-navigation.png" width="320" alt="Navigation"></img>|
