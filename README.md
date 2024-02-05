@@ -14,7 +14,7 @@ please [read the documentation](https://developer.tomtom.com/ios/navigation/docu
 Once you have obtained access, do the following:
 
 * Install Xcode 13 or 14.
-* Set the deployment target to at least 13.0.
+* Set the iOS deployment target to at least 13.0.
 
 ## Cloning the repository
 Clone the repository `https://github.com/tomtom-international/tomtom-navigation-ios-examples.git`

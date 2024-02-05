@@ -7,7 +7,7 @@ This project is a sample app to show how to run online modules using the TomTom 
 > **Note:** It's not a complete app that includes all TomTom Navigation SDK functionalities and implementations.
 
 <div align="center">
-  <img align="center" src="assets/nav-sdk-online.png" width="400"/>
+  <img align="center" src="assets/nav-sdk-navigation.png" width="400"/>
 </div>
 
 ## Features
@@ -29,7 +29,7 @@ This project is a sample app to show how to run online modules using the TomTom 
 
 Once you have obtained access, do the following:
 
-## API Keys
+### API Keys
 
 In order to manage, create or delete your API keys, you need to have a [TomTom Developer Portal] account.
 If you don't have one, you need to [register] for one.
@@ -45,7 +45,7 @@ enum Keys {
 }
 ```
 
-## Package Manager
+### Package Manager
 
 SPM or CocoaPods can be used to install the Navigation SDK. Both configurations are available in the examples. Please navigate to the related directory and find the project setup configuration.
 - [Project setup for SPM]

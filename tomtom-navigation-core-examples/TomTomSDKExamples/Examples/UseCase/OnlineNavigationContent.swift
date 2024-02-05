@@ -122,10 +122,10 @@ extension NavigationController: NavigationProgressObserver {
     }
 }
 
-// MARK: NavigationRouteAddedObserver
+// MARK: NavigationRouteAddObserver
 
 /// Allows observing route additions.
-extension NavigationController: NavigationRouteAddedObserver {
+extension NavigationController: NavigationRouteAddObserver {
     func didAddRoute(route: TomTomSDKRoute.Route, options: RoutePlanningOptions, reason: RouteAddedReason) {
         displayedRouteSubject.send(nil)
         displayedRouteSubject.send(route)
