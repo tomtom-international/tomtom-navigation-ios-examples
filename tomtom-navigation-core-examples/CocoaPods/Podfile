@@ -1,0 +1,29 @@
+platform :ios, '13.0'
+
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+workspace 'TomTomSDKExamplesNavigation.xcworkspace'
+
+install! 'cocoapods', warn_for_unused_master_specs_repo: false
+use_frameworks!
+
+plugin 'cocoapods-art', :sources => [
+  'tomtom-sdk-cocoapods'
+]
+
+SDK_VERSION = '0.38.0'
+
+target 'TomTomSDKExamplesNavigation' do
+  pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION
+  pod 'TomTomSDKLocationProvider', SDK_VERSION
+  pod 'TomTomSDKMapDisplay', SDK_VERSION
+  pod 'TomTomSDKNavigation', SDK_VERSION
+  pod 'TomTomSDKNavigationEngines', SDK_VERSION
+  pod 'TomTomSDKNavigationOnline', SDK_VERSION
+  pod 'TomTomSDKNavigationUI', SDK_VERSION
+  pod 'TomTomSDKRoute', SDK_VERSION
+  pod 'TomTomSDKRoutingCommon', SDK_VERSION
+  pod 'TomTomSDKRoutePlanner', SDK_VERSION
+  pod 'TomTomSDKRoutePlannerOnline', SDK_VERSION
+  pod 'TomTomSDKRouteReplannerDefault', SDK_VERSION
+end
