@@ -32,7 +32,7 @@ import TomTomSDKRoutingCommon
 // swiftlint:disable file_length
 
 /// This example shows how to build a simple navigation application using the TomTom Navigation SDK for iOS.
-/// The application displays a map and shows the user’s location.
+/// The application displays a map and shows the users location.
 /// After the user selects a destination with a long press, the app plans a route and draws it on the map.
 /// Navigation is started automatically using the route simulation.
 /// The application will display upcoming maneuvers, remaining distance, estimated time of arrival (ETA),
@@ -94,6 +94,7 @@ final class NavigationController: ObservableObject {
         self.navigationViewModel = navigationModel
 
         self.navigation.addProgressObserver(self)
+        self.navigation.addRouteAddObserver(self)
         locationProvider.start()
     }
 
@@ -483,7 +484,6 @@ extension NavigationController {
         routePlanningOptions: RoutePlanningOptions
     ) async throws
         -> TomTomSDKRoute.Route {
-        // swiftlint:disable line_length
         return try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<TomTomSDKRoute.Route, Error>) in
             routePlanner.planRoute(
                 options: routePlanningOptions,

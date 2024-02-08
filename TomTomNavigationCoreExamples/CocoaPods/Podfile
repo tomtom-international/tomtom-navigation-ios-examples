@@ -1,3 +1,12 @@
+#  © 2024 TomTom NV. All rights reserved.
+#
+#  This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+#  used for internal evaluation purposes or commercial use strictly subject to separate
+#  license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+#  to use this software in accordance with the terms of your license agreement. If you are
+#  not the licensee, you are not authorized to use this software in any manner and should
+#  immediately return or destroy it.
+
 platform :ios, '13.0'
 
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
@@ -11,7 +20,7 @@ plugin 'cocoapods-art', :sources => [
   'tomtom-sdk-cocoapods'
 ]
 
-SDK_VERSION = '0.38.0'
+SDK_VERSION = '0.39.0'
 
 target 'TomTomSDKExamplesNavigation' do
   pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION

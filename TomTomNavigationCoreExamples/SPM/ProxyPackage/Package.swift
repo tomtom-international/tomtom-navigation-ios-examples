@@ -1,10 +1,19 @@
 // swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
+//  © 2024 TomTom NV. All rights reserved.
+//
+//  This software is the proprietary copyright of TomTom NV and its subsidiaries and may be
+//  used for internal evaluation purposes or commercial use strictly subject to separate
+//  license agreement between you and TomTom NV. If you are the licensee, you are only permitted
+//  to use this software in accordance with the terms of your license agreement. If you are
+//  not the licensee, you are not authorized to use this software in any manner and should
+//  immediately return or destroy it.
+
 import PackageDescription
 
 /// The version for all TomTom SDK dependencies.
-let sdkVersion: Version = "0.38.0"
+let sdkVersion: Version = "0.39.0"
 
 /// Dictionary of all dependencies.
 /// `key`: package name.

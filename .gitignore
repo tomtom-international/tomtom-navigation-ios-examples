@@ -9,12 +9,13 @@ DerivedData/
 .netrc
 Package.resolved
 Package_template.swift
+.swiftlint.yml
 
 Podfile_template
 Pods/
 
 fastlane/
 project.yml
-tomtom-navigation-core-examples/TomTomSDKExamplesNavigation.xcodeproj
+TomTomNavigationCoreExamples/TomTomSDKExamplesNavigation.xcodeproj
 
 tomtom-navigation-offline-examples/
