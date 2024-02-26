@@ -11,8 +11,8 @@ env:
   spm_dir: './SPM'
   cocoapods_dir: './CocoaPods'
   platform: 'iOS Simulator'
-  device_name: 'iPhone 14'
-  ios_version: '16.4'
+  device_name: 'iPhone 15'
+  ios_version: '17.0.1'
 
 # clear out default permissions
 permissions: {}

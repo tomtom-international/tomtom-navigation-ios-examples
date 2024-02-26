@@ -58,7 +58,7 @@ final class NavigationController: ObservableObject {
             routeReplanner: routeReplanner,
             apiKey: Keys.apiKey,
             betterProposalAcceptanceMode: .automatic
-        )        
+        )
         guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) else {
             fatalError("The navigation object could not be created!")
         }
@@ -87,7 +87,10 @@ final class NavigationController: ObservableObject {
         navigationViewModel = navigationModel
 
         self.navigation.addProgressObserver(self)
-        self.navigation.addRouteObserver(self)
+        self.navigation.addRouteAddObserver(self)
+        self.navigation.addRouteRemoveObserver(self)
+        self.navigation.addRouteUpdateObserver(self)
+        self.navigation.addActiveRouteChangeObserver(self)
         locationProvider.start()
     }
 
@@ -116,25 +119,37 @@ extension NavigationController: NavigationProgressObserver {
     }
 }
 
-// MARK: NavigationRouteObserver
+// MARK: Navigation Route Observers
 
 /// Allows observing route changes.
-extension NavigationController: NavigationRouteObserver {
-    func didDeviateFromRoute(currentRoute _: TomTomSDKRoute.Route, location _: TomTomSDKLocationProvider.GeoLocation) {}
+extension NavigationController: TomTomSDKNavigation.NavigationRouteAddObserver,
+    TomTomSDKNavigation.NavigationRouteRemoveObserver,
+    TomTomSDKNavigation.NavigationActiveRouteChangeObserver,
+    TomTomSDKNavigation.NavigationRouteUpdateObserver
+{
+    func didAddRoute(
+        route: TomTomSDKRoute.Route,
+        options _: TomTomSDKRoutePlanner.RoutePlanningOptions,
+        reason: TomTomSDKNavigation.RouteAddedReason
+    ) {
+        let triggeringReasons: [RouteAddedReason] = [
+            .avoidBlockage,
+            .deviated,
+            .manuallyUpdated,
+            .withinRange,
+        ]
 
-    func didProposeRoutePlan(routePlan _: TomTomSDKNavigationEngines.RoutePlan, reason _: TomTomSDKNavigationEngines.RouteReplanningReason) {}
-
-    func didReplanRoute(replannedRoute: TomTomSDKRoute.Route, reason: TomTomSDKNavigationEngines.RouteReplanningReason) {
-        let nonTriggeringReasons: [RouteReplanningReason] = [.refresh, .increment, .languageChange]
-        if nonTriggeringReasons.contains(reason) == false {
-            displayedRouteSubject.send(nil)
-            displayedRouteSubject.send(replannedRoute)
+        if triggeringReasons.contains(reason) {
+            displayedRouteSubject.send(nil) // clear previous route after replanning
+            displayedRouteSubject.send(route)
         }
     }
 
-    func didChangeRoutes(navigatedRoutes _: TomTomSDKNavigation.NavigatedRoutes) {}
+    func didRemoveRoute(route _: TomTomSDKRoute.Route, reason _: TomTomSDKNavigation.RouteRemovedReason) {}
 
-    func didReplanRouteOnLanguageChange(replannedRoute _: TomTomSDKRoute.Route, reason _: TomTomSDKNavigationEngines.RouteReplanningReason, language _: Locale) {}
+    func didChangeActiveRoute(route _: TomTomSDKRoute.Route) {}
+
+    func didUpdateRoute(route _: TomTomSDKRoute.Route, reason _: TomTomSDKNavigation.RouteUpdatedReason) {}
 }
 
 // MARK: - MainView
