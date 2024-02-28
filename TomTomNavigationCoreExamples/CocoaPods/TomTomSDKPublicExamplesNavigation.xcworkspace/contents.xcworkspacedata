@@ -5,6 +5,6 @@
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:TomTomSDKExamplesNavigation.xcodeproj">
+      location = "group:TomTomSDKPublicExamplesNavigation.xcodeproj">
    </FileRef>
 </Workspace>

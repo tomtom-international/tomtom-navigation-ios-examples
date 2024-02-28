@@ -13,7 +13,7 @@
 import PackageDescription
 
 /// The version for all TomTom SDK dependencies.
-let sdkVersion: Version = "0.39.0"
+let sdkVersion: Version = "0.41.0"
 
 /// Dictionary of all dependencies.
 /// `key`: package name.
@@ -41,7 +41,7 @@ let dependencies: [String: [String]] = [
 let packageDependencies: [Package.Dependency] = dependencies
     .keys
     .map { package in
-        Package.Dependency.package(url: "https://@github.com/tomtom-international/\(package).git", exact: sdkVersion)
+        Package.Dependency.package(url: "https://github.com/tomtom-international/\(package).git", exact: sdkVersion)
     }
 
 let targetDependencies: [Target.Dependency] = dependencies

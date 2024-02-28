@@ -16,6 +16,6 @@ Pods/
 
 fastlane/
 project.yml
-TomTomNavigationCoreExamples/TomTomSDKExamplesNavigation.xcodeproj
+TomTomNavigationCoreExamples/TomTomSDKPublicExamplesNavigation.xcodeproj
 
 tomtom-navigation-offline-examples/

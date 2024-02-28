@@ -13,7 +13,7 @@ Once you have gained access, set up the development environment by following:
    ```   
    3. Change directory to the related folder of the recently cloned repository and install `ruby` via `rbenv`
    ```zsh
-   cd tomtom-navigation-ios-examples/CocoaPods
+   cd tomtom-navigation-ios-examples/TomTomNavigationCoreExamples/CocoaPods
    rbenv install
    ```
    4. Load `rbenv` to your shell

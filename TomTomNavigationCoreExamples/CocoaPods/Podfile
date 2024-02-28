@@ -11,7 +11,7 @@ platform :ios, '13.0'
 
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
-workspace 'TomTomSDKExamplesNavigation.xcworkspace'
+workspace 'TomTomSDKPublicExamplesNavigation.xcworkspace'
 
 install! 'cocoapods', warn_for_unused_master_specs_repo: false
 use_frameworks!
@@ -20,9 +20,9 @@ plugin 'cocoapods-art', :sources => [
   'tomtom-sdk-cocoapods'
 ]
 
-SDK_VERSION = '0.39.0'
+SDK_VERSION = '0.41.0'
 
-target 'TomTomSDKExamplesNavigation' do
+target 'TomTomSDKPublicExamplesNavigation' do
   pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION
   pod 'TomTomSDKLocationProvider', SDK_VERSION
   pod 'TomTomSDKMapDisplay', SDK_VERSION

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D2F394829A379FC0093F702"
-               BuildableName = "TomTomSDKExamplesNavigation.app"
-               BlueprintName = "TomTomSDKExamplesNavigation"
-               ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
+               BuildableName = "TomTomSDKPublicExamplesNavigation.app"
+               BlueprintName = "TomTomSDKPublicExamplesNavigation"
+               ReferencedContainer = "container:TomTomSDKPublicExamplesNavigation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D2F394829A379FC0093F702"
-            BuildableName = "TomTomSDKExamplesNavigation.app"
-            BlueprintName = "TomTomSDKExamplesNavigation"
-            ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
+            BuildableName = "TomTomSDKPublicExamplesNavigation.app"
+            BlueprintName = "TomTomSDKPublicExamplesNavigation"
+            ReferencedContainer = "container:TomTomSDKPublicExamplesNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D2F394829A379FC0093F702"
-            BuildableName = "TomTomSDKExamplesNavigation.app"
-            BlueprintName = "TomTomSDKExamplesNavigation"
-            ReferencedContainer = "container:TomTomSDKExamplesNavigation.xcodeproj">
+            BuildableName = "TomTomSDKPublicExamplesNavigation.app"
+            BlueprintName = "TomTomSDKPublicExamplesNavigation"
+            ReferencedContainer = "container:TomTomSDKPublicExamplesNavigation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
