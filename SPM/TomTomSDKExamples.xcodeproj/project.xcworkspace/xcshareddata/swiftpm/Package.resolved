@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tomtom-international/tomtom-sdk-spm-core",
       "state" : {
-        "revision" : "fdfa0849cac82febc15a53b7bbab715261c62cfe",
-        "version" : "0.43.0"
+        "revision" : "5fe4319d75451df5d793925c5ef09d15f98d2e8f",
+        "version" : "0.44.1"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tomtom-international/tomtom-sdk-spm-navigation",
       "state" : {
-        "revision" : "eedc14bb8c602a6348acd1587ab69c152ee2692e",
-        "version" : "0.43.0"
+        "revision" : "a70ebcc4f55c76513377be6f88b422c8da0f8b50",
+        "version" : "0.44.1"
       }
     }
   ],
