@@ -20,7 +20,7 @@ plugin 'cocoapods-art', :sources => [
   'tomtom-sdk-cocoapods'
 ]
 
-SDK_VERSION = '0.45.0'
+SDK_VERSION = '0.46.0'
 
 target 'TomTomSDKPublicExamplesNavigation' do
   pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION
