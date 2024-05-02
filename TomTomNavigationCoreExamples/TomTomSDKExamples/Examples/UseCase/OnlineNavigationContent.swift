@@ -39,7 +39,7 @@ import TomTomSDKRoutingCommon
 /// current speed, and speed limit information.
 ///
 /// For more details on this example, check out the tutorial:
-/// https://developer.tomtom.com/navigation/ios/build-a-navigation-app/building-a-navigation-app
+/// https://developer.tomtom.com/ios/navigation/documentation/use-cases/building-a-navigation-app
 struct OnlineNavigationContent: View {
     var body: some View {
         MainView()
