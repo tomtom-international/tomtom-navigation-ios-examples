@@ -69,7 +69,7 @@ You can see the downloaded map when the downloading process finished as below.
 ## Subdirectories
 - [Link to Use Case README]
 
-[TomTom Navigation SDK for iOS]: https://developer.tomtom.com/ios/navigation/documentation/overview/introduction
+[TomTom Navigation SDK for iOS]: https://developer.tomtom.com/navigation/ios/introduction/introduction
 [TomTom Developer Portal]: https://developer.tomtom.com/user/me/apps
 [How to get a TomTom API Key]: https://developer.tomtom.com/how-to-get-tomtom-api-key
 [register]: https://developer.tomtom.com/user/register

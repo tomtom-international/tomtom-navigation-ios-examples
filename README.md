@@ -4,7 +4,7 @@ This repository contains a set of individual Xcode projects showcasing features 
 iOS.
 
 For more information,
-please [read the documentation](https://developer.tomtom.com/ios/navigation/documentation/overview/introduction).
+please [read the documentation](https://developer.tomtom.com/navigation/ios/introduction/introduction).
 
 💻 Requirements
 ------------
