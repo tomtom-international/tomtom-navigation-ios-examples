@@ -20,6 +20,7 @@ import TomTomSDKMapDisplay
 import TomTomSDKNavigation
 import TomTomSDKNavigationEngines
 import TomTomSDKNavigationOnline
+import TomTomSDKNavigationTileStore
 import TomTomSDKNavigationUI
 import TomTomSDKRoute
 import TomTomSDKRoutePlanner
@@ -56,14 +57,19 @@ final class NavigationController: ObservableObject {
         guard let textToSpeech = try? SystemTextToSpeechEngine() else {
             fatalError("The text to speech engine object could not be created!")
         }
+        guard let navigationTileStore = try? NavigationTileStore(config: NavigationTileStoreConfiguration(apiKey: Keys.apiKey))
+        else {
+            fatalError("The navigation tile store object could not be created!")
+        }
+
         let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.apiKey)
         let routeReplanner = RouteReplannerFactory.create(routePlanner: routePlanner)
         let locationProvider = DefaultCLLocationProvider()
         let simulatedLocationProvider = SimulatedLocationProvider(delay: .tt.seconds(1))
         let navigationConfiguration = OnlineTomTomNavigationFactory.Configuration(
+            navigationTileStore: navigationTileStore,
             locationProvider: simulatedLocationProvider,
             routeReplanner: routeReplanner,
-            apiKey: Keys.apiKey,
             betterProposalAcceptanceMode: .automatic
         )
         guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) else {
