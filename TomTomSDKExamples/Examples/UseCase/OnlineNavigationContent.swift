@@ -20,6 +20,7 @@ import TomTomSDKMapDisplay
 import TomTomSDKNavigation
 import TomTomSDKNavigationEngines
 import TomTomSDKNavigationOnline
+import TomTomSDKNavigationTileStore
 import TomTomSDKNavigationUI
 import TomTomSDKRoute
 import TomTomSDKRoutePlanner
@@ -53,10 +54,13 @@ final class NavigationController: ObservableObject {
         let routeReplanner = RouteReplannerFactory.create(routePlanner: routePlanner)
         let locationProvider = DefaultCLLocationProvider()
         let simulatedLocationProvider = SimulatedLocationProvider(delay: .tt.seconds(1))
+        guard let navigationTileStore = try? NavigationTileStore(config: NavigationTileStoreConfiguration(apiKey: Keys.apiKey)) else {
+            fatalError("The navigation tile store object could not be created!")
+        }
         let navigationConfiguration = OnlineTomTomNavigationFactory.Configuration(
+            navigationTileStore: navigationTileStore,
             locationProvider: simulatedLocationProvider,
             routeReplanner: routeReplanner,
-            apiKey: Keys.apiKey,
             betterProposalAcceptanceMode: .automatic
         )
         guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) else {
