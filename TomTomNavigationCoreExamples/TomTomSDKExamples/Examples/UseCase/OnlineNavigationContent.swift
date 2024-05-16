@@ -25,7 +25,6 @@ import TomTomSDKNavigationUI
 import TomTomSDKRoute
 import TomTomSDKRoutePlanner
 import TomTomSDKRoutePlannerOnline
-import TomTomSDKRouteReplannerDefault
 import TomTomSDKRoutingCommon
 
 // MARK: - OnlineNavigationContent
@@ -63,13 +62,12 @@ final class NavigationController: ObservableObject {
         }
 
         let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.apiKey)
-        let routeReplanner = RouteReplannerFactory.create(routePlanner: routePlanner)
         let locationProvider = DefaultCLLocationProvider()
         let simulatedLocationProvider = SimulatedLocationProvider(delay: .tt.seconds(1))
         let navigationConfiguration = OnlineTomTomNavigationFactory.Configuration(
             navigationTileStore: navigationTileStore,
             locationProvider: simulatedLocationProvider,
-            routeReplanner: routeReplanner,
+            routePlanner: routePlanner,
             betterProposalAcceptanceMode: .automatic
         )
         guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) else {
