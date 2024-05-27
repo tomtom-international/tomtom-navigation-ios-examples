@@ -56,12 +56,13 @@ final class NavigationController: ObservableObject {
         guard let textToSpeech = try? SystemTextToSpeechEngine() else {
             fatalError("The text to speech engine object could not be created!")
         }
-        guard let navigationTileStore = try? NavigationTileStore(config: NavigationTileStoreConfiguration(apiKey: Keys.apiKey))
+        guard let navigationTileStore =
+            try? NavigationTileStore(config: NavigationTileStoreConfiguration(apiKey: Keys.tomtomApiKey))
         else {
             fatalError("The navigation tile store object could not be created!")
         }
 
-        let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.apiKey)
+        let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.tomtomApiKey)
         let locationProvider = DefaultCLLocationProvider()
         let simulatedLocationProvider = SimulatedLocationProvider(delay: .tt.seconds(1))
         let navigationConfiguration = OnlineTomTomNavigationFactory.Configuration(
