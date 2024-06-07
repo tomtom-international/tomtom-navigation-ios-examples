@@ -473,8 +473,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ../TomTomSDKExamples/TomTomSDKExamplesInfo.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires GPS to display your position on map";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -508,8 +506,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ../TomTomSDKExamples/TomTomSDKExamplesInfo.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Application requires GPS to display your position on map";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application requires GPS to display your position on map";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

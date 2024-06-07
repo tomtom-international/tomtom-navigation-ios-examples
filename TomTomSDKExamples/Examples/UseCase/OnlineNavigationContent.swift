@@ -94,11 +94,13 @@ final class NavigationController: ObservableObject {
         self.navigation.addRouteRemoveObserver(self)
         self.navigation.addRouteUpdateObserver(self)
         self.navigation.addActiveRouteChangeObserver(self)
-        locationProvider.start()
+        locationManager.requestWhenInUseAuthorization()
+        locationProvider.enable()
     }
 
     // MARK: Internal
 
+    let locationManager = CLLocationManager()
     let locationProvider: LocationProvider
     let simulatedLocationProvider: SimulatedLocationProvider
     let routePlanner: TomTomSDKRoutePlannerOnline.OnlineRoutePlanner
@@ -338,14 +340,15 @@ extension MapCoordinator {
 /// This extension enables the MapCoordinator to observe GPS updates and authorization changes.
 /// This means that when the application starts, the camera position and zoom level are updated in the onLocationUpdated callback function.
 /// The user then sees the current location.
-extension MapCoordinator: TomTomSDKLocationProvider.LocationProviderObservable {
-    func onLocationUpdated(location: GeoLocation) {
+extension MapCoordinator: TomTomSDKLocationProvider.LocationUpdateObserver {
+    func didUpdateLocation(location: GeoLocation) {
         // Zoom and center the camera on the first location received.
-        animateCamera(zoom: 9.0, position: location.location.coordinate, animationDurationInSeconds: 1.5, onceOnly: true)
-    }
-
-    func onHeadingUpdate(newHeading _: CLHeading, lastLocation _: GeoLocation) {
-        // Handle heading updates
+        animateCamera(
+            zoom: 9.0,
+            position: location.location.coordinate,
+            animationDurationInSeconds: 1.5,
+            onceOnly: true
+        )
     }
 
     func onAuthorizationStatusChanged(isGranted _: Bool) {
@@ -406,7 +409,7 @@ extension NavigationController {
 
                 // Use simulated location updates
                 self.simulatedLocationProvider.updateCoordinates(route.geometry, interpolate: true)
-                self.simulatedLocationProvider.start()
+                self.simulatedLocationProvider.enable()
                 self.mapMatchedLocationProvider.send(navigation.mapMatchedLocationProvider)
 
                 self.showNavigationView = true
@@ -419,7 +422,7 @@ extension NavigationController {
     func stopNavigating() {
         displayedRouteSubject.send(nil)
         navigationViewModel.stop()
-        simulatedLocationProvider.stop()
+        simulatedLocationProvider.disable()
         showNavigationView = false
     }
 }
@@ -434,10 +437,10 @@ extension NavigationController {
     }
 
     private func startCoordinate() throws -> CLLocationCoordinate2D {
-        if let simulatedPosition = simulatedLocationProvider.location?.location.coordinate {
+        if let simulatedPosition = simulatedLocationProvider.lastKnownLocation?.location.coordinate {
             return simulatedPosition
         }
-        if let currentPosition = locationProvider.location?.location.coordinate {
+        if let currentPosition = locationProvider.lastKnownLocation?.location.coordinate {
             return currentPosition
         }
         throw RoutePlanError.unknownStartingLocation
