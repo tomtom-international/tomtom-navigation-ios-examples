@@ -101,11 +101,13 @@ final class NavigationController: ObservableObject {
         self.navigation.addProgressObserver(self)
         self.navigation.addRouteAddObserver(self)
         locationProvider.enable()
+        locationManager.requestWhenInUseAuthorization()
     }
 
     // MARK: Internal
 
     let locationProvider: LocationProvider
+    let locationManager = CLLocationManager()
     let simulatedLocationProvider: SimulatedLocationProvider
     let routePlanner: TomTomSDKRoutePlannerOnline.OnlineRoutePlanner
     let navigation: TomTomNavigation
@@ -325,7 +327,7 @@ extension MapCoordinator {
 
 /// Extend MapCoordinator to conform to LocationUpdateObserver by adding the following functions.
 ///
-/// This extension enables the MapCoordinator to observe GPS updates and authorization changes.
+/// This extension enables the MapCoordinator to observe GPS updates.
 /// This means that when the application starts,
 /// the camera position and zoom level are updated in the didUpdateLocation callback function.
 /// The user then sees the current location.
@@ -338,10 +340,6 @@ extension MapCoordinator: TomTomSDKLocationProvider.LocationUpdateObserver {
             animationDurationInSeconds: 1.5,
             onceOnly: true
         )
-    }
-
-    func onAuthorizationStatusChanged(isGranted _: Bool) {
-        // Handle authorization changes
     }
 }
 
