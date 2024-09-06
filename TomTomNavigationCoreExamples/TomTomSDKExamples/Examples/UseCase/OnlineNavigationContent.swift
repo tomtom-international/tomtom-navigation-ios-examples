@@ -25,6 +25,7 @@ import TomTomSDKNavigationUI
 import TomTomSDKRoute
 import TomTomSDKRoutePlanner
 import TomTomSDKRoutePlannerOnline
+import TomTomSDKRouteReplannerDefault
 import TomTomSDKRoutingCommon
 
 // MARK: - OnlineNavigationContent
@@ -56,19 +57,19 @@ final class NavigationController: ObservableObject {
         guard let textToSpeech = try? SystemTextToSpeechEngine() else {
             fatalError("The text to speech engine object could not be created!")
         }
-        guard let navigationTileStore =
-            try? NavigationTileStore(config: NavigationTileStoreConfiguration(apiKey: Keys.tomtomApiKey))
+        guard let navigationTileStore = try? NavigationTileStore(config: NavigationTileStoreConfiguration(apiKey: Keys.apiKey))
         else {
             fatalError("The navigation tile store object could not be created!")
         }
 
-        let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.tomtomApiKey)
+        let routePlanner = TomTomSDKRoutePlannerOnline.OnlineRoutePlanner(apiKey: Keys.apiKey)
+        let routeReplanner = RouteReplannerFactory.create(routePlanner: routePlanner)
         let locationProvider = DefaultCLLocationProvider()
         let simulatedLocationProvider = SimulatedLocationProvider(delay: .tt.seconds(1))
         let navigationConfiguration = OnlineTomTomNavigationFactory.Configuration(
             navigationTileStore: navigationTileStore,
             locationProvider: simulatedLocationProvider,
-            routePlanner: routePlanner,
+            routeReplanner: routeReplanner,
             betterProposalAcceptanceMode: .automatic
         )
         guard let navigation = try? OnlineTomTomNavigationFactory.create(configuration: navigationConfiguration) else {
@@ -100,14 +101,12 @@ final class NavigationController: ObservableObject {
 
         self.navigation.addProgressObserver(self)
         self.navigation.addRouteAddObserver(self)
-        locationProvider.enable()
-        locationManager.requestWhenInUseAuthorization()
+        locationProvider.start()
     }
 
     // MARK: Internal
 
     let locationProvider: LocationProvider
-    let locationManager = CLLocationManager()
     let simulatedLocationProvider: SimulatedLocationProvider
     let routePlanner: TomTomSDKRoutePlannerOnline.OnlineRoutePlanner
     let navigation: TomTomNavigation
@@ -323,16 +322,16 @@ extension MapCoordinator {
     }
 }
 
-// MARK: TomTomSDKLocationProvider.LocationUpdateObserver
+// MARK: TomTomSDKLocationProvider.LocationProviderObservable
 
-/// Extend MapCoordinator to conform to LocationUpdateObserver by adding the following functions.
+/// Extend MapCoordinator to conform to LocationProviderObservable by adding the following functions.
 ///
-/// This extension enables the MapCoordinator to observe GPS updates.
+/// This extension enables the MapCoordinator to observe GPS updates and authorization changes.
 /// This means that when the application starts,
-/// the camera position and zoom level are updated in the didUpdateLocation callback function.
+/// the camera position and zoom level are updated in the onLocationUpdated callback function.
 /// The user then sees the current location.
-extension MapCoordinator: TomTomSDKLocationProvider.LocationUpdateObserver {
-    func didUpdateLocation(location: GeoLocation) {
+extension MapCoordinator: TomTomSDKLocationProvider.LocationProviderObservable {
+    func onLocationUpdated(location: GeoLocation) {
         // Zoom and center the camera on the first location received.
         animateCamera(
             zoom: 9.0,
@@ -340,6 +339,14 @@ extension MapCoordinator: TomTomSDKLocationProvider.LocationUpdateObserver {
             animationDurationInSeconds: 1.5,
             onceOnly: true
         )
+    }
+
+    func onHeadingUpdate(newHeading _: CLHeading, lastLocation _: GeoLocation) {
+        // Handle heading updates
+    }
+
+    func onAuthorizationStatusChanged(isGranted _: Bool) {
+        // Handle authorization changes
     }
 }
 
@@ -398,7 +405,7 @@ extension NavigationController {
 
                 // Use simulated location updates
                 self.simulatedLocationProvider.updateCoordinates(route.geometry, interpolate: true)
-                self.simulatedLocationProvider.enable()
+                self.simulatedLocationProvider.start()
                 self.mapMatchedLocationProvider.send(navigation.mapMatchedLocationProvider)
 
                 self.showNavigationView = true
@@ -411,7 +418,7 @@ extension NavigationController {
     func stopNavigating() {
         displayedRouteSubject.send(nil)
         navigationViewModel.stop()
-        simulatedLocationProvider.disable()
+        simulatedLocationProvider.stop()
         showNavigationView = false
     }
 }
@@ -426,10 +433,10 @@ extension NavigationController {
     }
 
     private func startCoordinate() throws -> CLLocationCoordinate2D {
-        if let simulatedPosition = simulatedLocationProvider.lastKnownLocation?.location.coordinate {
+        if let simulatedPosition = simulatedLocationProvider.location?.location.coordinate {
             return simulatedPosition
         }
-        if let currentPosition = locationProvider.lastKnownLocation?.location.coordinate {
+        if let currentPosition = locationProvider.location?.location.coordinate {
             return currentPosition
         }
         throw RoutePlanError.unknownStartingLocation

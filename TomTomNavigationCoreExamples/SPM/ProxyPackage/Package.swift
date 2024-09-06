@@ -13,7 +13,7 @@
 import PackageDescription
 
 /// The version for all TomTom SDK dependencies.
-let sdkVersion: Version = "0.60.1"
+let sdkVersion: Version = "0.47.3"
 
 /// Dictionary of all dependencies.
 /// `key`: package name.
@@ -53,7 +53,7 @@ let targetDependencies: [Target.Dependency] = dependencies
 
 let package = Package(
     name: "SPMDependencies",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(name: "TomTomSPMDependencies", type: .static, targets: ["TomTomSPMDependencies"]),
     ],
