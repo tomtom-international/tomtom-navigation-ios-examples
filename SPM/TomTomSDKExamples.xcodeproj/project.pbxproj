@@ -538,7 +538,7 @@
 			repositoryURL = "https://github.com/tomtom-international/tomtom-sdk-spm-navigation";
 			requirement = {
 				kind = exactVersion;
-				version = 0.59.0;
+				version = 0.60.1;
 			};
 		};
 		9D0D47332AF93514009E9B53 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */ = {
@@ -546,7 +546,7 @@
 			repositoryURL = "https://github.com/tomtom-international/tomtom-sdk-spm-core";
 			requirement = {
 				kind = exactVersion;
-				version = 0.59.0;
+				version = 0.60.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
