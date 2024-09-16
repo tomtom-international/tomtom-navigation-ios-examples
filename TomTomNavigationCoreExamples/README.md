@@ -41,7 +41,7 @@ In order to insert your API key in the project, you need to change the `Keys.swi
 
 ```swift
 enum Keys {
-    static let tomtomApiKey = "YOUR_TOMTOM_API_KEY"
+    static let apiKey = "YOUR_API_KEY"
 }
 ```
 
