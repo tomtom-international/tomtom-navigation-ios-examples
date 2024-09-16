@@ -7,9 +7,9 @@
 //  not the licensee, you are not authorized to use this software in any manner and should
 //  immediately return or destroy it.
 
-/// Navigation SDK is only avaialble upon request.
+/// Navigation SDK is only available upon request.
 /// Use the API key provided by TomTom to start using the SDK.
 enum Keys {
-    #warning("Please replace the placeholder API Key")
-    static let apiKey = "<YOUR API KEY>"
+    #warning("Please replace the placeholder TomTom API Key")
+    static let tomtomApiKey = "YOUR_TOMTOM_API_KEY"
 }
