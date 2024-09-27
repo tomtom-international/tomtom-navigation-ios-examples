@@ -13,7 +13,7 @@
 import PackageDescription
 
 /// The version for all TomTom SDK dependencies.
-let sdkVersion: Version = "0.47.5"
+let sdkVersion: Version = "0.63.0"
 
 /// Dictionary of all dependencies.
 /// `key`: package name.
@@ -30,10 +30,12 @@ let dependencies: [String: [String]] = [
     "tomtom-sdk-spm-core": [
         "TomTomSDKMapDisplay",
         "TomTomSDKRoutePlannerOnline",
-        "TomTomSDKRouteReplannerDefault"],
+        "TomTomSDKRouteReplannerDefault",
+    ],
     "tomtom-sdk-spm-navigation": [
         "TomTomSDKNavigationOnline",
-        "TomTomSDKNavigationUI"],
+        "TomTomSDKNavigationUI",
+    ],
 ]
 
 // MARK: - Internal. You should *NOT* have to change anything from this point onward.
@@ -53,7 +55,7 @@ let targetDependencies: [Target.Dependency] = dependencies
 
 let package = Package(
     name: "SPMDependencies",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(name: "TomTomSPMDependencies", type: .static, targets: ["TomTomSPMDependencies"]),
     ],
