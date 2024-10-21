@@ -7,7 +7,7 @@
 #  not the licensee, you are not authorized to use this software in any manner and should
 #  immediately return or destroy it.
 
-platform :ios, '14.0'
+platform :ios, '13.0'
 
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
@@ -20,7 +20,7 @@ plugin 'cocoapods-art', :sources => [
   'tomtom-sdk-cocoapods'
 ]
 
-SDK_VERSION = '0.64.0'
+SDK_VERSION = '0.47.6'
 
 target 'TomTomSDKPublicExamplesNavigation' do
   pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION
