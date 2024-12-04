@@ -437,7 +437,7 @@ extension NavigationController {
         from origin: CLLocationCoordinate2D,
         to destination: CLLocationCoordinate2D
     )
-        throws -> TomTomSDKRoutePlanner.RoutePlanningOptions {
+        throws -> TomTomSDKRoutingCommon.RoutePlanningOptions {
         let itinerary = Itinerary(
             origin: ItineraryPoint(coordinate: origin),
             destination: ItineraryPoint(coordinate: destination)

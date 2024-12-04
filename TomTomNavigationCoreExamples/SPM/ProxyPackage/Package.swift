@@ -13,7 +13,7 @@
 import PackageDescription
 
 /// The version for all TomTom SDK dependencies.
-let sdkVersion: Version = "0.65.1"
+let sdkVersion: Version = "0.67.0"
 
 /// Dictionary of all dependencies.
 /// `key`: package name.
