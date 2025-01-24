@@ -1,5 +1,4 @@
 {
-  "originHash" : "fccc9a5f943aa38015e5e623ae4692aa24c06ef676d970247cc099b373c90de4",
   "pins" : [
     {
       "identity" : "tomtom-sdk-spm-core",
@@ -20,5 +19,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
