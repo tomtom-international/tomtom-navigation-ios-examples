@@ -1,8 +1,6 @@
 // Copyright (C) 2023 TomTom NV. All rights reserved.
 
 module.exports = {
-  gitAuthor: 'Renovate Bot <renovatebot@github.com>',
-  username: 'TomTomSdkIntegration[bot]',
   onboarding: false,
   platform: 'github',
   repositories: [
