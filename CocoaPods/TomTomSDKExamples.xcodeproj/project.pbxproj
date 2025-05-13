@@ -247,7 +247,7 @@
 				};
 			};
 			buildConfigurationList = 9D2F394429A379FC0093F702 /* Build configuration list for PBXProject "TomTomSDKExamples" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 16.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -396,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

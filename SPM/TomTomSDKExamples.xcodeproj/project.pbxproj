@@ -266,7 +266,7 @@
 				};
 			};
 			buildConfigurationList = 9D2F394429A379FC0093F702 /* Build configuration list for PBXProject "TomTomSDKExamples" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 16.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
