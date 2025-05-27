@@ -10,7 +10,9 @@ Hello and welcome to this repository with examples showcasing the [TomTom Naviga
 
 ## Development setup
 
-Before beginning, make sure you have Xcode 13 or 14 installed.
+Once you have obtained access, do the following:
+- Install Xcode >=16.0.
+- Set the iOS deployment target to at least 14.0.
 
 SPM or CocoaPods can be used to install the Navigation SDK. Both configurations are available in the examples. Please navigate to the related directory and find the project setup configuration.
 - [Project setup for SPM]
