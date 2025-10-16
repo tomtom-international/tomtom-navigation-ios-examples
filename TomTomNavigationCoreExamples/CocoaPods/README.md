@@ -36,7 +36,7 @@ Once you have gained access, set up the development environment by following:
 
 3. Add a reference to the [CocoaPods] private repository:
    ```zsh
-   bundle exec pod repo-art add tomtom-sdk-cocoapods "https://repositories.tomtom.com/artifactory/api/pods/cocoapods"
+   bundle exec pod repo add-cdn tomtom-sdk-cocoapods "https://repositories.tomtom.com/artifactory/api/pods/cocoapods"
    ```
 
 4. Install the dependencies by executing the following command in **the project folder**.
@@ -46,7 +46,7 @@ Once you have gained access, set up the development environment by following:
 
 5. To update the SDK version, run the command:
     ```zsh
-    bundle exec pod repo-art update tomtom-sdk-cocoapods
+    bundle exec pod repo update tomtom-sdk-cocoapods
     ```
 6. Open the project’s `xcworkspace` and start developing your awesome application.
 

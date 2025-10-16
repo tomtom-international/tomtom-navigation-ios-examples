@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 //  © 2024 TomTom NV. All rights reserved.
@@ -13,7 +13,7 @@
 import PackageDescription
 
 /// The version for all TomTom SDK dependencies.
-let sdkVersion: Version = "0.70.0"
+let sdkVersion: Version = "0.71.1"
 
 /// Dictionary of all dependencies.
 /// `key`: package name.
@@ -30,11 +30,11 @@ let dependencies: [String: [String]] = [
     "tomtom-sdk-spm-core": [
         "TomTomSDKMapDisplay",
         "TomTomSDKRoutePlannerOnline",
-        "TomTomSDKRouteReplannerDefault",
     ],
     "tomtom-sdk-spm-navigation": [
         "TomTomSDKNavigationOnline",
         "TomTomSDKNavigationUI",
+        "TomTomSDKRouteReplannerDefault",
     ],
 ]
 
@@ -55,7 +55,7 @@ let targetDependencies: [Target.Dependency] = dependencies
 
 let package = Package(
     name: "SPMDependencies",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(name: "TomTomSPMDependencies", type: .static, targets: ["TomTomSPMDependencies"]),
     ],

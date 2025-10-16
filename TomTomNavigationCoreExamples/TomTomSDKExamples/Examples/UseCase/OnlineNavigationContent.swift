@@ -132,7 +132,11 @@ extension NavigationController: NavigationProgressObserver {
 
 /// Allows observing route additions.
 extension NavigationController: NavigationRouteAddObserver {
-    func didAddRoute(route: TomTomSDKRoute.Route, options: RoutePlanningOptions, reason: RouteAddedReason) {
+    func didAddRoute(
+        route: TomTomSDKRoute.Route,
+        options: TomTomSDKRoutingCommon.RoutePlanningOptions,
+        reason: RouteAddedReason
+    ) {
         displayedRouteSubject.send(nil)
         displayedRouteSubject.send(route)
     }
@@ -310,7 +314,7 @@ extension MapCoordinator {
         map?.cameraTrackingMode = trackingMode
 
         // Update chevron position on the screen so it is not hidden behind the navigation panel
-        if trackingMode == .followRoute() || trackingMode == .followRouteNorthUp() {
+        if trackingMode == .followRouteDirection() || trackingMode == .followRouteNorthUp() {
             let cameraUpdate = CameraUpdate(positionMarkerVerticalOffset: 0.4)
             moveCamera(cameraUpdate: cameraUpdate)
         }
@@ -361,7 +365,7 @@ extension MapCoordinator: TomTomSDKMapDisplay.MapDelegate {
         switch event {
         case let .trackingModeChanged(mode):
             // Handle camera tracking mode change
-            break
+            print("Tracking mode changed to: \(mode)")
         default:
             break
         }
@@ -449,16 +453,12 @@ extension NavigationController {
         // For voice announcements:
         let languageCode = Locale.preferredLanguages.first ?? Locale.current.languageCode ?? "en-GB"
         let locale = Locale(identifier: languageCode)
-        let guidanceOptions = try GuidanceOptions(
-            instructionType: .tagged,
+        let guidanceOptions = try TomTomSDKRoutingCommon.GuidanceOptions(
             language: locale,
-            roadShieldReferences: .all,
-            announcementPoints: .all,
-            phoneticsType: .IPA,
-            progressPoints: .all
+            roadShieldReferences: .all
         )
 
-        let options = try RoutePlanningOptions(
+        let options = try TomTomSDKRoutingCommon.RoutePlanningOptions(
             itinerary: itinerary,
             costModel: costModel,
             guidanceOptions: guidanceOptions
@@ -478,7 +478,7 @@ extension NavigationController {
 
     private func planRoute(
         withRoutePlanner routePlanner: OnlineRoutePlanner,
-        routePlanningOptions: RoutePlanningOptions
+        routePlanningOptions: TomTomSDKRoutingCommon.RoutePlanningOptions
     ) async throws
         -> TomTomSDKRoute.Route {
         return try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<TomTomSDKRoute.Route, Error>) in
@@ -488,7 +488,7 @@ extension NavigationController {
             ) { result in
                 switch result {
                 case let .failure(error):
-                    if let routingError = error as? RoutingError {
+                    if let routingError = error as? TomTomSDKRoutingCommon.RoutingError {
                         print("Error code: \(routingError.code)")
                         print("Error message: \(String(describing: routingError.errorDescription))")
                         continuation.resume(throwing: routingError)
@@ -526,7 +526,7 @@ extension MapCoordinator {
             guard let self = self else { return }
             if let route = route {
                 self.addRouteToMap(route: route)
-                self.setCamera(trackingMode: .followRoute())
+                self.setCamera(trackingMode: .followRouteDirection())
             } else {
                 self.routeOnMap = nil
                 self.map?.removeRoutes()

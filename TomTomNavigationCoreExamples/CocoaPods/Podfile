@@ -7,7 +7,7 @@
 #  not the licensee, you are not authorized to use this software in any manner and should
 #  immediately return or destroy it.
 
-platform :ios, '14.0'
+platform :ios, '15.0'
 
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
@@ -16,11 +16,9 @@ workspace 'TomTomSDKPublicExamplesNavigation.xcworkspace'
 install! 'cocoapods', warn_for_unused_master_specs_repo: false
 use_frameworks!
 
-plugin 'cocoapods-art', :sources => [
-  'tomtom-sdk-cocoapods'
-]
+source 'https://repositories.tomtom.com/artifactory/api/pods/cocoapods'
 
-SDK_VERSION = '0.70.0'
+SDK_VERSION = '0.71.1'
 
 target 'TomTomSDKPublicExamplesNavigation' do
   pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION
