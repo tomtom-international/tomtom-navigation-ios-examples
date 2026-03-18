@@ -36,7 +36,7 @@ Once you have gained access, set up the development environment by following:
 
 3. Add a reference to the [CocoaPods] private repository:
    ```zsh
-   bundle exec pod repo add-cdn tomtom-sdk-cocoapods "https://repositories.tomtom.com/artifactory/api/pods/cocoapods"
+   bundle exec pod repo add-cdn tomtom-sdk-cocoapods "https://repositories.tomtom.com/artifactory/api/pods/cocoapods-virtual"
    ```
 
 4. Install the dependencies by executing the following command in **the project folder**.

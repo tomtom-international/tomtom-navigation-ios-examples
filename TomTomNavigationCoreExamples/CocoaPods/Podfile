@@ -16,9 +16,9 @@ workspace 'TomTomSDKPublicExamplesNavigation.xcworkspace'
 install! 'cocoapods', warn_for_unused_master_specs_repo: false
 use_frameworks!
 
-source 'https://repositories.tomtom.com/artifactory/api/pods/cocoapods'
+source 'https://repositories.tomtom.com/artifactory/api/pods/cocoapods-virtual'
 
-SDK_VERSION = '0.71.1'
+SDK_VERSION = '0.72.0'
 
 target 'TomTomSDKPublicExamplesNavigation' do
   pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION
