@@ -18,7 +18,7 @@ use_frameworks!
 
 source 'https://repositories.tomtom.com/artifactory/api/pods/cocoapods-virtual'
 
-SDK_VERSION = '0.72.1'
+SDK_VERSION = '0.73.0'
 
 target 'TomTomSDKPublicExamplesNavigation' do
   pod 'TomTomSDKDefaultTextToSpeech', SDK_VERSION
