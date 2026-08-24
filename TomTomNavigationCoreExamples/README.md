@@ -71,7 +71,7 @@ You can see the downloaded map when the downloading process finished as below.
 
 [TomTom Navigation SDK for iOS]: https://developer.tomtom.com/navigation/ios/introduction/introduction
 [TomTom Developer Portal]: https://developer.tomtom.com/user/me/apps
-[How to get a TomTom API Key]: https://developer.tomtom.com/platform/documentation/dashboard/api-key-management
+[How to get a TomTom API Key]: https://developer.tomtom.com/how-to-get-tomtom-api-key
 [register]: https://developer.tomtom.com/user/register
 [Contact us]: https://developer.tomtom.com/tomtom-sdk-for-ios/request-access
 [Project setup for SPM]: SPM

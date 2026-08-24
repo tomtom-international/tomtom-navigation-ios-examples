@@ -82,7 +82,7 @@ GEM
     nap (1.1.0)
     netrc (0.11.0)
     public_suffix (4.0.7)
-    rexml (3.4.2)
+    rexml (3.3.9)
       strscan (>= 3.0.9)
     ruby-macho (2.5.1)
     ruby2_keywords (0.0.5)
@@ -97,7 +97,7 @@ GEM
       claide (>= 1.0.2, < 2.0)
       colored2 (~> 3.1)
       nanaimo (~> 0.3.0)
-      rexml (~> 3.4.2)
+      rexml (~> 3.3.9)
 
 PLATFORMS
   arm64-darwin
@@ -110,4 +110,4 @@ RUBY VERSION
    ruby 3.4.1p0
 
 BUNDLED WITH
-   2.7.2
+   2.6.8
