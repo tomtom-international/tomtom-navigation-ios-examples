@@ -147,9 +147,6 @@ extension NavigationController: NavigationRouteAddObserver {
 struct MainView: View {
     // MARK: Internal
 
-    @StateObject
-    var navigationController = NavigationController()
-
     var body: some View {
         ZStack(alignment: .bottom) {
             TomTomMapView(contentInsets: $contentInsets, navigationController: navigationController)
@@ -169,6 +166,9 @@ struct MainView: View {
 
     @State
     private var contentInsets = EdgeInsets()
+
+    @StateObject
+    var navigationController = NavigationController()
 }
 
 // MARK: - TomTomMapView
